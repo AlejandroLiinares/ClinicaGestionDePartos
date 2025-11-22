@@ -1,0 +1,50 @@
+/* ============== Contenedor principal ============== */
+.main-container {
+    margin-top: 1.5rem;
+}
+
+/* Grid de tarjetas */
+.cards-container {
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.5rem;
+    box-shadow: var(--shadow-s);
+}
+
+/* ============== Cards individuales ============== */
+.card {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    text-align: center;
+    box-shadow: var(--shadow-m);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-l);
+}
+
+/* Íconos */
+.card-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+/* Títulos y textos */
+.card h2 {
+    font: var(--h2);
+    color: var(--text);
+    margin-bottom: 0.4rem;
+}
+
+.card p {
+    font: var(--p);
+    color: var(--text-muted);
+}

@@ -1,0 +1,85 @@
+/* ===== Reset general ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+/* ===== Variables del modo oscuro ===== */
+:root {
+    --ff: "Manrope", sans-serif;
+
+    --h1: 700 1.5rem/1.2em var(--ff);
+    --h2: 700 1.25rem/1.4em var(--ff);
+    --h3: 700 1.125rem/1.4em var(--ff);
+    --p: 400 1rem/1.6em var(--ff);
+    --small: 400 0.75rem/1.6em var(--ff);
+
+    --transition: 0.25s ease;
+
+    /* Colores base */
+    --primary: oklch(0.9 0.17 100);
+    --bg-dark: oklch(0.1 0 264);
+    --bg: oklch(0.2 0 264);
+    --bg-light: oklch(0.3 0 264);
+
+    /* Texto */
+    --text: oklch(0.96 0 264);
+    --text-muted: oklch(0.76 0 264);
+
+    /* Sombras */
+    --shadow-s: inset 0 1px 2px #ffffff30, 0 1px 2px #00000030, 0 2px 4px #00000015;
+    --shadow-m: inset 0 1px 2px #ffffff50, 0 2px 4px #00000030, 0 4px 8px #00000015;
+    --shadow-l: inset 0 1px 2px #ffffff70, 0 4px 6px #00000030, 0 6px 10px #00000015;
+}
+
+/* ===== Modo claro ===== */
+body.light {
+    --primary: oklch(0.65 0.15 264);
+    --bg-dark: oklch(0.92 0 264);
+    --bg: oklch(0.96 0 264);
+    --bg-light: oklch(1 0 264);
+
+    --text: oklch(0.15 0 264);
+    --text-muted: oklch(0.4 0 264);
+}
+
+/* ===== Body ===== */
+body {
+    background: var(--bg-dark);
+    color: var(--text);
+    padding: 1rem 1.5rem;
+    transition: var(--transition);
+}
+
+/* ===== Header superior ===== */
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font: var(--h1);
+    color: var(--text);
+}
+
+/* ===== Botón de tema ===== */
+.theme-btn {
+    background: var(--bg);
+    padding: 0.4rem;
+    border-radius: 0.8rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-btn img {
+    width: 22px;
+    height: 22px;
+}
+
+.theme-btn:hover {
+    background: var(--bg-light);
+}
