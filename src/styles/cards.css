@@ -9,17 +9,19 @@
     padding: 2rem;
     border-radius: 1.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 18rem));
     gap: 1.5rem;
     box-shadow: var(--shadow-s);
 }
 
 /* ============== Cards individuales ============== */
 .card {
+    max-width: 18rem;
     background: var(--bg-light);
     padding: 1.5rem;
     border-radius: 1.25rem;
-    text-align: center;
+    text-align: left;
     box-shadow: var(--shadow-m);
     transition: var(--transition);
 }
@@ -29,12 +31,12 @@
     box-shadow: var(--shadow-l);
 }
 
-/* Íconos */
-.card-icon {
-    width: 42px;
-    height: 42px;
-    margin-bottom: 1rem;
-    opacity: 0.9;
+/* Emojis */
+.card-emoji {
+    font-size: 5.5rem;        /* tamaño grande */
+    display: block;           /* ahora es un bloque, elimina inline spacing */
+    line-height: 1;           /* elimina espacio vertical extra */
+    margin-bottom: 2rem;      /* espacio debajo del emoji */
 }
 
 /* Títulos y textos */
