@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 16rem;
+    width: 12rem;
     height: 100vh;
     background: var(--bg);
     padding: 2rem 1rem;
@@ -56,7 +56,7 @@
 
 /* =================== CONTENIDO PRINCIPAL =================== */
 body {
-    padding-left: 16rem; /* Deja espacio fijo para el sidebar */
+    padding-left: 13rem; /* Deja espacio fijo para el sidebar */
 }
 
 /* Ajuste del top-header para alinearse */
