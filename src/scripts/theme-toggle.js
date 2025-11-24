@@ -6,8 +6,8 @@ btn.addEventListener("click", () => {
 
     // Cambia el icono sol/luna
     if (document.body.classList.contains("light")) {
-        icon.src = "../assets/svg/moon.svg";
+        icon.src = "../../assets/svg/moon.svg";
     } else {
-        icon.src = "../assets/svg/sun.svg";
+        icon.src = "../../assets/svg/sun.svg";
     }
 });
