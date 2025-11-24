@@ -1,0 +1,66 @@
+/* =============== SIDEBAR =============== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16rem;
+    height: 100vh;
+    background: var(--bg);
+    padding: 2rem 1rem;
+    box-shadow: var(--shadow-m);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 1000;
+}
+
+/* Logo */
+.nav_logo {
+    font: var(--h2);
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* Lista del menú */
+.nav__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* Link individual */
+.nav__links a {
+    text-decoration: none;
+    font: var(--p);
+    color: var(--text-muted);
+    background: var(--bg-light);
+    padding: 0.75rem 1rem;
+    border-radius: 0.8rem;
+    display: block;
+    transition: var(--transition);
+}
+
+/* Hover */
+.nav__links a:hover {
+    background: var(--primary);
+    color: var(--bg-dark);
+    transform: translateX(4px);
+}
+
+/* Página activa (opcional) */
+.nav__links a.active {
+    background: var(--primary);
+    color: var(--bg-dark);
+}
+
+/* =================== CONTENIDO PRINCIPAL =================== */
+body {
+    padding-left: 16rem; /* Deja espacio fijo para el sidebar */
+}
+
+/* Ajuste del top-header para alinearse */
+.top-header {
+    margin-left: 0;
+    padding-left: 0.5rem;
+}
