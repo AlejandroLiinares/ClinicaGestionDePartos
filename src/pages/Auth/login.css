@@ -6,7 +6,6 @@ body {
                  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
                  'Open Sans', 'Helvetica Neue', sans-serif;
 
-    /* GRADIENT CIRCULAR ROJO: Profundo -> Calido -> Blanco*/
     background: radial-gradient(
     circle at right,
     #ff1f2b 0%,
@@ -26,10 +25,7 @@ body {
 }
 
 
-/* ==========================================================================
-   PANEL IZQUIERDO
-   ========================================================================== */
-
+/* PANEL IZQUIERDO */
 .login-left {
     position: relative;
     display: flex;
@@ -47,18 +43,28 @@ body {
     font-weight: 700;
     line-height: 1.15;
     color: #000000;
+
+    opacity: 0;
+    animation: slideFadeIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .welcome-subtitle {
     font-size: 1.6rem;
     padding-bottom: 11rem;
     color: #000000;
+
+    opacity: 0;
+    animation: slideFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.20;
 }
 
 .left-footer {
     position: absolute;
     bottom: 2rem;
     left: 13rem;
+
+    opacity: 0;
+    animation: slideFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .left-footer-text {
@@ -222,6 +228,23 @@ body {
     font-size: 0.81rem;
     margin: 0;
 }
+
+/* ANIMACIÓN ENTRADA DESDE IZQUIERDA (SUAVE Y LIMPIA) */
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(4px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 800px) {
