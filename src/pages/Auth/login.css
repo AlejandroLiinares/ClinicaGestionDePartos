@@ -8,8 +8,8 @@ body {
 
     background: radial-gradient(
     circle at right,
-    #ff1f2b 0%,
-    #ffa3a8 20%,
+    #ff444d 0%,
+    #ffafb3 20%,
     #ffffff 80%
     );
     
@@ -130,8 +130,8 @@ body {
 }
 
 .form-field label {
-    font-size: 0.95rem;
-    font-weight: 550;
+    font-size: 1rem;
+    font-weight: 500;
     color: #000000;
     display: flex;
     flex-direction: column;
@@ -199,7 +199,7 @@ body {
 
 
 .btn-primary:hover {
-    background-color: #171616;
+    background-color: #0f0e0e;
 }
 
 .forgot-link {
