@@ -16,6 +16,9 @@
 
     <!-- JS Tema -->
     <script src="../../scripts/theme-toggle.js" defer></script>
+
+    <!-- SVG Favicon  -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/pregnant.svg">
 </head>
 
 <body class="light">
@@ -70,27 +73,48 @@
         <section class="cards-container">
 
             <div class="card">
-                <span class="card-emoji">🤱</span>
-                <h3>Pacientes</h3>
-                <p>Gestiona a tus pacientes.</p>
+                <button onclick="location.href='../Matrona/Pacientes/pacientes.html'" class="card-button">
+                    <img alt="Pacientes" src="../../assets/icons/pacienteicon.png"
+                    height="120px" width="75px"/>
+                    <h3>Pacientes</h3>
+                    <p>Gestiona a tus pacientes.</p>
+                </button>
+            </div>
+            
+            <div class="card">
+                <button onclick="location.href='../Matrona/Gestaciones/gestaciones.html'" class="card-button">
+                    <img alt="Gestaciones" src="../../assets/icons/gestacionicon.png"
+                    height="120px" width="75px"/>
+                    <h3>Gestaciones</h3>
+                    <p>Mira tus gestaciones asociados.</p>
+                </button>
             </div>
 
             <div class="card">
-                <span class="card-emoji">👶</span>
-                <h3>Recién Nacidos</h3>
-                <p>Control y seguimiento neonatal.</p>
+                <button onclick="location.href='../Matrona/Partos/partos.html'" class="card-button">
+                    <img alt="Partos" src="../../assets/icons/pregnancyicon.png"
+                    height="120px" width="75px"/>
+                    <h3>Partos</h3>
+                    <p>Gestiona tus partos.</p>
+                </button>
             </div>
 
             <div class="card">
-                <span class="card-emoji">📋</span>
-                <h3>Historial Clínico</h3>
-                <p>Accede a la información clínica.</p>
+                <button onclick="location.href='../Matrona/RecienNacido/recienNacido.html'" class="card-button">
+                    <img alt="Recién Nacidos" src="../../assets/icons/pregnant-woman.png"
+                    height="120px" width="75px"/>
+                    <h3>Recién Nacidos</h3>
+                    <p>Gestiona a tus recién nacidos.</p>
+                </button>
             </div>
 
             <div class="card">
-                <span class="card-emoji">📤</span>
-                <h3>Reportes</h3>
-                <p>Genera tus informes fácilmente.</p>
+                <button onclick="location.href='../Reportes/reportes.html'" class="card-button">
+                    <img alt="Reportes" src="../../assets/icons/pregnant-woman.png"
+                    height="120px" width="75px"/>
+                    <h3>Reportes</h3>
+                    <p>Gestiona tus reportes.</p>
+                </button>
             </div>
 
         </section>

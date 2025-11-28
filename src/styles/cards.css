@@ -17,7 +17,7 @@
 
 /* ============== Cards individuales ============== */
 .card {
-    max-width: 14rem;
+    max-width: 15rem;
     background: var(--bg-light);
     padding: 1.5rem;
     border-radius: 1.25rem;
@@ -31,12 +31,9 @@
     box-shadow: var(--shadow-l);
 }
 
-/* Emojis */
-.card-emoji {
-    font-size: 5.5rem;        /* tamaño grande */
-    display: block;           /* ahora es un bloque, elimina inline spacing */
-    line-height: 1;           /* elimina espacio vertical extra */
-    margin-bottom: 2rem;      /* espacio debajo del emoji */
+.card-button {
+    all: unset;
+    cursor: pointer;
 }
 
 /* Títulos y textos */
