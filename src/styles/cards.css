@@ -1,27 +1,28 @@
 /* ============== Contenedor principal ============== */
 .main-container {
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
 }
 
 /* Grid de tarjetas */
 .cards-container {
     background: var(--bg);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 1.5rem;
     display: grid;
     flex-direction: column;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 18rem));
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 15rem));
     gap: 1.5rem;
     box-shadow: var(--shadow-s);
 }
 
 /* ============== Cards individuales ============== */
 .card {
-    max-width: 15rem;
+    max-width: 14.5rem;
+    max-height: 16rem;
     background: var(--bg-light);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 1.25rem;
-    text-align: left;
+    text-align: center;
     box-shadow: var(--shadow-m);
     transition: var(--transition);
 }
@@ -37,7 +38,8 @@
 }
 
 /* Títulos y textos */
-.card h2 {
+.card h3 {
+    padding-top: 1rem;
     font: var(--h2);
     color: var(--text);
 }
