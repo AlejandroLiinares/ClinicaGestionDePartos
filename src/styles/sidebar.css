@@ -29,6 +29,14 @@
     gap: 0.8rem;
 }
 
+:root {
+   --icon-filter: brightness(0); /* Negro */
+}
+
+body.dark {
+   --icon-filter: brightness(0) invert(1); /* Blanco */
+}
+
 /* Link individual */
 .nav__links a {
     text-decoration: none;
@@ -52,6 +60,40 @@
 .nav__links a.active {
     background: var(--primary);
     color: var(--bg-dark);
+}
+
+.nav-svg {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.nav-svg {
+    width: 25px;    /* Ajusta según diseño */
+    height: 25px;
+    filter: var(--icon-filter); /* Importante para modo oscuro */
+    opacity: 0.9;
+}
+
+.nav-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 6rem); /* ajusta según el espacio del logo */
+    padding-right: 0.5rem; /* espacio para evitar que el scroll tape el texto */
+}
+
+/* Estilos del scrollbar (opcional, para hacerlo bonito) */
+.nav-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-scroll::-webkit-scrollbar-thumb {
+    background: var(--text-muted);
+    border-radius: 4px;
+}
+
+.nav-scroll::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 /* =================== CONTENIDO PRINCIPAL =================== */
