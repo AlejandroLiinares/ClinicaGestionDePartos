@@ -1,108 +1,145 @@
-/* =============== SIDEBAR =============== */
+/* ============================================
+   SIDEBAR BASE
+============================================ */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 12rem;
     height: 100vh;
+    width: 14rem;                     /* Sidebar expandido */
     background: var(--bg);
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     box-shadow: var(--shadow-m);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    transition: width 0.3s ease;
+    overflow: hidden;
     z-index: 1000;
 }
 
-/* Logo */
-.nav_logo {
-    font: var(--h2);
-    color: var(--text);
-    text-decoration: none;
+/* Sidebar colapsado (solo iconos) */
+.sidebar.collapsed {
+    width: 4.5rem;
 }
 
-/* Lista del menú */
-.nav__links {
-    list-style: none;
+/* Al pasar el mouse sobre el sidebar colapsado → expandir */
+.sidebar.collapsed:hover {
+    width: 14rem;
+}
+
+/* ============================================
+   LOGO
+============================================ */
+.nav__logo {
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+    justify-content: center;
+    padding: 0.5rem 0;
 }
 
-:root {
-   --icon-filter: brightness(0); /* Negro */
+/* Ocultar logo cuando sidebar está colapsado */
+.sidebar.collapsed .nav__logo img {
+    opacity: 0;
 }
 
-body.dark {
-   --icon-filter: brightness(0) invert(1); /* Blanco */
+.sidebar.collapsed:hover .nav__logo img {
+    opacity: 1;
 }
 
-/* Link individual */
-.nav__links a {
-    text-decoration: none;
-    font: var(--p);
-    color: var(--text-muted);
-    background: var(--bg-light);
-    padding: 0.75rem 1rem;
-    border-radius: 0.8rem;
-    display: block;
-    transition: var(--transition);
-}
-
-/* Hover */
-.nav__links a:hover {
-    background: var(--primary);
-    color: var(--bg-dark);
-    transform: translateX(4px);
-}
-
-/* Página activa (opcional) */
-.nav__links a.active {
-    background: var(--primary);
-    color: var(--bg-dark);
-}
-
-.nav-svg {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-.nav-svg {
-    width: 25px;    /* Ajusta según diseño */
-    height: 25px;
-    filter: var(--icon-filter); /* Importante para modo oscuro */
-    opacity: 0.9;
-}
-
+/* ============================================
+   NAV SCROLL
+============================================ */
 .nav-scroll {
     overflow-y: auto;
-    overflow-x: hidden;
-    max-height: calc(100vh - 6rem); /* ajusta según el espacio del logo */
-    padding-right: 0.5rem; /* espacio para evitar que el scroll tape el texto */
+    flex-grow: 1;
+    padding-right: 0.3rem;
 }
 
-/* Estilos del scrollbar (opcional, para hacerlo bonito) */
 .nav-scroll::-webkit-scrollbar {
     width: 6px;
 }
 
 .nav-scroll::-webkit-scrollbar-thumb {
     background: var(--text-muted);
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
-.nav-scroll::-webkit-scrollbar-track {
-    background: transparent;
+/* ============================================
+   LINKS DEL MENÚ
+============================================ */
+.nav__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0;
+    margin: 0;
 }
 
-/* =================== CONTENIDO PRINCIPAL =================== */
+.nav__link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-light);
+    border-radius: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font: var(--p);
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+/* Hover */
+.nav__link:hover {
+    background: var(--primary);
+    color: var(--bg-dark);
+    transform: translateX(4px);
+}
+
+/* Activo */
+.nav__link.active {
+    background: var(--primary);
+    color: var(--bg-dark);
+}
+
+/* ============================================
+   ICONOS
+============================================ */
+:root {
+    --icon-filter: brightness(0);
+}
+
+body.dark {
+    --icon-filter: brightness(0) invert(1);
+}
+
+.nav-svg {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    filter: var(--icon-filter);
+}
+
+/* ============================================
+   COLAPSADO → Ocultar texto
+============================================ */
+.sidebar.collapsed .nav-text {
+    display: none;
+}
+
+/* Cuando se hace hover estando colapsado → mostrar texto */
+.sidebar.collapsed:hover .nav-text {
+    display: inline;
+}
+
+/* ============================================
+   AJUSTE DEL CONTENIDO PRINCIPAL
+============================================ */
 body {
-    padding-left: 13rem; /* Deja espacio fijo para el sidebar */
+    padding-left: 14rem;
+    transition: padding-left 0.3s ease;
 }
 
-/* Ajuste del top-header para alinearse */
-.top-header {
-    margin-left: 0;
-    padding-left: 0.5rem;
+body.sidebar-collapsed {
+    padding-left: 4.5rem;
 }

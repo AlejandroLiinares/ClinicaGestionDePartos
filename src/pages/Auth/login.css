@@ -45,7 +45,7 @@ body {
     color: #ffffff;
 
     opacity: 0;
-    animation: slideFadeIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: slideFadeIn 5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .welcome-subtitle {
@@ -54,7 +54,7 @@ body {
     color: #ffffff;
 
     opacity: 0;
-    animation: slideFadeIn 10s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: slideFadeIn 5.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     animation-delay: 0.20;
 }
 
@@ -64,7 +64,7 @@ body {
     left: 13rem;
 
     opacity: 0;
-    animation: slideFadeIn 10.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: slideFadeIn 5.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .left-footer-text {
