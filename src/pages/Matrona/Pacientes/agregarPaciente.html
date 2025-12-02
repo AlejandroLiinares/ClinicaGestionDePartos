@@ -1,98 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacientes - Matrona</title>
+    <title>Añadir Paciente - Matrona</title>
 
-    <!-- CSS Global-->
-    <link rel="stylesheet" href="../../../styles/global.css" />
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../../../styles/global.css">
 
-    <!-- CSS Menu de navegación -->
-     <link rel="stylesheet" href="../../../styles/sidebar.css" />
+    <!-- Sidebar -->
+    <link rel="stylesheet" href="../../../styles/sidebar.css">
 
-    <!-- CSS Cards -->
-    <link rel="stylesheet" href="../../../styles/cards.css" />
+    <!-- Formularios -->
+    <link rel="stylesheet" href="../../../styles/forms.css">
 
-    <!-- JS Tema -->
-    <script src="../../../scripts/layout.js" defer></script>
-
+    <!-- Tema -->
+    <script src="../../../scripts/theme-toggle.js" defer></script>
 </head>
+
 <body class="light">
 
-    <aside class="sidebar collapsed" id="sidebar">
+<!-- SIDEBAR -->
+<aside class="sidebar collapsed" id="sidebar">
     <nav class="nav-container">
 
-        <!-- Logo -->
         <a href="../../../../index.html" class="nav__logo">
-            <img src="../../../assets/images/HermindaMartin.png" alt="Logo" class="nav__logo-icon"
-            width="140px" height="60px"/>
+            <img src="../../../assets/images/HermindaMartin.png" 
+                 width="140" height="60" 
+                 class="nav__logo-icon" alt="Logo">
         </a>
 
-        <!-- Contenido desplazable -->
         <div class="nav-scroll">
             <ul class="nav__links">
 
                 <li class="nav__item">
-                    <a href="#home" class="nav__link">
-                        <img src="../../../assets/svg/inicio.svg" class="nav-svg" />
+                    <a href="../inicioMatrona.html" class="nav__link">
+                        <img src="../../../assets/svg/inicio.svg" class="nav-svg">
                         <span class="nav-text">Inicio</span>
                     </a>
                 </li>
 
                 <li class="nav__item">
-                    <a href="../../Matrona/Pacientes/pacientes.html" class="nav__link">
-                        <img src="../../../assets/svg/paciente.svg" class="nav-svg" />
+                    <a href="pacientes.html" class="nav__link active">
+                        <img src="../../../assets/svg/paciente.svg" class="nav-svg">
                         <span class="nav-text">Pacientes</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="../../Matrona/Gestaciones/gestaciones.html" class="nav__link">
-                        <img src="../../../assets/svg/gestacion.svg" class="nav-svg" />
-                        <span class="nav-text">Gestaciones</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="../../Matrona/Partos/partos.html" class="nav__link">
-                        <img src="../../../assets/svg/parto.svg" class="nav-svg" />
-                        <span class="nav-text">Partos</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="../../Matrona/RecienNacido/recienNacido.html" class="nav__link">
-                        <img src="../../../assets/svg/reciennacido.svg" class="nav-svg" />
-                        <span class="nav-text">Recién Nacidos</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="../Profesionales/profesionales.html" class="nav__link">
-                        <img src="../../assets/svg/profesional.svg" class="nav-svg" />
-                        <span class="nav-text">Profesionales</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="../Turnos/turnos.html" class="nav__link">
-                        <img src="../../assets/svg/turnos.svg" class="nav-svg" />
-                        <span class="nav-text">Turnos</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="../Supervisor/Auditoria/auditoria.html" class="nav__link">
-                        <img src="../../assets/svg/auditoria.svg" class="nav-svg" />
-                        <span class="nav-text">Auditoría</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="../Usuarios/usuarios.html" class="nav__link">
-                        <img src="../../assets/svg/usuarios.svg" class="nav-svg" />
-                        <span class="nav-text">Usuarios</span>
                     </a>
                 </li>
 
@@ -102,30 +54,157 @@
     </nav>
 </aside>
 
+<!-- HEADER -->
 <header class="top-header">
-        <!-- Contenedor de del header top que se repite en cada vista-->
-        <div class="">
-            <!-- Foto perfil matrona (futuro dropdown) -->
-            <div class="profile-info">
-                <img id="photo-image" width="30" height="30" title="Foto de perfil del usuario"
-                alt="Foto de perfil del usuario" class="profile-photo"
-                src="../../../assets/icons/matronaicon.png" />
-                <span class="profile-name">Matrona Ana María</span>
 
-            <!-- Buscador (filtrador general) -->
-
-
-            <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
-                <img id="themeIcon" src="../../../assets/svg/moon.svg" alt="Tema" />
-            </button>
+    <div class="header-right">
+        <div class="profile-info">
+            <img src="../../../assets/icons/matronaicon.png" width="30" height="30" class="profile-photo">
+            <span class="profile-name">Matrona Ana María</span>
         </div>
 
-    </header>
+        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../../assets/svg/moon.svg">
+        </button>
+    </div>
 
-    <main class="main-container">
-        <h1>Agregar nuevo paciente</h1>
+    <h1>Añadir Paciente</h1>
+</header>
 
-        
-    </main>
+
+<main class="main-container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumbs">
+        <a href="../inicioMatrona.html">Inicio</a>
+        <span>›</span>
+        <a href="pacientes.html">Pacientes</a>
+        <span>›</span>
+        <span>Añadir</span>
+    </nav>
+
+    <!-- FORMULARIO PRINCIPAL -->
+    <form method="POST" class="form-wrapper">
+        {% csrf_token %}
+
+        <!-- INFORMACIÓN PERSONAL -->
+        <section class="form-section">
+            <h2 class="form-section-title">Información Personal</h2>
+
+            <div class="form-grid-3">
+                <div class="form-field">
+                    <label>Nombre</label>
+                    {{ form.nombre }}
+                </div>
+
+                <div class="form-field">
+                    <label>Primer Apellido</label>
+                    {{ form.primer_apellido }}
+                </div>
+
+                <div class="form-field">
+                    <label>Segundo Apellido</label>
+                    {{ form.segundo_apellido }}
+                </div>
+            </div>
+
+            <div class="form-grid-3">
+                <div class="form-field">
+                    <label>Tipo de Documento</label>
+                    {{ form.documento }}
+                </div>
+                <div class="form-field">
+                    <label>Identificación</label>
+                    {{ form.identificacion }}
+                    <div class="field-help">{{ form.identificacion.help_text }}</div>
+                </div>
+                <div class="form-field">
+                    <label>Fecha de Nacimiento</label>
+                    {{ form.fecha_nacimiento }}
+                </div>
+            </div>
+
+            <div class="form-grid-3">
+                <div class="form-field">
+                    <label>Tipo de Paciente</label>
+                    {{ form.tipo }}
+                </div>
+                <div class="form-field">
+                    <label>Teléfono</label>
+                    {{ form.telefono }}
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CARACTERÍSTICAS -->
+        <section class="form-section">
+            <h2 class="form-section-title">Características</h2>
+
+            <div class="checkbox-group">
+                <label class="checkbox-item">{{ form.descapacitado }} Discapacitada</label>
+                <label class="checkbox-item">{{ form.pueblo_originario }} Pueblo originario</label>
+                <label class="checkbox-item">{{ form.privada_de_libertad }} Privada de libertad</label>
+                <label class="checkbox-item">{{ form.transexual }} Transexual</label>
+            </div>
+
+            <div class="form-grid-3">
+                <div class="form-field">
+                    <label>Visita Guiada</label>
+                    {{ form.visita_guiada }}
+                </div>
+
+                <div class="form-field">
+                    <label>Peso</label>
+                    {{ form.peso }}
+                </div>
+
+                <div class="form-field">
+                    <label>Altura</label>
+                    {{ form.altura }}
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label>Actividad</label>
+                {{ form.actividad }}
+            </div>
+        </section>
+
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <section class="form-section">
+            <h2 class="form-section-title">Información de Contacto</h2>
+
+            <div class="form-grid-3">
+                <div class="form-field">
+                    <label>Nacionalidad</label>
+                    {{ form.nacionalidad }}
+                </div>
+                <div class="form-field">
+                    <label>Comuna</label>
+                    {{ form.comuna }}
+                </div>
+                <div class="form-field">
+                    <label>CESFAM</label>
+                    {{ form.cesfam }}
+                    <div class="field-help">{{ form.cesfam.help_text }}</div>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label>Dirección</label>
+                <input type="text" name="direccion" class="input-text">
+            </div>
+        </section>
+
+        <!-- BOTÓN -->
+        <div class="form-submit">
+            <button type="submit" class="btn-primary">Añadir Paciente</button>
+        </div>
+
+    </form>
+
+</main>
+
 </body>
 </html>

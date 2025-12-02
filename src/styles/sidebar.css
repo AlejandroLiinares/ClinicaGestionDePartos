@@ -12,14 +12,14 @@
     box-shadow: var(--shadow-m);
     display: flex;
     flex-direction: column;
-    transition: width 0.3s ease;
+    transition: width 0.6s ease;
     overflow: hidden;
     z-index: 1000;
 }
 
 /* Sidebar colapsado (solo iconos) */
 .sidebar.collapsed {
-    width: 4.5rem;
+    width: 5.5rem;
 }
 
 /* Al pasar el mouse sobre el sidebar colapsado → expandir */
@@ -70,7 +70,7 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.5rem; /* Espacio entre enlaces */
     padding: 0;
     margin: 0;
 }
@@ -78,9 +78,8 @@
 .nav__link {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.7rem;  /* Espacio entre icono y texto */
     padding: 0.75rem 0.90rem;
-    background: var(--bg-light);
     border-radius: 0.8rem;
     color: var(--text-muted);
     text-decoration: none;
@@ -113,8 +112,8 @@ body.dark {
 }
 
 .nav-svg {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     flex-shrink: 0;
     filter: var(--icon-filter);
 }
@@ -135,10 +134,9 @@ body.dark {
    AJUSTE DEL CONTENIDO PRINCIPAL
 ============================================ */
 body {
-    padding-left: 5.5rem;
-    transition: padding-left 0.2s ease;
+    padding-left: 6.5rem;
 }
 
 body.sidebar-collapsed {
-    padding-left: 4.5rem;
+    padding-left: 4.5rem; /* Ajuste cuando el sidebar está colapsado */
 }
