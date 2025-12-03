@@ -1,0 +1,3 @@
+Ideas para el futuro:
+- Añadir un porcentaje lateral vertical de 0 a 100% que vaya mostrando el progreso del usuario en cada formulario
+- Añadir un sección donde la paciente relacionada con el bebe tenga tarjeta dinámica donde aparezca en un porcentaje el éxito o riesgo que tiene de un bebe sano.
