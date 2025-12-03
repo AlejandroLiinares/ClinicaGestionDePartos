@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../../styles/sidebar.css">
 
     <!-- Formularios -->
-    <link rel="stylesheet" href="../../../styles/forms.css">
+    <link rel="stylesheet" href="../../../styles/form.css">
 
     <!-- Tema -->
     <script src="../../../scripts/theme-toggle.js" defer></script>
@@ -26,9 +26,7 @@
     <nav class="nav-container">
 
         <a href="../../../../index.html" class="nav__logo">
-            <img src="../../../assets/images/HermindaMartin.png" 
-                 width="140" height="60" 
-                 class="nav__logo-icon" alt="Logo">
+            <img src="../../../assets/images/HermindaMartin.png" width="140" height="60" class="nav__logo-icon">
         </a>
 
         <div class="nav-scroll">
@@ -83,9 +81,8 @@
         <span>Añadir</span>
     </nav>
 
-    <!-- FORMULARIO PRINCIPAL -->
-    <form method="POST" class="form-wrapper">
-        {% csrf_token %}
+    <!-- FORMULARIO -->
+    <form class="form-wrapper">
 
         <!-- INFORMACIÓN PERSONAL -->
         <section class="form-section">
@@ -94,44 +91,54 @@
             <div class="form-grid-3">
                 <div class="form-field">
                     <label>Nombre</label>
-                    {{ form.nombre }}
+                    <input type="text" name="nombre" class="input-text" required>
                 </div>
 
                 <div class="form-field">
                     <label>Primer Apellido</label>
-                    {{ form.primer_apellido }}
+                    <input type="text" name="primer_apellido" class="input-text" required>
                 </div>
 
                 <div class="form-field">
                     <label>Segundo Apellido</label>
-                    {{ form.segundo_apellido }}
+                    <input type="text" name="segundo_apellido" class="input-text" required>
                 </div>
             </div>
 
             <div class="form-grid-3">
                 <div class="form-field">
                     <label>Tipo de Documento</label>
-                    {{ form.documento }}
+                    <select name="documento" class="input-select">
+                        <option value="rut">RUT</option>
+                        <option value="pasaporte">Pasaporte</option>
+                    </select>
                 </div>
+
                 <div class="form-field">
                     <label>Identificación</label>
-                    {{ form.identificacion }}
-                    <div class="field-help">{{ form.identificacion.help_text }}</div>
+                    <input type="text" name="identificacion" class="input-text">
+                    <div class="field-help">Sin puntos ni guión</div>
                 </div>
+
                 <div class="form-field">
                     <label>Fecha de Nacimiento</label>
-                    {{ form.fecha_nacimiento }}
+                    <input type="date" name="fecha_nacimiento" class="input-text">
                 </div>
             </div>
 
             <div class="form-grid-3">
                 <div class="form-field">
                     <label>Tipo de Paciente</label>
-                    {{ form.tipo }}
+                    <select name="tipo" class="input-select">
+                        <option value="gestante">Gestante</option>
+                        <option value="puérpera">Puérpera</option>
+                        <option value="recien_nacido">Recién Nacido</option>
+                    </select>
                 </div>
+
                 <div class="form-field">
                     <label>Teléfono</label>
-                    {{ form.telefono }}
+                    <input type="text" name="telefono" class="input-text">
                 </div>
             </div>
 
@@ -142,32 +149,38 @@
             <h2 class="form-section-title">Características</h2>
 
             <div class="checkbox-group">
-                <label class="checkbox-item">{{ form.descapacitado }} Discapacitada</label>
-                <label class="checkbox-item">{{ form.pueblo_originario }} Pueblo originario</label>
-                <label class="checkbox-item">{{ form.privada_de_libertad }} Privada de libertad</label>
-                <label class="checkbox-item">{{ form.transexual }} Transexual</label>
+                <label class="checkbox-item"><input type="radio" name="feature"> Discapacitada</label>
+                <label class="checkbox-item"><input type="radio" name="feature"> Pueblo originario</label>
+                <label class="checkbox-item"><input type="radio" name="feature"> Privada de libertad</label>
+                <label class="checkbox-item"><input type="radio" name="feature"> Transexual</label>
             </div>
 
             <div class="form-grid-3">
                 <div class="form-field">
                     <label>Visita Guiada</label>
-                    {{ form.visita_guiada }}
+                    <select name="visita_guiada" class="input-select">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
                 </div>
 
                 <div class="form-field">
-                    <label>Peso</label>
-                    {{ form.peso }}
+                    <label>Peso (kg)</label>
+                    <input type="number" step="0.1" name="peso" class="input-text">
                 </div>
 
                 <div class="form-field">
-                    <label>Altura</label>
-                    {{ form.altura }}
+                    <label>Altura (cm)</label>
+                    <input type="number" name="altura" class="input-text">
                 </div>
             </div>
 
             <div class="form-field">
                 <label>Actividad</label>
-                {{ form.actividad }}
+                <select name="actividad" class="input-select">
+                    <option value="activa">Activa</option>
+                    <option value="sedentaria">Sedentaria</option>
+                </select>
             </div>
         </section>
 
@@ -178,16 +191,18 @@
             <div class="form-grid-3">
                 <div class="form-field">
                     <label>Nacionalidad</label>
-                    {{ form.nacionalidad }}
+                    <input type="text" name="nacionalidad" class="input-text">
                 </div>
+
                 <div class="form-field">
                     <label>Comuna</label>
-                    {{ form.comuna }}
+                    <input type="text" name="comuna" class="input-text">
                 </div>
+
                 <div class="form-field">
                     <label>CESFAM</label>
-                    {{ form.cesfam }}
-                    <div class="field-help">{{ form.cesfam.help_text }}</div>
+                    <input type="text" name="cesfam" class="input-text">
+                    <div class="field-help">Centro de salud de referencia</div>
                 </div>
             </div>
 

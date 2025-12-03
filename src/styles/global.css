@@ -3,14 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Manrope", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 /* ===== Variables del modo oscuro ===== */
 :root {
-    --ff: "Manrope", sans-serif;
+    --ff: "Inter", sans-serif;
 
-    --h1: 700 1.5rem/1.2em var(--ff);
+    --h1: 700 2rem/3em var(--ff);
     --h2: 700 1.25rem/1.4em var(--ff);
     --h3: 700 1.125rem/1.4em var(--ff);
     --p: 400 1rem/1.6em var(--ff);
@@ -85,4 +85,11 @@ body {
 
 .theme-btn:hover {
     background: var(--bg-light);
+}
+
+.main-title {
+    font: var(--h1);
+    color: var(--text);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

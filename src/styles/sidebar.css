@@ -116,6 +116,7 @@ body.dark {
     height: 30px;
     flex-shrink: 0;
     filter: var(--icon-filter);
+    fill: currentColor;
 }
 
 /* ============================================

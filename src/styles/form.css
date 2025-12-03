@@ -1,0 +1,145 @@
+/* ---------------------- RESET ---------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ---------------------- CONTENEDOR FORM ---------------------- */
+.form-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px 50px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ---------------------- TITULOS DE SECCIÓN ---------------------- */
+.form-section {
+    background: #f8f9fb;
+    border-radius: 20px;
+    padding: 25px 30px;
+    border: 1px solid #eceff4;
+}
+
+.form-section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+}
+
+/* ---------------------- GRID ---------------------- */
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+@media (max-width: 900px) {
+    .form-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------------- CAMPOS ---------------------- */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #444;
+}
+
+/* ---------------------- INPUTS ---------------------- */
+.input-text,
+.input-select {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1.5px solid #e3e6ea;
+    background: #f4f6f9;
+    font-size: 0.95rem;
+    transition: 0.25s ease;
+}
+
+.input-text:hover,
+.input-select:hover {
+    background: #eef1f5;
+}
+
+.input-text:focus,
+.input-select:focus {
+    background: #fff;
+    border-color: #ff3a3a;
+    box-shadow: 0 0 0 4px rgba(255, 58, 58, 0.25);
+    outline: none;
+}
+
+/* ---------------------- SELECT ---------------------- */
+.input-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+/* ---------------------- AYUDA ---------------------- */
+.field-help {
+    font-size: 0.8rem;
+    color: #8a8a8a;
+    margin-top: -3px;
+}
+
+/* ---------------------- CHECKBOXES ---------------------- */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px 0;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #ff3a3a;
+    cursor: pointer;
+}
+
+/* ---------------------- BOTON PRINCIPAL ---------------------- */
+.btn-primary {
+    padding: 15px 30px;
+    background: #ff1c1c;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #ff4242;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
