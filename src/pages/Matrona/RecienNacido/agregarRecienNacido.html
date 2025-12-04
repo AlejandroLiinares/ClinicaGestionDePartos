@@ -1,24 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CSS Global-->
-    <link rel="stylesheet" href="../../../styles/global.css" />
+    <title>Añadir Recién Nacido - Matrona</title>
 
-    <!-- CSS Menu de navegación -->
-     <link rel="stylesheet" href="../../../styles/sidebar.css" />
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../../../styles/global.css">
 
-    <!-- CSS Cards -->
-    <link rel="stylesheet" href="../../../styles/cards.css" />
+    <!-- Sidebar -->
+    <link rel="stylesheet" href="../../../styles/sidebar.css">
 
-    <!-- JS Tema -->
+    <!-- Formularios -->
+    <link rel="stylesheet" href="../../../styles/form.css">
+
+    <!-- Tema -->
     <script src="../../../scripts/theme-toggle.js" defer></script>
-    
-    <title>Agregar recién nacido</title>
 </head>
-<body>
-    
+
+<body class="light">
+
+<!-- SIDEBAR -->
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+
+        <a href="../../../../index.html" class="nav__logo">
+            <img src="../../../assets/images/HermindaMartin.png" width="140" height="60" class="nav__logo-icon">
+        </a>
+
+        <div class="nav-scroll">
+            <ul class="nav__links">
+
+                <li class="nav__item">
+                    <a href="../inicioMatrona.html" class="nav__link">
+                        <img src="../../../assets/svg/inicio.svg" class="nav-svg">
+                        <span class="nav-text">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="pacientes.html" class="nav__link active">
+                        <img src="../../../assets/svg/paciente.svg" class="nav-svg">
+                        <span class="nav-text">Pacientes</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+</aside>
+
+<!-- HEADER -->
+<header class="top-header">
+
+    <div class="header-right">
+        <div class="profile-info">
+            <img src="../../../assets/icons/matronaicon.png" width="30" height="30" class="profile-photo">
+            <span class="profile-name">Matrona Ana María</span>
+        </div>
+
+        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../../assets/svg/moon.svg">
+        </button>
+    </div>
+
+    <h1>Añadir Recién Nacido</h1>
+</header>
+
+
+<main class="main-container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumbs">
+        <a href="../inicioMatrona.html">Inicio</a>
+        <span>›</span>
+        <a href="recienNacido.html">Recién Nacidos</a>
+        <span>›</span>
+        <span>Nuevo</span>
+    </nav>
+
+<form class="form-content">
+
+        <!-- INFORMACIÓN GENERAL -->
+        <section class="form-section">
+            <h2 class="form-section-title">Información General</h2>
+
+            <div class="form-grid-3">
+
+                <!-- PARTO -->
+                <div class="form-field">
+                    <label for="parto_id">Parto</label>
+                    <select id="parto_id" name="parto_id" required>
+                        <option value="">Seleccione...</option>
+                        <!-- Rellenar desde backend -->
+                    </select>
+                </div>
+
+                <!-- PRESENTACIÓN FETAL -->
+                <div class="form-field">
+                    <label for="presentacion_fetal_id">Presentación Fetal</label>
+                    <select id="presentacion_fetal_id" name="presentacion_fetal_id" required>
+                        <option value="">Seleccione...</option>
+                        <!-- Rellenar desde backend -->
+                    </select>
+                </div>
+
+                <!-- FECHA Y HORA -->
+                <div class="form-field">
+                    <label for="fecha_hora">Fecha y Hora</label>
+                    <input type="datetime-local" id="fecha_hora" name="fecha_hora">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DATOS DEL RECIÉN NACIDO -->
+        <section class="form-section">
+            <h2 class="form-section-title">Datos del Recién Nacido</h2>
+
+            <div class="form-grid-3">
+
+                <div class="form-field">
+                    <label for="nombre_completo">Nombre Completo</label>
+                    <input type="text" id="nombre_completo" name="nombre_completo" maxlength="300">
+                </div>
+
+                <div class="form-field">
+                    <label for="codigo">Código</label>
+                    <input type="text" id="codigo" name="codigo" maxlength="10">
+                </div>
+
+                <div class="form-field">
+                    <label for="destino_RN">Destino RN</label>
+                    <input type="text" id="destino_RN" name="destino_RN" maxlength="50">
+                </div>
+
+            </div>
+
+            <div class="form-grid-3">
+
+                <div class="form-field">
+                    <label for="peso">Peso (gr)</label>
+                    <input type="number" step="0.01" id="peso" name="peso">
+                </div>
+
+                <div class="form-field">
+                    <label for="talla">Talla (cm)</label>
+                    <input type="number" step="0.01" id="talla" name="talla">
+                </div>
+
+                <div class="form-field">
+                    <label for="perimetro_cefalico">Perímetro Cefálico (cm)</label>
+                    <input type="number" step="0.01" id="perimetro_cefalico" name="perimetro_cefalico">
+                </div>
+
+            </div>
+
+            <div class="form-grid-3">
+
+                <div class="form-field">
+                    <label for="perimetro_toracico">Perímetro Torácico (cm)</label>
+                    <input type="number" step="0.01" id="perimetro_toracico" name="perimetro_toracico">
+                </div>
+
+                <div class="form-field">
+                    <label for="apgar_1">Apgar al Minuto 1</label>
+                    <input type="number" id="apgar_1" name="apgar_1" min="0" max="10">
+                </div>
+
+                <div class="form-field">
+                    <label for="apgar_5">Apgar a los 5 Minutos</label>
+                    <input type="number" id="apgar_5" name="apgar_5" min="0" max="10">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CUIDADOS Y OBSERVACIONES -->
+        <section class="form-section">
+            <h2 class="form-section-title">Cuidados y Observaciones</h2>
+
+            <div class="form-grid-3">
+
+                <div class="form-field">
+                    <label for="apego">Apego</label>
+                    <input type="number" id="apego" name="apego">
+                </div>
+
+                <div class="form-field">
+                    <label for="apego_canguro">Apego Canguro</label>
+                    <select id="apego_canguro" name="apego_canguro">
+                        <option value="">Seleccione...</option>
+                        <option value="0">No</option>
+                        <option value="1">Sí</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="gases_de_cordon">Gases de Cordón</label>
+                    <select id="gases_de_cordon" name="gases_de_cordon">
+                        <option value="">Seleccione...</option>
+                        <option value="0">No</option>
+                        <option value="1">Sí</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-grid-3">
+
+                <div class="form-field">
+                    <label for="OAE">OAE</label>
+                    <input type="number" id="OAE" name="OAE">
+                </div>
+
+                <div class="form-field">
+                    <label for="lactancia_60">Lactancia < 60 min</label>
+                    <select id="lactancia_60" name="lactancia_60">
+                        <option value="">Seleccione...</option>
+                        <option value="0">No</option>
+                        <option value="1">Sí</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="apego_tunel">Apego en Túnel</label>
+                    <select id="apego_tunel" name="apego_tunel">
+                        <option value="">Seleccione...</option>
+                        <option value="0">No</option>
+                        <option value="1">Sí</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-field">
+                <label for="alojamiento_conjunto">Alojamiento Conjunto</label>
+                <select id="alojamiento_conjunto" name="alojamiento_conjunto">
+                    <option value="">Seleccione...</option>
+                    <option value="0">No</option>
+                    <option value="1">Sí</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="observaciones">Observaciones</label>
+                <textarea id="observaciones" name="observaciones" rows="3" maxlength="250"></textarea>
+            </div>
+
+        </section>
+
+        <!-- BOTÓN -->
+        <div class="form-submit">
+            <button type="submit" class="btn-primary">Guardar</button>
+        </div>
+
+    </form>
+
+</main>
+
 </body>
 </html>

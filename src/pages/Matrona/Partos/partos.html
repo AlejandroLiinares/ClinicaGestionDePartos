@@ -1,44 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CSS Global-->
-    <link rel="stylesheet" href="../../../styles/global.css" />
+    <title>Partos - Matrona</title>
 
-    <!-- CSS Menu de navegación -->
-     <link rel="stylesheet" href="../../../styles/sidebar.css" />
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../../../styles/global.css">
 
-    <!-- CSS Cards -->
-    <link rel="stylesheet" href="../../../styles/cards.css" />
+    <!-- Sidebar -->
+    <link rel="stylesheet" href="../../../styles/sidebar.css">
 
-    <!-- JS Tema -->
+    <!-- Cards -->
+    <link rel="stylesheet" href="../../../styles/cards.css">
+
+    <!-- Tema -->
     <script src="../../../scripts/theme-toggle.js" defer></script>
-    
-    <title>Partos</title>
 </head>
-<body>
 
-    <aside id="home" class="sidebar">
-        <nav class="nav container">
+<body class="light">
 
-            <!-- Logo -->
-            <a href="../../../index.html" class="nav_logo">Clínica Herminda Martín</a>
-            <ul class="nav__links"> 
-                <li><a href="../inicioMatrona.html">Inicio</a></li> 
-                <li><a href="../Pacientes/pacientes.html">Pacientes</a></li> 
-                <li><a href="../Gestaciones/gestaciones.html">Gestaciones</a></li> 
-                <li><a href="../Partos/partos.html">Partos</a></li>
-                <li><a href="../RecienNacido/recienNacido.html">Recién Nacidos</a></li>
-                <li><a href="../Profesionales/profesionales.html">Profesionales</a></li>
-                <li><a href="../Turnos/turnos.html">Turnos</a></li>
-                <li><a href="../Supervisor/Auditoria/auditoria.html">Auditoría</a></li>
-                <li><a href="../Usuarios/usuarios.html">Usuarios</a></li> 
+<!-- SIDEBAR -->
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+
+        <!-- Logo -->
+        <a href="../../../../index.html" class="nav__logo">
+            <img src="../../../assets/images/HermindaMartin.png"
+                 alt="Logo Hospital Herminda Martín"
+                 class="nav__logo-icon"
+                 width="140" height="60">
+        </a>
+
+        <div class="nav-scroll">
+            <ul class="nav__links">
+
+                <li class="nav__item">
+                    <a href="../inicioMatrona.html" class="nav__link">
+                        <img src="../../../assets/svg/inicio.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../Pacientes/pacientes.html" class="nav__link active">
+                        <img src="../../../assets/svg/paciente.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Paciente</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Matrona/Gestaciones/gestaciones.html" class="nav__link">
+                        <img src="../../../assets/svg/gestacion.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Gestaciones</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Matrona/Partos/partos.html" class="nav__link">
+                        <img src="../../../assets/svg/parto.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Partos</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Matrona/RecienNacido/recienNacido.html" class="nav__link">
+                        <img src="../../../assets/svg/reciennacido.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Recién Nacidos</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Matrona/Profesionales/profesionales.html" class="nav__link">
+                        <img src="../../../assets/svg/profesional.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Profesionales</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Turnos/turnos.html" class="nav__link">
+                        <img src="../../../assets/svg/turnos.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Turnos</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Supervisor/Auditoria/auditoria.html" class="nav__link">
+                        <img src="../../../assets/svg/auditoria.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Auditoría</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Usuarios/usuarios.html" class="nav__link">
+                        <img src="../../../assets/svg/usuarios.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Usuarios</span>
+                    </a>
+                </li>
+
             </ul>
-        </nav>
-    </aside>
+        </div>
 
-    <h1 id="home">Partos</h1>
+    </nav>
+</aside>
+
+<!-- HEADER SUPERIOR -->
+<header class="top-header">
+
+    <div class="header-right">
+        <div class="profile-info">
+            <img src="../../../assets/icons/matronaicon.png"
+                 width="30" height="30"
+                 class="profile-photo"
+                 alt="Foto de perfil de la matrona">
+
+            <span class="profile-name">Matrona Ana María</span>
+        </div>
+
+        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+                <img id="themeIcon" src="../../../assets/svg/moon.svg" alt="Tema" />
+            </button>
+    </div>
+
+    <h1>Gestión de Partos</h1>
+
+</header>
+
+<main class="main-container">
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+        <a href="../inicioMatrona.html">Inicio</a>
+        <span>›</span>
+        <span>Partos</span>
+    </nav>
+
+    <h2>Accesos rápidos</h2>
+
+    <section class="cards-container">
+
+        <div class="card">
+            <a href="listarPartos.html" class="card-button">
+                <img alt="Listar partos"
+                     src="../../../assets/icons/listarpartosicon.png"
+                     width="120" height="140">
+                <h3>Listar partos</h3>
+                <p>Consulta el listado de todos tus partos.</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="agregarParto.html" class="card-button">
+                <img alt="Agregar parto"
+                     src="../../../assets/icons/agregarpicon.png"
+                     width="120" height="130">
+                <h3>Agregar nuevo parto</h3>
+                <p>Registra un nuevo parto en el sistema.</p>
+            </a>
+        </div>
+
+    </section>
+</main>
+
 </body>
 </html>

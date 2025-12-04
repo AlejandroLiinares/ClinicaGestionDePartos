@@ -78,13 +78,34 @@
 }
 
 .input-text:focus,
-.input-select:focus {
+.input-select:focus,
+.input-text-large:focus {
     background: #fff;
-    border-color: #ff3a3a;
     box-shadow: 0 0 0 4px rgba(255, 58, 58, 0.25);
     outline: none;
 }
 
+.input-text-large {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1.5px solid #e3e6ea;
+    background: #f4f6f9;
+    font-size: 0.95rem;
+    transition: 0.25s ease;
+    min-height: 150px;
+    resize: vertical;
+    line-height: 1.4;
+}
+
+.input-text-large {
+    vertical-align: top;
+}
+
+
+.input-text-large:hover {
+    background: #eef1f5;
+}
 /* ---------------------- SELECT ---------------------- */
 .input-select {
     appearance: none;

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Parto - Matrona</title>
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../../../styles/global.css">
+
+    <!-- Sidebar -->
+    <link rel="stylesheet" href="../../../styles/sidebar.css">
+
+    <!-- Formularios -->
+    <link rel="stylesheet" href="../../../styles/form.css">
+
+    <!-- Tema -->
+    <script src="../../../scripts/theme-toggle.js" defer></script>
+</head>
+
+<body class="light">
+
+<!-- SIDEBAR -->
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+
+        <a href="../../../../index.html" class="nav__logo">
+            <img src="../../../assets/images/HermindaMartin.png" width="140" height="60" class="nav__logo-icon">
+        </a>
+
+        <div class="nav-scroll">
+            <ul class="nav__links">
+
+                <li class="nav__item">
+                    <a href="../inicioMatrona.html" class="nav__link">
+                        <img src="../../../assets/svg/inicio.svg" class="nav-svg">
+                        <span class="nav-text">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="pacientes.html" class="nav__link active">
+                        <img src="../../../assets/svg/paciente.svg" class="nav-svg">
+                        <span class="nav-text">Pacientes</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+</aside>
+
+<!-- HEADER -->
+<header class="top-header">
+
+    <div class="header-right">
+        <div class="profile-info">
+            <img src="../../../assets/icons/matronaicon.png" width="30" height="30" class="profile-photo">
+            <span class="profile-name">Matrona Ana María</span>
+        </div>
+
+        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../../assets/svg/moon.svg">
+        </button>
+    </div>
+
+    <h1>Añadir Parto</h1>
+</header>
+
+
+<main class="main-container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumbs">
+        <a href="../inicioMatrona.html">Inicio</a>
+        <span>›</span>
+        <a href="partos.html">Partos</a>
+        <span>›</span>
+        <span>Nuevo</span>
+    </nav>
+
+<form class="form-wrapper">
+
+    <!-- INFORMACIÓN PRINCIPAL -->
+    <fieldset class="form-section">
+        <legend class="form-section-title">Información Principal del Parto</legend>
+
+        <div class="form-grid-3">
+
+            <!-- USUARIO -->
+            <div class="form-field">
+                <label for="usuario_id">Profesional Responsable</label>
+                <select id="usuario_id" name="parto[usuario_id]" class="input-select" required>
+                    <option value="">Seleccione al usuario</option>
+                    <!-- Daniel vos vas a cargar a las matronas, si quieres ayuda me dices.-->
+                </select>
+            </div>
+
+            <!-- TIPO DE INGRESO -->
+            <div class="form-field">
+                <label for="id_tipo_de_ingreso">Tipo de Ingreso</label>
+                <select id="id_tipo_de_ingreso" name="parto[id_tipo_de_ingreso]" class="input-select" required>
+                    <option value="">Seleccione tipo</option>
+                </select>
+            </div>
+
+            <!-- GRUPO ROBSON -->
+            <div class="form-field">
+                <label for="grupo_robson_id">Grupo Robson</label>
+                <select id="grupo_robson_id" name="parto[grupo_robson_id]" class="input-select" required>
+                    <option value="">Seleccione grupo</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-grid-3">
+
+            <!-- VÍA DE NACIMIENTO -->
+            <div class="form-field">
+                <label for="via_nacimiento_id">Vía de Nacimiento</label>
+                <select id="via_nacimiento_id" name="parto[via_nacimiento_id]" class="input-select" required>
+                    <option value="">Seleccione vía</option>
+                </select>
+            </div>
+
+            <!-- GESTACIÓN ASOCIADA -->
+            <div class="form-field">
+                <label for="gestacion_id">Gestación Asociada</label>
+                <select id="gestacion_id" name="parto[gestacion_id]" class="input-select" required>
+                    <option value="">Seleccione gestación</option>
+                </select>
+            </div>
+
+            <!-- FECHA INGRESO -->
+            <div class="form-field">
+                <label for="fecha_ingreso">Fecha de Ingreso</label>
+                <input type="datetime-local" id="fecha_ingreso" name="parto[fecha_ingreso]" class="input-text">
+            </div>
+
+        </div>
+    </fieldset>
+
+
+    <!-- FACTORES MATERNOS -->
+    <fieldset class="form-section">
+        <legend class="form-section-title">Factores Maternos</legend>
+
+        <div class="form-grid-3">
+
+            <div class="form-field">
+                <label for="paridad">Paridad</label>
+                <input type="number" id="paridad" name="parto[paridad]" class="input-text" min="0">
+            </div>
+
+            <div class="form-field">
+                <label for="gestaciones">Gestaciones Previas</label>
+                <input type="number" id="gestaciones" name="parto[gestaciones]" class="input-text" min="0">
+            </div>
+
+            <div class="form-field">
+                <label for="edad_madre">Edad de la Madre al Parto</label>
+                <input type="number" id="edad_madre" name="parto[edad_madre]" class="input-text" min="10" max="60">
+            </div>
+
+        </div>
+
+        <div class="form-grid-3">
+
+            <div class="form-field">
+                <label for="semana_gestacion_momento">Semana de Gestación al Momento</label>
+                <input type="number" id="semana_gestacion_momento" name="parto[semana_gestacion_momento]" class="input-text" min="20" max="45">
+            </div>
+
+            <div class="form-field">
+                <label for="estado">Estado del Parto</label>
+                <select id="estado" name="parto[estado]" class="input-select">
+                    <option value="">Seleccione estado</option>
+                    <!-- Opciones de ENUM -->
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="posicion_materna">Posición Materna</label>
+                <select id="posicion_materna" name="parto[posicion_materna]" class="input-select">
+                    <option value="">Seleccione posición</option>
+                    <!-- Opciones ENUM -->
+                </select>
+            </div>
+
+        </div>
+    </fieldset>
+
+
+    <!-- PROCESO DE PARTO -->
+    <fieldset class="form-section">
+        <legend class="form-section-title">Proceso del Parto</legend>
+
+        <div class="checkbox-group">
+
+            <label class="checkbox-item">
+                <input type="checkbox" name="parto[acompanante]" value="1"> Acompañante
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox" name="parto[monitor]" value="1"> Monitor
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox" name="parto[ttc]" value="1"> TTC
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox" name="parto[induccion]" value="1"> Inducción
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox" name="parto[aceleracion]" value="1"> Aceleración
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox" name="parto[oxitocina_profilactica]" value="1"> Oxitocina Profiláctica
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox" name="parto[uso_sala_saip]" value="1"> Uso de Sala SAIP
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox" name="parto[entrega_placenta]" value="1"> Entrega de Placenta
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox" name="parto[esterilizacion]" value="1"> Esterilización
+            </label>
+
+        </div>
+
+        <div class="form-grid-3">
+
+            <div class="form-field">
+                <label for="n_tactos_vaginales">N° Tactos Vaginales</label>
+                <input type="number" id="n_tactos_vaginales" name="parto[n_tactos_vaginales]" class="input-text" min="0">
+            </div>
+
+            <div class="form-field">
+                <label for="tiempo_dilatacion">Tiempo de Dilatación (min)</label>
+                <input type="number" id="tiempo_dilatacion" name="parto[tiempo_dilatacion]" class="input-text" min="0">
+            </div>
+
+            <div class="form-field">
+                <label for="tiempo_expulsivo">Tiempo Expulsivo (min)</label>
+                <input type="number" id="tiempo_expulsivo" name="parto[tiempo_expulsivo]" class="input-text" min="0">
+            </div>
+
+        </div>
+
+        <div class="form-grid-3">
+
+            <div class="form-field">
+                <label for="rotura_membrana">Rotura de Membrana</label>
+                <select id="rotura_membrana" name="parto[rotura_membrana]" class="input-select">
+                    <option value="">Seleccione</option>
+                    <!-- ENUM -->
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="tiempo_membrana_rota">Tiempo de Membrana Rota</label>
+                <input type="datetime-local" id="tiempo_membrana_rota" name="parto[tiempo_membrana_rota]" class="input-text">
+            </div>
+
+            <div class="form-field">
+                <label for="estado_perine">Estado del Periné</label>
+                <select id="estado_perine" name="parto[estado_perine]" class="input-select">
+                    <option value="">Seleccione estado</option>
+                    <!-- ENUM -->
+                </select>
+            </div>
+
+        </div>
+
+    </fieldset>
+
+
+    <!-- BOTÓN -->
+    <div class="form-submit">
+        <button type="submit" class="btn-primary">Registrar Parto</button>
+    </div>
+
+</form>
+
+
+</main>
+
+</body>
+</html>

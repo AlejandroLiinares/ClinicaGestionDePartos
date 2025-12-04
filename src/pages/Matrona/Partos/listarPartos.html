@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Partos - Matrona</title>
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../../../styles/global.css">
+
+    <!-- Sidebar -->
+    <link rel="stylesheet" href="../../../styles/sidebar.css">
+
+    <!-- Tablas -->
+    <link rel="stylesheet" href="../../../styles/table.css">
+
+    <!-- Tema -->
+    <script src="../../../scripts/theme-toggle.js" defer></script>
+</head>
+
+<body class="light">
+
+<!-- SIDEBAR -->
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+
+        <!-- Logo -->
+        <a href="../../../../index.html" class="nav__logo">
+            <img src="../../../assets/images/HermindaMartin.png"
+                 alt="Logo Hospital Herminda Martín"
+                 class="nav__logo-icon"
+                 width="140" height="60">
+        </a>
+
+        <div class="nav-scroll">
+            <ul class="nav__links">
+
+                <li class="nav__item">
+                    <a href="../inicioMatrona.html" class="nav__link">
+                        <img src="../../../assets/svg/inicio.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="pacientes.html" class="nav__link active">
+                        <img src="../../../assets/svg/paciente.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Pacientes</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../Gestaciones/gestaciones.html" class="nav__link">
+                        <img src="../../../assets/svg/gestacion.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Gestaciones</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../Partos/partos.html" class="nav__link">
+                        <img src="../../../assets/svg/parto.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Partos</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../RecienNacido/recienNacido.html" class="nav__link">
+                        <img src="../../../assets/svg/reciennacido.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Recién Nacidos</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+</aside>
+
+<!-- HEADER SUPERIOR -->
+<header class="top-header">
+
+    <div class="header-right">
+        <div class="profile-info">
+            <img src="../../../assets/icons/matronaicon.png"
+                 width="30" height="30"
+                 class="profile-photo"
+                 alt="Foto de matrona">
+            <span class="profile-name">Matrona Ana María</span>
+        </div>
+
+        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../../assets/svg/moon.svg" alt="Tema">
+        </button>
+    </div>
+
+    <h1>Listado de Partos</h1>
+
+</header>
+
+<main class="main-container">
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+        <a href="../inicioMatrona.html">Inicio</a>
+        <span>›</span>
+        <a href="partos.html">Partos</a>
+        <span>›</span>
+        <span>Listado</span>
+    </nav>
+
+    <!-- Barra superior: buscador + agregar -->
+    <div class="page-actions">
+        <input type="text" class="search-input" placeholder="Buscar parto...">
+
+        <a href="agregarParto.html" class="btn-primary">
+            + Agregar Parto
+        </a>
+    </div>
+
+    <!-- TABLA -->
+    <section class="table-container">
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>RUT</th>
+                    <th>Nombre completo</th>
+                    <th>Edad</th>
+                    <th>Última gestación</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- Aquí Daniel inyectará los datos -->
+                <!-- {% for paciente in pacientes %} -->
+                <tr>
+                    <td>11.234.567-8</td>
+                    <td>María Fernanda López</td>
+                    <td>28</td>
+                    <td>G2 - 36 semanas</td>
+                    <td>
+                        <a href="detallarParto.html" class="btn-table">Ver</a>
+                    </td>
+                </tr>
+                <!-- {% endfor %} -->
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+</body>
+</html>
