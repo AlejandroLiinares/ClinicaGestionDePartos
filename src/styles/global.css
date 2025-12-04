@@ -1,4 +1,6 @@
-/* ===== Reset general ===== */
+/* =========================================================
+   RESET GENERAL
+========================================================= */
 * {
     margin: 0;
     padding: 0;
@@ -6,57 +8,103 @@
     font-family: "Inter", sans-serif;
 }
 
-/* ===== Variables del modo oscuro ===== */
+/* =========================================================
+   VARIABLES GLOBALES — MODO CLARO (DEFAULT)
+========================================================= */
 :root {
     --ff: "Inter", sans-serif;
 
-    --h1: 700 2rem/3em var(--ff);
-    --h2: 700 1.25rem/1.4em var(--ff);
-    --h3: 700 1.125rem/1.4em var(--ff);
+    /* Tipografías */
+    --h1: 700 2rem/1.2em var(--ff);
+    --h2: 700 1.5rem/1.3em var(--ff);
+    --h3: 600 1.25rem/1.4em var(--ff);
     --p: 400 1rem/1.6em var(--ff);
-    --small: 400 0.75rem/1.6em var(--ff);
+    --small: 400 0.85rem/1.4em var(--ff);
 
     --transition: 0.25s ease;
 
-    /* Colores base */
+    /* ===== MODO CLARO ===== */
+    --primary: oklch(66.304% 0.17292 23.008);
+
+    --bg-dark: oklch(0.96 0 264);   /* Body */
+    --bg: oklch(1 0 264);           /* Cards, contenedores */
+    --bg-light: oklch(98% 0 264);   /* Hover */
+
+    --text: oklch(15% 0 0);
+    --text-muted: oklch(40% 0.05 264);
+
+    /* Sombras suaves (estética principal del sistema) */
+    --shadow-s: 
+        inset 0 1px 2px #ffffffd0,
+        0 1px 2px #00000020,
+        0 2px 4px #00000010;
+
+    --shadow-m: 
+        inset 0 1px 2px #ffffffb0,
+        0 2px 4px #00000025,
+        0 4px 8px #00000015;
+
+    --shadow-l: 
+        inset 0 1px 2px #ffffff90,
+        0 4px 6px #00000030,
+        0 10px 20px #00000020;
+}
+
+/* =========================================================
+   MODO OSCURO (ACTIVO SI <body> TIENE LA CLASE .dark)
+========================================================= */
+body.dark {
     --primary: oklch(57.488% 0.23419 274.123);
+
     --bg-dark: oklch(0.1 0 264);
     --bg: oklch(0.2 0 264);
     --bg-light: oklch(0.3 0 264);
 
-    /* Texto */
-    --text: oklch(0.96 0 264);
-    --text-muted: oklch(0.76 0 264);
-
-    /* Sombras */
-    --shadow-s: inset 0 1px 2px #ffffff30, 0 1px 2px #00000030, 0 2px 4px #00000015;
-    --shadow-m: inset 0 1px 2px #ffffff50, 0 2px 4px #00000030, 0 4px 8px #00000015;
-    --shadow-l: inset 0 1px 2px #ffffff70, 0 4px 6px #00000030, 0 6px 10px #00000015;
+    --text: oklch(96% 0 264);
+    --text-muted: oklch(76% 0 264);
 }
 
-/* aqui hay que hacer que por defecto sea blanco 
-y que el segundo sea dark */
-
-/* ===== Modo claro ===== */
-body.light {
-    --primary: oklch(66.304% 0.17292 23.008);
-    --bg-dark: oklch(0.92 0 264);
-    --bg: oklch(0.96 0 264);
-    --bg-light: oklch(1 0 264);
-
-    --text: oklch(0% 0 0);
-    --text-muted: oklch(24.111% 0.07514 24.751);
-}
-
-/* ===== Body ===== */
+/* =========================================================
+   BASE DEL SISTEMA
+========================================================= */
 body {
     background: var(--bg-dark);
     color: var(--text);
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 2rem;
     transition: var(--transition);
 }
 
-/* ===== Header superior ===== */
+/* =========================================================
+   TIPOGRAFÍAS
+========================================================= */
+h1 { font: var(--h1); color: var(--text); }
+h2 { font: var(--h2); color: var(--text); }
+h3 { font: var(--h3); color: var(--text); }
+
+p { font: var(--p); color: var(--text); }
+small { font: var(--small); color: var(--text-muted); }
+
+/* =========================================================
+   CONTENEDORES — CARDS Y SECCIONES
+========================================================= */
+.section,
+.card {
+    background: var(--bg);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-m);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.card:hover,
+.section:hover {
+    box-shadow: var(--shadow-l);
+}
+
+/* =========================================================
+   HEADER SUPERIOR
+========================================================= */
 .top-header {
     display: flex;
     align-items: center;
@@ -68,14 +116,22 @@ body {
     color: var(--text);
 }
 
-/* ===== Botón de tema ===== */
+/* =========================================================
+   BOTÓN DE TEMA
+========================================================= */
 .theme-btn {
     background: var(--bg);
-    padding: 0.4rem;
+    padding: 0.45rem;
     border-radius: 0.8rem;
     border: none;
     cursor: pointer;
     transition: var(--transition);
+    box-shadow: var(--shadow-s);
+}
+
+.theme-btn:hover {
+    background: var(--bg-light);
+    box-shadow: var(--shadow-m);
 }
 
 .theme-btn img {
@@ -83,10 +139,9 @@ body {
     height: 22px;
 }
 
-.theme-btn:hover {
-    background: var(--bg-light);
-}
-
+/* =========================================================
+   TÍTULO PRINCIPAL DE PÁGINA
+========================================================= */
 .main-title {
     font: var(--h1);
     color: var(--text);
