@@ -15,13 +15,165 @@
     <link rel="stylesheet" href="../../../styles/cards.css" />
 
     <!-- JS Tema -->
-    <script src="../../../scripts/theme-toggle.js" defer></script>
+    <script src="../../../scripts/sub-themes.js" defer></script>
     
 </head>
-<body class="light">
-    <h1>Reportes</h1>
-    <p>En los cards para exportar los reportes tienen que haber al menos dos botones:
-        Uno para Vista previa, y otro en rojo para 'exportar a PDF'
-    </p>
+<body>
+    <aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+
+        <!-- Logo -->
+        <a href="../../../../index.html" class="nav__logo">
+            <img src="../../../assets/images/HermindaMartin.png"
+                 alt="Logo Hospital Herminda Martín"
+                 class="nav__logo-icon"
+                 width="140" height="60">
+        </a>
+
+        <div class="nav-scroll">
+            <ul class="nav__links">
+
+                <li class="nav__item">
+                    <a href="../inicioMatrona.html" class="nav__link">
+                        <img src="../../../assets/svg/inicio.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../Pacientes/pacientes.html" class="nav__link active">
+                        <img src="../../../assets/svg/paciente.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Paciente</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Matrona/Gestaciones/gestaciones.html" class="nav__link">
+                        <img src="../../../assets/svg/gestacion.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Gestaciones</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Matrona/Partos/partos.html" class="nav__link">
+                        <img src="../../../assets/svg/parto.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Partos</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Matrona/RecienNacido/recienNacido.html" class="nav__link">
+                        <img src="../../../assets/svg/reciennacido.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Recién Nacidos</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Matrona/Profesionales/profesionales.html" class="nav__link">
+                        <img src="../../../assets/svg/profesional.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Profesionales</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Turnos/turnos.html" class="nav__link">
+                        <img src="../../../assets/svg/turnos.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Turnos</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Supervisor/Auditoria/auditoria.html" class="nav__link">
+                        <img src="../../../assets/svg/auditoria.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Auditoría</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="../../../pages/Usuarios/usuarios.html" class="nav__link">
+                        <img src="../../../assets/svg/usuarios.svg" class="nav-svg" alt="">
+                        <span class="nav-text">Usuarios</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+</aside>
+
+<header class="top-header">
+
+    <div class="header-right">
+        <div class="profile-info">
+            <img src="../../../assets/icons/matronaicon.png"
+                 width="30" height="30"
+                 class="profile-photo"
+                 alt="Foto de perfil de la matrona">
+
+            <span class="profile-name">Matrona Ana María</span>
+        </div>
+        
+        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../../assets/svg/moon.svg" alt="Tema" />
+        </button>
+        
+    </div>
+
+    <h1 class="main-title">Generación de Reportes</h1>
+
+</header>
+
+<main class="main-container">
+
+        <h2>Enviar reportes</h2>
+
+        <!-- Cards -->
+        <section class="cards-container">
+
+            <div class="card">
+                    <img alt="A11" src="../../../assets/icons/reporteicon.png"
+                    height="140px" width="120px"/>
+                    <h3>BS22</h3>
+                    <button style="background-color: red;" onclick="" class="card-button">
+                        <p>Generar en PDF</p>
+                        <p>Vista previa</p>
+                    </button>
+            </div>
+
+            <div class="card">
+                    <img alt="A11" src="../../../assets/icons/reporteicon.png"
+                    height="140px" width="120px"/>
+                    <h3>A11</h3>
+                    <button style="background-color: red;" onclick="" class="card-button">
+                        <p>Generar en PDF</p>
+                        <p>Vista previa</p>
+                    </button>
+            </div>
+            
+            <div class="card">
+                <button onclick="location.href='../Supervisor/Auditoria/auditoria.html'" class="card-button">
+                    <img alt="A24" src="../../assets/icons/reporteicon.png"
+                    height="130px" width="120px"/>
+                    <h3>A24</h3>
+                    <button style="background-color: red;" onclick="" class="card-button">
+                        <p>Generar en PDF</p>
+                        <p>Vista previa</p>
+                </button>
+            </div>
+
+            <div class="card">
+                <button onclick="location.href='../Supervisor/Auditoria/auditoria.html'" class="card-button">
+                    <img alt="Auditoria" src="../../assets/icons/reporteicon.png"
+                    height="130px" width="120px"/>
+                    <h3>A24</h3>
+                    <button style="background-color: red;" onclick="" class="card-button">
+                        <p>Generar en PDF</p>
+                        <p>Vista previa</p>
+                </button>
+            </div>
+
+        </section>
+    </main>
 </body>
 </html>

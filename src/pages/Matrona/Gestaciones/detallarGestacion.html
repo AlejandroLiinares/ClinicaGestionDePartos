@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detalle Gestación - Matrona</title>
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../../../styles/global.css">
+
+    <!-- Sidebar -->
+    <link rel="stylesheet" href="../../../styles/sidebar.css">
+
+    <!-- Formularios -->
+    <link rel="stylesheet" href="../../../styles/form.css">
+
+    <!-- Tema -->
+    <script src="../../../scripts/sub-themes.js" defer></script>
 </head>
+
 <body>
-    <h1>Detalle de la Gestación</h1>
+
+<!-- SIDEBAR -->
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+
+        <a href="../../../../index.html" class="nav__logo">
+            <img src="../../../assets/images/HermindaMartin.png" width="140" height="60" class="nav__logo-icon">
+        </a>
+
+        <div class="nav-scroll">
+            <ul class="nav__links">
+
+                <li class="nav__item">
+                    <a href="../inicioMatrona.html" class="nav__link">
+                        <img src="../../../assets/svg/inicio.svg" class="nav-svg">
+                        <span class="nav-text">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="pacientes.html" class="nav__link active">
+                        <img src="../../../assets/svg/paciente.svg" class="nav-svg">
+                        <span class="nav-text">Pacientes</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+</aside>
+
+<!-- HEADER -->
+<header class="top-header">
+
+    <div class="header-right">
+        <div class="profile-info">
+            <img src="../../../assets/icons/matronaicon.png" width="30" height="30" class="profile-photo">
+            <span class="profile-name">Matrona Ana María</span>
+        </div>
+
+        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../../assets/svg/moon.svg">
+        </button>
+    </div>
+
+    <h1>Detalles de la Gestación</h1>
+</header>
+
+
+<main class="main-container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumbs">
+        <a href="../inicioMatrona.html">Inicio</a>
+        <span>›</span>
+        <a href="gestaciones.html">Gestaciones</a>
+        <span>›</span>
+        <span>Detalle</span>
+    </nav>
+
+    <section class="form-section">
+        <h2>Información de la Gestación</h2>
+        <form class="detail-form">
+
+            <div class="form-group">
+                <label for="fechaGestacion">Fecha de la Gestación:</label>
+                <input type="date" id="fechaGestacion" name="fechaGestacion" value="2024-05-15" disabled>
+            </div>
+
+        </form>
+    </section>
+
+</main>
+
 </body>
 </html>
