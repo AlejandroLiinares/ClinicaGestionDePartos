@@ -68,10 +68,10 @@ body {
     background: var(--bg-dark);
     color: var(--text);
     transition: var(--transition);
-    margin-left: 1.8rem;
-    margin-right: 1.8rem;
-    margin-top: 8.5rem;
-    margin-bottom: 1.8rem;
+    margin-left: 1rem;
+    margin-right: 1.3rem;
+    margin-top: 6rem;
+    margin-bottom: 1.5rem;
 }
 
 /* BOTÓN DE TEMA */

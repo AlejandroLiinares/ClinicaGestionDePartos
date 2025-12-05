@@ -2,64 +2,42 @@
 .sidebar {
     position: fixed;
     /* 1. DESPEGAR DE LOS BORDES (El truco de la cápsula) */
-    top: 8.5rem;          /* Separación superior */
+    top: 5.5rem;          /* Separación superior */
     left: 1.5rem;            /* Separación izquierda */
     
     /* 2. ALTURA "FLOTANTE" */
     height: fit-content; /* Se adapta al contenido interno */
-    /* 3. FORMA DE CÁPSULA CONTENEDORA */
-    border-radius: 3rem;   /* Bordes muy redondos para el contenedor principal */
+    max-height: calc(100vh - 6rem);
+    border-radius: 3rem;  
     
-    background: var(--bg); /* Asegúrate que este color sea blanco o muy claro */
-    padding: 1.5rem 0.8rem; /* Ajusté el padding lateral para que los botones respiren */
+    background: var(--bg-panel); /* Asegúrate que este color sea blanco o muy claro */
+    padding: 1rem 0.6rem; /* Ajusté el padding lateral para que los botones respiren */
     box-shadow: var(--shadow-m);
     display: flex;
     flex-direction: column;
     transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Suaviza la animación */
-    overflow: hidden;
     z-index: 1000;
 }
 
 /* Sidebar colapsado */
 .sidebar.collapsed {
-    width: 5.5rem; 
-    /* La altura ya la controla la clase base .sidebar */
+    width: 5rem; 
 }
 
 /* Hover expansión */
 .sidebar.collapsed:hover {
-    width: 16rem; /* Un poco más ancho para que el texto respire mejor */
+    width: 15rem; /* Un poco más ancho para que el texto respire mejor */
 }
-
-/* LOS ESTILOS DE BOTONES ESTÁN EN EL GLOBAL YA QUE SE NECESITAN EN VARIOS LADOS */
-
-/*.sidebar-bottom {
-    bottom: 0;
-    top: auto;
-    width: 100%;
-    height: auto;
-    box-shadow: var(--shadow-xl);
-    padding: 0.5rem 1rem;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.sidebar-bottom.collapsed {
-    width: auto;
-    height: auto;
-}
-
-/*  LINKS DEL MENÚ */
 
 /* ESTILO DE LOS BOTONES (LAS PÍLDORAS) */
 .nav-link {
     display: flex;
     align-items: center;
-    gap: 1rem;            /* Más espacio entre icono y texto */
-    padding: 1rem 1.2rem; /* Más "gorditos" verticalmente */
+    gap: 0.8rem;            /* Más espacio entre icono y texto */
+    padding: 0.75rem 1rem; /* Más "gorditos" verticalmente */
     
     /* 4. BOTONES EN FORMA DE PÍLDORA PERFECTA */
-    border-radius: 50px;  /* Esto fuerza que sean redondos sin importar el ancho */
+    border-radius: 60px;  /* Esto fuerza que sean redondos sin importar el ancho */
     
     color: var(--text-muted);
     text-decoration: none;

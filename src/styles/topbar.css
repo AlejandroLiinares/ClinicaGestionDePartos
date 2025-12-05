@@ -34,20 +34,20 @@ body.dark {
 .top-header {
     /* Posicionamiento y Layout */
     position: fixed;
-    top: 1.5rem;
+    top: 0.8rem;
     left: 1.5rem;   /* Ajusta según tu sidebar colapsado */
-    right: 1.8rem;
-    height: 5rem;
+    right: 1.5rem;
+    height: 3.8rem;
     
     /* Estética (Usando Variables) */
     background: var(--bg-panel);
-    border-radius: 3rem;
+    border-radius: 2rem;
     box-shadow: var(--shadow-m);
     
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     z-index: 900;
     transition: all 0.4s ease; /* Suaviza el cambio de color Claro/Oscuro */
 }
@@ -63,6 +63,7 @@ body.dark {
 .topbar-search {
     flex: 1;
     max-width: 500px;
+    height: 2.8rem;
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -120,6 +121,7 @@ body.dark {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    line-height: 1.2;
 }
 
 .profile-name {
