@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS Global-->
+    <link rel="stylesheet" href="../styles/global.css" />
+
+    <!-- CSS Topbar -->
+    <link rel="stylesheet" href="../styles/topbar.css" />
+
+    <!-- CSS Menu de navegación -->
+    <link rel="stylesheet" href="../styles/sidebar.css" />
+
+    <!-- SVG Favicon  -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/pregnant.svg">  
+
+    <!-- CSS Cards -->
+    <link rel="stylesheet" href="../styles/cards.css" />
+
+    <!-- JS Tema -->
+    <script src="../scripts/one-themes.js" defer></script>
+</head>
+<body>
+    
+
+
+    <header class="top-header">
+        <!-- Logo -->
+        <a href="../../index.html" class="nav__logo">
+            <img src="../assets/icons/logo.png" alt="Logo" class="nav__logo-icon"
+            width="90px" height="55px"/>
+        </a>
+
+        <!-- BUSCADOR -->
+        <div class="topbar-search">
+            <img src="../assets/svg/buscar.svg" class="nav-svg" alt="Buscar"/>
+            <input type="text" class="search-input" placeholder="Buscar en el sistema...">
+        </div>
+
+        <!-- CAMBIO DE TEMA  -->
+        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../assets/svg/moon.svg" alt="Tema" />
+        </button>
+
+        <!-- CORREO TI  -->
+        <button class="action-btn" aria-label="Correo TI">
+            <img src="../assets/svg/correo.svg" alt="Correo TI" class="nav-svg"/>
+        </button>
+
+        <!-- PERFIL DE USUARIO -->
+        <div class="profile-container">
+            <img width="30" height="30" title="Foto de perfil del usuario"
+            alt="Foto de perfil del usuario" class="profile-photo"
+            src="../assets/icons/matronaicon.png"/>
+
+            <div class="profile-text">
+                <span class="profile-name">Matrona Ana María</span>
+                <span class="profile-email">ana.maria@clinica.cl</span>
+            </div>
+
+            <!-- BOTON DESPLEGABLE  -->
+            <button class="dropdown-btn" aria-label="Más opciones de perfil">
+                <img src="../assets/svg/dropdown.svg" alt="Más opciones"/>
+            </button>
+
+            <!-- DROPDOWN  -->
+            <div class="profile-dropdown">
+                <a href="../Matrona/perfilMatrona.html">Ver mi perfil.</a>
+            </div>
+        </div>
+    </header>
+
+
+
+</body>
+</html>

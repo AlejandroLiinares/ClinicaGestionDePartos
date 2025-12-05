@@ -1,82 +1,78 @@
-<!-- sidebar.html -->
-</li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS Sidebar -->
+    <link rel="stylesheet" href="../styles/sidebar.css" />
+
+    <!-- CSS Global-->
+    <link rel="stylesheet" href="../styles/global.css" />
+
+    <!-- JS Tema -->
+    <script src="../scripts/theme-toggle.js" defer></script>
+
+    <!-- SVG Favicon  -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/pregnant.svg">
 
 
-<!-- Pacientes -->
-<li class="nav_item" data-tooltip="Pacientes">
-    <a href="../Matrona/Pacientes/pacientes.html" class="nav_link">
-        <img src="../../assets/icons/patient.svg" class="nav_icon" alt="Pacientes">
-        <span class="nav_text">Pacientes</span>
-    </a>
-</li>
+</head>
+<body>
+    
 
 
-<!-- Gestaciones -->
-<li class="nav_item" data-tooltip="Gestaciones">
-    <a href="../Matrona/Gestaciones/gestaciones.html" class="nav_link">
-        <img src="../../assets/icons/pregnant.svg" class="nav_icon" alt="Gestaciones">
-        <span class="nav_text">Gestaciones</span>
-    </a>
-</li>
+    <aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+        <a href="#home" class="nav-link active">
+        <img src="../assets/svg/inicio.svg" class="nav-svg" />
+            <span class="nav-text">Inicio</span>
+        </a>
 
+        <a href="../Matrona/Pacientes/pacientes.html" class="nav-link">
+            <img src="../assets/svg/paciente.svg" class="nav-svg" />
+            <span class="nav-text">Pacientes</span>
+        </a>
 
-<!-- Partos (sección desplegable) -->
-<li class="nav_item nav_dropdown" data-tooltip="Partos">
-    <button class="dropdown_toggle">
-        <img src="../../assets/icons/birth.svg" class="nav_icon" alt="Partos">
-        <span class="nav_text">Partos</span>
-        <img src="../../assets/icons/arrow.svg" class="dropdown_arrow" alt="Abrir">
-    </button>
-    <ul class="dropdown_menu">
-        <li><a href="../Matrona/Partos/partos.html">Registro de Partos</a></li>
-        <li><a href="../Matrona/Partos/stats.html">Estadísticas</a></li>
-    </ul>
-</li>
+        <a href="../Matrona/Gestaciones/gestaciones.html" class="nav-link">
+            <img src="../assets/svg/gestacion.svg" class="nav-svg" />
+            <span class="nav-text">Gestaciones</span>
+        </a>
 
+        <a href="../Matrona/Partos/partos.html" class="nav-link">
+            <img src="../assets/svg/parto.svg" class="nav-svg" />
+            <span class="nav-text">Partos</span>
+        </a>
 
-<!-- Recién Nacidos -->
-<li class="nav_item" data-tooltip="Recién Nacidos">
-    <a href="../Matrona/RecienNacido/recienNacido.html" class="nav_link">
-        <img src="../../assets/icons/baby.svg" class="nav_icon" alt="Recién Nacidos">
-        <span class="nav_text">Recién Nacidos</span>
-    </a>
-</li>
+        <a href="../Matrona/RecienNacido/recienNacido.html" class="nav-link">
+            <img src="../assets/svg/reciennacido.svg" class="nav-svg" />
+            <span class="nav-text">Recién Nacidos</span>
+        </a>
 
+        <a href="../Profesionales/profesionales.html" class="nav-link">
+            <img src="../assets/svg/profesional.svg" class="nav-svg" />
+            <span class="nav-text">Profesionales</span>
+        </a>
 
-<!-- Profesionales -->
-<li class="nav_item" data-tooltip="Profesionales">
-    <a href="../Profesionales/profesionales.html" class="nav_link">
-        <img src="../../assets/icons/staff.svg" class="nav_icon" alt="Profesionales">
-        <span class="nav_text">Profesionales</span>
-    </a>
-</li>
+        <a href="../Turnos/turnos.html" class="nav-link">
+            <img src="../assets/svg/turnos.svg" class="nav-svg" />
+            <span class="nav-text">Turnos</span>
+        </a>
 
+        <a href="../Supervisor/Auditoria/auditoria.html" class="nav-link">
+            <img src="../assets/svg/auditoria.svg" class="nav-svg" />
+            <span class="nav-text">Auditoría</span>
+        </a>
 
-<!-- Turnos -->
-<li class="nav_item" data-tooltip="Turnos">
-    <a href="../Turnos/turnos.html" class="nav_link">
-        <img src="../../assets/icons/calendar.svg" class="nav_icon" alt="Turnos">
-        <span class="nav_text">Turnos</span>
-    </a>
-</li>
-
-
-<!-- Auditoría -->
-<li class="nav_item" data-tooltip="Auditoría">
-    <a href="../Supervisor/Auditoria/auditoria.html" class="nav_link">
-        <img src="../../assets/icons/audit.svg" class="nav_icon" alt="Auditoría">
-        <span class="nav_text">Auditoría</span>
-    </a>
-</li>
-
-
-<!-- Usuarios -->
-<li class="nav_item" data-tooltip="Usuarios">
-    <a href="../Usuarios/usuarios.html" class="nav_link">
-        <img src="../../assets/icons/users.svg" class="nav_icon" alt="Usuarios">
-        <span class="nav_text">Usuarios</span>
-    </a>
-</li>
-</ul>
-</nav>
+        <a href="../Usuarios/usuarios.html" class="nav-link">
+            <img src="../assets/svg/usuarios.svg" class="nav-svg" />
+            <span class="nav-text">Usuarios</span>
+        </a>
+    </nav>
 </aside>
+
+
+
+</body>
+</html>
