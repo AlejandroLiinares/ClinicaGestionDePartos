@@ -20,11 +20,60 @@
     <!-- JS Tema -->
     <script src="../../scripts/theme-toggle.js" defer></script>
 
+    <!-- JS DROPDOWN  -->
+    <script src="../../scripts/profile-dropdown.js" defer></script>
+
     <!-- SVG Favicon  -->
     <link rel="icon" type="image/svg+xml" href="/src/assets/svg/pregnant.svg">
 </head>
 
 <body>
+<header class="top-header">
+    
+    <a href="../../../index.html" class="nav__logo header-pill">
+        <img src="../../assets/icons/logo.png" alt="Logo" class="nav__logo-icon"
+        width="90px" height="55px"/>
+    </a>
+
+    <div class="topbar-search header-pill">
+        <img src="../../assets/svg/buscar.svg" class="nav-svg" alt="Buscar"/>
+        <input type="text" class="search-input" placeholder="Buscar en el sistema...">
+    </div>
+
+    <div class="actions-group header-pill">
+        <button id="themeToggle" class="action-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../assets/svg/moon.svg" alt="Tema" />
+        </button>
+
+        <button class="action-btn" aria-label="Correo TI">
+            <img src="../../assets/svg/correo.svg" alt="Correo TI" class="nav-svg"/>
+        </button>
+
+        <button class="action-btn" aria-label="Cerrar sesión">
+            <img src="../../assets/svg/salir.svg" alt="Cerrar sesión" class="nav-svg"/>
+        </button>
+    </div>
+
+    <div class="profile-container header-pill">
+        <img width="35" height="35" title="Foto de perfil"
+        alt="Foto perfil" class="profile-photo"
+        src="../../assets/icons/matronaicon.png"/>
+
+        <div class="profile-text">
+            <span class="profile-name">Matrona Ana María</span>
+            <span class="profile-email">ana.maria@clinica.cl</span>
+        </div>
+
+        <button class="dropdown-btn" aria-label="Más opciones">
+            <img src="../../assets/svg/flechaabajo.svg" alt="Más opciones" width="20px" height="20px"/>
+        </button>
+
+        <div class="profile-dropdown">
+            <a href="../Matrona/perfilMatrona.html">Ver mi perfil.</a>
+        </div>
+    </div>
+
+</header>
 
 <aside class="sidebar collapsed" id="sidebar">
     <nav class="nav-container">
@@ -63,139 +112,107 @@
             <span class="nav-text">Turnos</span>
         </a>
 
-        <a href="../Supervisor/Auditoria/auditoria.html" class="nav-link">
-            <img src="../../assets/svg/auditoria.svg" class="nav-svg" />
-            <span class="nav-text">Auditoría</span>
-        </a>
-
         <a href="../Usuarios/usuarios.html" class="nav-link">
             <img src="../../assets/svg/usuarios.svg" class="nav-svg" />
             <span class="nav-text">Usuarios</span>
         </a>
-    </nav>
-</aside>
 
-<!-- Sidebar inferior 
-<aside class="sidebar collapsed bottom" id="sidebar-bottom">
-    <nav class="nav-container-bottom">
-        <button class="nav-btn">
-            <img src="../../assets/svg/salir.svg" class="nav-svg" />
-            <span class="nav-text">Cerrar sesión</span>
-        </button>
-    </nav>
-</aside>
--->
-
-    <header class="top-header">
-        <!-- Logo -->
-        <a href="../../../index.html" class="nav__logo">
-            <img src="../../assets/icons/logo.png" alt="Logo" class="nav__logo-icon"
-            width="90px" height="55px"/>
+        <a href="../Supervisor/Reportes/reportes.html" class="nav-link">
+            <img src="../../assets/svg/reporte.svg" class="nav-svg" />
+            <span class="nav-text">Reportes</span>
         </a>
 
-        <!-- BUSCADOR -->
-        <div class="topbar-search">
-            <img src="../../assets/svg/buscar.svg" class="nav-svg" alt="Buscar"/>
-            <input type="text" class="search-input" placeholder="Buscar en el sistema...">
-        </div>
-
-        <!-- CAMBIO DE TEMA  -->
-        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
-            <img id="themeIcon" src="../../assets/svg/moon.svg" alt="Tema" />
-        </button>
-
-        <!-- CORREO TI  -->
-        <button class="action-btn" aria-label="Correo TI">
-            <img src="../../assets/svg/correo.svg" alt="Correo TI" class="nav-svg"/>
-        </button>
-
-        <!-- PERFIL DE USUARIO -->
-        <div class="profile-container">
-            <img width="30" height="30" title="Foto de perfil del usuario"
-            alt="Foto de perfil del usuario" class="profile-photo"
-            src="../../assets/icons/matronaicon.png"/>
-
-            <div class="profile-text">
-                <span class="profile-name">Matrona Ana María</span>
-                <span class="profile-email">ana.maria@clinica.cl</span>
-            </div>
-
-            <!-- BOTON DESPLEGABLE  -->
-            <button class="dropdown-btn" aria-label="Más opciones de perfil">
-                <img src="../../assets/svg/dropdown.svg" alt="Más opciones"/>
-            </button>
-
-            <!-- DROPDOWN  -->
-            <div class="profile-dropdown">
-                <a href="../Matrona/perfilMatrona.html">Ver mi perfil.</a>
-            </div>
-        </div>
-    </header>
-
+        <a href="../Supervisor/Auditoria/auditoria.html" class="nav-link">
+            <img src="../../assets/svg/auditoria.svg" class="nav-svg" />
+            <span class="nav-text">Auditoría</span>
+        </a>
+    </nav>
+</aside>
     <!-- ===== Contenedor de las cards ===== -->
     <main class="main-container">
 
+    <div class="welcome-header">
         <h1 class="main-title">Bienvenida, Matrona Ana María</h1>
-        <p>Ponte cómoda y ponte al día con tus actividades.</p>
+        <p class="subtitle-desc">Ponte cómoda y ponte al día con tus actividades.</p>
+    </div>
 
-        <h2 class="second-title">Accesos rápidos</h2>
+    <div class="layout-grid">
 
-        <!-- Cards -->
-        <section class="cards-container">
-
-            <div class="card">
-                <button onclick="location.href='../Matrona/Pacientes/pacientes.html'" class="card-button">
-                    <img alt="Pacientes" src="../../assets/icons/pacienteicon.png"
-                    height="130px" width="80px"/>
-                    <h3 class="third-title">Pacientes</h3>
-                    <p>Gestiona a tus pacientes</p>
-                </button>
-            </div>
+        <section class="left-column">
+            <h2 class="second-title">Accesos rápidos</h2>
             
-            <div class="card">
-                <button onclick="location.href='../Matrona/Gestaciones/gestaciones.html'" class="card-button">
-                    <img alt="Gestaciones" src="../../assets/icons/gestacionicon.png"
-                    height="130px" width="110px"/>
-                    <h3>Gestaciones</h3>
-                    <p>Mira tus gestaciones asociados</p>
-                </button>
-            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <button onclick="location.href='../Matrona/Pacientes/pacientes.html'" class="card-button">
+                        <img alt="Pacientes" src="../../assets/icons/pacienteicon.png" class="card-icon"/>
+                        <h3 class="third-title">Pacientes</h3>
+                        <p>Gestiona a tus pacientes</p>
+                    </button>
+                </div>
+                
+                <div class="card">
+                    <button onclick="location.href='../Matrona/Gestaciones/gestaciones.html'" class="card-button">
+                        <img alt="Gestaciones" src="../../assets/icons/gestacionicon.png" class="card-icon"/>
+                        <h3 class="third-title">Gestaciones</h3>
+                        <p>Mira tus gestaciones</p>
+                    </button>
+                </div>
 
-            <div class="card">
-                <button onclick="location.href='../Matrona/Partos/partos.html'" class="card-button">
-                    <img alt="Partos" src="../../assets/icons/partoicon.png"
-                    height="135px" width="115px"/>
-                    <h3>Partos</h3>
-                    <p>Gestiona tus partos</p>
-                </button>
-            </div>
+                <div class="card">
+                    <button onclick="location.href='../Matrona/Partos/partos.html'" class="card-button">
+                        <img alt="Partos" src="../../assets/icons/partoicon.png" class="card-icon"/>
+                        <h3 class="third-title">Partos</h3>
+                        <p>Gestiona tus partos</p>
+                    </button>
+                </div>
 
-            <div class="card">
-                <button onclick="location.href='../Matrona/RecienNacido/recienNacido.html'" class="card-button">
-                    <img alt="Recién Nacidos" src="../../assets/icons/reciennacidoicon.png"
-                    height="140px" width="110px"/>
-                    <h3>Recién Nacidos</h3>
-                    <p>Gestiona a tus recién nacidos</p>
-                </button>
-            </div>
+                <div class="card">
+                    <button onclick="location.href='../Matrona/RecienNacido/recienNacido.html'" class="card-button">
+                        <img alt="Recién Nacidos" src="../../assets/icons/reciennacidoicon.png" class="card-icon"/>
+                        <h3 class="third-title">Recién Nacidos</h3>
+                        <p>Gestiona recién nacidos</p>
+                    </button>
+                </div>
 
-            <div class="card">
-                <button onclick="location.href='../Reportes/reportes.html'" class="card-button">
-                    <img alt="Reportes" src="../../assets/icons/wizardicon.png"
-                    height="140px" width="120px"/>
-                    <h3>Wizard</h3>
-                    <p>Gestiona tus reportes</p>
-                </button>
+                <div class="card">
+                    <button onclick="location.href='../Reportes/reportes.html'" class="card-button">
+                        <img alt="Reportes" src="../../assets/icons/wizardicon.png" class="card-icon"/>
+                        <h3 class="third-title">Wizard</h3>
+                        <p>Gestiona tus reportes</p>
+                    </button>
+                </div>
+
+                <div class="card">
+                    <button onclick="location.href='../Reportes/reportes.html'" class="card-button">
+                        <img alt="Reportes" src="../../assets/icons/auditoriaicon.png" class="card-icon"/>
+                        <h3 class="third-title">Turnos</h3>
+                        <p>Gestiona tus próximos turnos</p>
+                    </button>
+                </div>
             </div>
         </section>
 
-        <!-- Dashboard -->
-        <section class="dashboard">
-            <div class="dashboard-card">
-                <h3>Dashboard general</h3>
-                <p class="dashboard-number">Aqui irá el dashboard que está haciendo Benjamin</p>
+        <aside class="right-column">
+            <h2 class="second-title">Resumen</h2> <div class="dashboard-panel">
+                <div class="stat-item">
+                    <span class="stat-label">Pacientes ingresados hoy</span>
+                    <span class="stat-number">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Partos registrados este mes</span>
+                    <span class="stat-number">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Reportes enviados</span>
+                    <span class="stat-number">0</span>
+                </div>
+                <div class="dashboard-placeholder">
+                    <p>Gráfico de Benjamín</p>
+                </div>
             </div>
-        </section>
-    </main>
+        </aside>
+
+    </div>
+</main>
 </body>
 </html>

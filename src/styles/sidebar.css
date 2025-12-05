@@ -31,6 +31,8 @@
     width: 16rem; /* Un poco más ancho para que el texto respire mejor */
 }
 
+/* LOS ESTILOS DE BOTONES ESTÁN EN EL GLOBAL YA QUE SE NECESITAN EN VARIOS LADOS */
+
 /*.sidebar-bottom {
     bottom: 0;
     top: auto;

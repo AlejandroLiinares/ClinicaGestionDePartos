@@ -22,7 +22,7 @@
     --transition: 0.25s ease;
 
     /* ===== MODO CLARO ===== */
-    --primary: oklch(66.304% 0.17292 23.008);
+    --primary: oklch(68.71% 0.202 24.112);
 
     --bg-dark: oklch(97.015% 0.00011 271.152);   /* Body */
     --bg: oklch(100% 0.00011 271.152);           /* Cards, contenedores */
@@ -52,62 +52,47 @@
    MODO OSCURO (ACTIVO SI <body> TIENE LA CLASE .dark)
 ========================================================= */
 body.dark {
-    --primary: oklch(57.488% 0.23419 274.123);
+    --primary: oklch(68.423% 0.21027 39.191);
 
     --bg-dark: oklch(0.1 0 264);
     --bg: oklch(0.2 0 264);
     --bg-light: oklch(0.3 0 264);
 
-    --text: oklch(96% 0 264);
+    --text: oklch(96.115% 0.00011 271.152);
     --text-muted: oklch(76% 0 264);
 }
 
-/* =========================================================
-   BASE DEL SISTEMA
-========================================================= */
+/* BASE DEL SISTEMA */
+
 body {
     background: var(--bg-dark);
     color: var(--text);
     transition: var(--transition);
     margin-left: 1.8rem;
+    margin-right: 1.8rem;
     margin-top: 8.5rem;
-}
-
-/* =========================================================
-   TIPOGRAFÍAS
-========================================================= */
-h1 { font: var(--h1); color: var(--text); }
-h2 { font: var(--h2); color: var(--text); }
-h3 { font: var(--h3); color: var(--text); }
-
-p { font: var(--p); color: var(--text); }
-small { font: var(--small); color: var(--text-muted); }
-
-.top-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin-bottom: 1.8rem;
 }
 
 /* BOTÓN DE TEMA */
-.theme-btn {
+.action-btn {
     background: var(--bg);
     padding: 0.45rem;
-    border-radius: 0.8rem;
+    border-radius: 2rem;
     border: none;
     cursor: pointer;
     transition: var(--transition);
     box-shadow: var(--shadow-s);
 }
 
-.theme-btn:hover {
+.action-btn:hover {
     background: var(--bg-light);
     box-shadow: var(--shadow-m);
 }
 
-.theme-btn img {
-    width: 22px;
-    height: 22px;
+.action-btn img {
+    width: 25px;
+    height: 25px;
 }
 
 /* =========================================================

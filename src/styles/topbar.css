@@ -97,43 +97,6 @@ body.dark {
     color: var(--text-muted); /* Variable */
 }
 
-/* --- BOTONES DE ACCIÓN --- */
-.theme-btn, 
-.action-btn {
-    background: transparent;
-    border: 1px solid var(--border-subtle); /* Variable */
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-left: 0.8rem;
-    transition: all 0.3s ease;
-}
-
-/* Manejo de iconos SVG dentro de botones */
-.theme-btn img,
-.action-btn img,
-.dropdown-btn img {
-    transition: filter 0.3s;
-    /* Nota: El icono de Luna/Sol NO lleva filtro porque cambias el src con JS.
-       Pero el de correo y dropdown SÍ necesitan volverse blancos. */
-}
-
-/* Excepción: Invertir solo los iconos que son negros por defecto */
-.action-btn img, 
-.dropdown-btn img {
-    filter: var(--icon-filter);
-}
-
-.theme-btn:hover, 
-.action-btn:hover {
-    background: var(--hover-bg);
-    border-color: var(--primary);
-    transform: translateY(-2px);
-}
 
 /* --- PERFIL --- */
 .profile-container {
@@ -170,13 +133,68 @@ body.dark {
     color: var(--text-muted); /* Variable */
 }
 
+/* =========================================
+   DROPDOWN PERFIL (Estilo Pastilla)
+   ========================================= */
+
+/* Contenedor del Dropdown (El panel flotante) */
+.profile-dropdown {
+    position: absolute;
+    top: 130%; /* Un poco separado del header para que "flote" */
+    right: 0;
+    width: 220px;
+    
+    background: var(--bg-panel);
+    padding: 0.8rem; /* Padding interno para que los botones no toquen el borde */
+    border-radius: 1.5rem; /* Bordes muy redondeados (coherencia con sidebar/header) */
+    box-shadow: var(--shadow-l); /* Sombra difusa para elevación */
+    border: 1px solid var(--border-subtle);
+    
+    /* Animación de entrada (Estado inicial oculto) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.98); /* Ligeramente desplazado y pequeño */
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); /* Efecto "Spring" muy suave */
+    z-index: 1000;
+}
+
+/* Estado ACTIVO (Clase agregada por JS) */
+.profile-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* --- ENLACES INTERNOS (Estilo Botón Pastilla) --- */
+/* topbar.css (Añadir/Verificar esto antes de tus clases .active) */
+
+.profile-dropdown {
+    /* POSICIONAMIENTO */
+    position: absolute;
+    top: 115%;              /* Un poco más abajo para que no toque el header */
+    z-index: 1000;
+    right: 0;
+    
+    /* ESTÉTICA (Cápsula Flotante) */
+    width: 160px;
+    background: var(--bg-panel);
+    border-radius: 1.5rem;   /* Bordes redondeados consistentes */
+    padding: 0.8rem;
+    box-shadow: var(--shadow-l); /* Sombra difusa para que destaque */
+}
+
 .dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     background: transparent;
     border: none;
+    color: var(--text-main);
+    font: var(--p);
     cursor: pointer;
-    opacity: 0.6;
-    margin-left: 0.5rem;
+    transition: background 0.3s ease;
 }
-.dropdown-btn:hover {
-    opacity: 1;
+
+.dropdown-btn.active img {
+    transform: rotate(180deg); /* La flecha gira suavemente hacia arriba */
 }
