@@ -118,3 +118,9 @@ body {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
 }
+
+.subtitle {
+    font: var(--p);
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}

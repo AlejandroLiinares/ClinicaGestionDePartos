@@ -10,9 +10,9 @@ if (localStorage.getItem("theme") === "dark") {
 // 2. Función para actualizar el icono (Sol o Luna)
 function updateIcon() {
     if (document.body.classList.contains("dark")) {
-        icon.src = "../assets/svg/sun.svg"; // Si es oscuro, mostrar sol
+        icon.src = "src/assets/svg/sun.svg"; // Si es oscuro, mostrar sol
     } else {
-        icon.src = "../assets/svg/moon.svg"; // Si es claro, mostrar luna
+        icon.src = "src/assets/svg/moon.svg"; // Si es claro, mostrar luna
     }
 }
 

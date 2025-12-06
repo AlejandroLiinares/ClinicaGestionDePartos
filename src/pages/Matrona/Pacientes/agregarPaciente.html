@@ -6,69 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir Paciente - Matrona</title>
 
-    <!-- CSS Global -->
-    <link rel="stylesheet" href="../../../styles/global.css">
+    <!-- CSS NORMALIZE-->
+    <link rel="stylesheet" href="../../../styles/normalize.css" />
 
-    <!-- Sidebar -->
-    <link rel="stylesheet" href="../../../styles/sidebar.css">
+    <!-- CSS Global-->
+    <link rel="stylesheet" href="../../../styles/global.css" />
 
-    <!-- Formularios -->
-    <link rel="stylesheet" href="../../../styles/form.css">
+    <!-- CSS Topbar -->
+    <link rel="stylesheet" href="../../../styles/topbar.css" />
 
-    <!-- Tema -->
+    <!-- CSS Menu de navegación -->
+    <link rel="stylesheet" href="../../../styles/sidebar.css" />
+
+    <!-- CSS Cards -->
+    <link rel="stylesheet" href="../../../styles/cards.css" />
+
+    <!-- CSS Form -->
+    <link rel="stylesheet" href="../../../styles/form.css" />
+
+    <!-- JS Tema -->
     <script src="../../../scripts/sub-themes.js" defer></script>
+
+    <!-- JS DROPDOWN  -->
+    <script src="../../../scripts/profile-dropdown.js" defer></script>
+
+    <!-- SVG Favicon  -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/pregnant.svg">
 </head>
 
-<body class="light">
+<body>
 
-<!-- SIDEBAR -->
-<aside class="sidebar collapsed" id="sidebar">
-    <nav class="nav-container">
-
-        <a href="../../../../index.html" class="nav__logo">
-            <img src="../../../assets/images/HermindaMartin.png" width="140" height="60" class="nav__logo-icon">
-        </a>
-
-        <div class="nav-scroll">
-            <ul class="nav__links">
-
-                <li class="nav__item">
-                    <a href="../inicioMatrona.html" class="nav__link">
-                        <img src="../../../assets/svg/inicio.svg" class="nav-svg">
-                        <span class="nav-text">Inicio</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="pacientes.html" class="nav__link active">
-                        <img src="../../../assets/svg/paciente.svg" class="nav-svg">
-                        <span class="nav-text">Pacientes</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-
-    </nav>
-</aside>
-
-<!-- HEADER -->
 <header class="top-header">
+    
+    <a href="../../../../index.html" class="nav__logo header-pill">
+        <img src="../../../assets/icons/logo.png" alt="Logo" class="nav__logo-icon"
+        width="90px" height="55px"/>
+    </a>
 
-    <div class="header-right">
-        <div class="profile-info">
-            <img src="../../../assets/icons/matronaicon.png" width="30" height="30" class="profile-photo">
-            <span class="profile-name">Matrona Ana María</span>
-        </div>
+    <div class="topbar-search header-pill">
+        <img src="../../../assets/svg/buscar.svg" class="nav-svg" alt="Buscar"/>
+        <input type="text" class="search-input" placeholder="Buscar en el sistema...">
+    </div>
 
-        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
-            <img id="themeIcon" src="../../../assets/svg/moon.svg">
+    <div class="actions-group header-pill">
+        <button id="themeToggle" class="action-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../../assets/svg/moon.svg" alt="Tema" />
+        </button>
+
+        <button class="action-btn" aria-label="Correo TI">
+            <img src="../../../assets/svg/correo.svg" alt="Correo TI" class="nav-svg"/>
+        </button>
+
+        <button class="action-btn" aria-label="Cerrar sesión">
+            <img src="../../../assets/svg/salir.svg" alt="Cerrar sesión" class="nav-svg"/>
         </button>
     </div>
 
-    <h1>Añadir Paciente</h1>
+    <div class="profile-container header-pill">
+        <img width="35" height="35" title="Foto de perfil"
+        alt="Foto perfil" class="profile-photo"
+        src="../../../assets/icons/matronaicon.png"/>
+
+        <div class="profile-text">
+            <span class="profile-name">Matrona Ana María</span>
+            <span class="profile-email">ana.maria@clinica.cl</span>
+        </div>
+
+        <button class="dropdown-btn" aria-label="Más opciones">
+            <img src="../../../assets/svg/flechaabajo.svg" alt="Más opciones" width="20px" height="20px"/>
+        </button>
+
+        <div class="profile-dropdown">
+            <a href="../../Matrona/perfilMatrona.html">Ver mi perfil.</a>
+        </div>
+    </div>
+
 </header>
 
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+        <a href="../inicioMatrona.html" class="nav-link active">
+        <img src="../../../assets/svg/inicio.svg" class="nav-svg" />
+            <span class="nav-text">Inicio</span>
+        </a>
+
+        <a href="../../Matrona/Pacientes/pacientes.html" class="nav-link">
+            <img src="../../../assets/svg/paciente.svg" class="nav-svg" />
+            <span class="nav-text">Pacientes</span>
+        </a>
+
+        <a href="../../Matrona/Gestaciones/gestaciones.html" class="nav-link">
+            <img src="../../../assets/svg/gestacion.svg" class="nav-svg" />
+            <span class="nav-text">Gestaciones</span>
+        </a>
+
+        <a href="../../Matrona/Partos/partos.html" class="nav-link">
+            <img src="../../../assets/svg/parto.svg" class="nav-svg" />
+            <span class="nav-text">Partos</span>
+        </a>
+
+        <a href="../../Matrona/RecienNacido/recienNacido.html" class="nav-link">
+            <img src="../../../assets/svg/reciennacido.svg" class="nav-svg" />
+            <span class="nav-text">Recién Nacidos</span>
+        </a>
+
+        <a href="../../Profesionales/profesionales.html" class="nav-link">
+            <img src="../../../assets/svg/profesional.svg" class="nav-svg" />
+            <span class="nav-text">Profesionales</span>
+        </a>
+
+        <a href="../../Turnos/turnos.html" class="nav-link">
+            <img src="../../../assets/svg/turnos.svg" class="nav-svg" />
+            <span class="nav-text">Turnos</span>
+        </a>
+
+        <a href="../../Usuarios/usuarios.html" class="nav-link">
+            <img src="../../../assets/svg/usuarios.svg" class="nav-svg" />
+            <span class="nav-text">Usuarios</span>
+        </a>
+
+        <a href="../../Supervisor/Reportes/reportes.html" class="nav-link">
+            <img src="../../../assets/svg/reporte.svg" class="nav-svg" />
+            <span class="nav-text">Reportes</span>
+        </a>
+
+        <a href="../../Supervisor/Auditoria/auditoria.html" class="nav-link">
+            <img src="../../../assets/svg/auditoria.svg" class="nav-svg" />
+            <span class="nav-text">Auditoría</span>
+        </a>
+    </nav>
+</aside>
 
 <main class="main-container">
 
@@ -81,205 +148,181 @@
         <span>Nuevo</span>
     </nav>
 
-    <form class="form-wrapper">
-
-    <!-- INFORMACIÓN PERSONAL -->
-    <fieldset class="form-section">
-        <legend class="form-section-title">Información Personal</legend>
-
-        <div class="form-grid-3">
-            <div class="form-field">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="personal[nombre]" class="input-text" required>
-            </div>
-
-            <div class="form-field">
-                <label for="apellido1">Primer Apellido</label>
-                <input type="text" id="apellido1" name="personal[apellido1]" class="input-text" required>
-            </div>
-
-            <div class="form-field">
-                <label for="apellido2">Segundo Apellido</label>
-                <input type="text" id="apellido2" name="personal[apellido2]" class="input-text" required>
-            </div>
-        </div>
-
-        <div class="form-grid-3">
-            <div class="form-field">
-                <label for="documento_tipo">Tipo de Documento</label>
-                <select id="documento_tipo" name="personal[documento_tipo]" class="input-select" required>
-                    <option value="rut">RUT</option>
-                    <option value="pasaporte">Pasaporte</option>
-                </select>
-            </div>
-
-            <div class="form-field">
-                <label for="documento">Identificación</label>
-                <input 
-                    type="text" 
-                    id="documento" 
-                    name="personal[identificacion]" 
-                    class="input-text"
-                    placeholder="12345678-9"
-                    pattern="^\d{7,8}\-[\dkK]$"
-                    required>
-                <div class="field-help">Sin puntos y <strong>con</strong> guión.</div>
-            </div>
-
-            <div class="form-field">
-                <label for="fecha_nacimiento">Fecha de Nacimiento</label>
-                <input 
-                    type="date" 
-                    id="fecha_nacimiento" 
-                    name="personal[fecha_nacimiento]" 
-                    class="input-text"
-                    max="2013-12-31"
-                    required>
-            </div>
-        </div>
-
-        <div class="form-grid-3">
-
-            <div class="form-field">
-                <label for="tipo_paciente">Tipo de Paciente</label>
-                <select id="tipo_paciente" name="personal[tipo]" class="input-select" required>
-                    <option value="gestante">Gestante</option>
-                    <option value="puérpera">Puérpera</option>
-                    <option value="recien_nacido">Recién Nacido</option>
-                </select>
-            </div>
-
-            <div class="form-field">
-                <label for="telefono">Teléfono</label>
-                <input
-                    type="tel"
-                    id="telefono"
-                    name="personal[telefono]"
-                    class="input-text"
-                    placeholder="+56 9XXXXXXXX"
-                    pattern="\+56\s?9[0-9]{8}"
-                    inputmode="tel"
-                    required>
-                <span class="field-help">Debe comenzar con +56 9 y contener 8 dígitos después.</span>
-            </div>
-
-            <!-- Daniel, se que este campo no está, pero creo que es necesario.  -->
-            <div class="form-field">
-                <label for="email">Correo Electrónico</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="personal[email]" 
-                    class="input-text"
-                    placeholder="ejemplo@correo.com"
-                    required>
-            </div>
-        </div>
-    </fieldset>
-
-    <!-- CARACTERÍSTICAS -->
-    <fieldset class="form-section">
-        <legend class="form-section-title">Características</legend>
-
-        <div class="checkbox-group">
-            <label class="checkbox-item">
-                <input type="checkbox" name="features[]" value="discapacidad"> Discapacitada
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="features[]" value="pueblo_originario"> Pueblo originario
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="features[]" value="privada_libertad"> Privada de libertad
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="features[]" value="transexual"> Transexual
-            </label>
-        </div>
-
-        <div class="form-grid-3">
-
-            <div class="form-field">
-                <label for="visita_guiada">Visita Guiada</label>
-                <select id="visita_guiada" name="features_extra[visita_guiada]" class="input-select" required>
-                    <option value="si">Sí</option>
-                    <option value="no">No</option>
-                </select>
-            </div>
-
-            <div class="form-field">
-                <label for="peso">Peso (kg)</label>
-                <input 
-                    type="number" 
-                    id="peso" 
-                    name="metrics[peso]" 
-                    class="input-text"
-                    step="0.1"
-                    min="10"
-                    required>
-            </div>
-
-            <div class="form-field">
-                <label for="altura">Altura (cm)</label>
-                <input 
-                    type="number"
-                    id="altura"
-                    name="metrics[altura]"
-                    class="input-text"
-                    min="62.8"
-                    required>
-            </div>
-        </div>
-
-        <div class="form-field">
-            <label for="actividad">Actividad</label>
-            <select id="actividad" name="metrics[actividad]" class="input-select" required>
-                <option value="activa">Activa</option>
-                <option value="sedentaria">Sedentaria</option>
-            </select>
-        </div>
-    </fieldset>
-
-    <!-- INFORMACIÓN DE CONTACTO -->
-    <fieldset class="form-section">
-        <legend class="form-section-title">Información de Contacto</legend>
-
-        <div class="form-grid-3">
-            <div class="form-field">
-                <label for="nacionalidad">Nacionalidad</label>
-                <input type="text" id="nacionalidad" name="contact[nacionalidad]" class="input-text" required>
-            </div>
-
-            <div class="form-field">
-                <label for="comuna">Comuna</label>
-                <input type="text" id="comuna" name="contact[comuna]" class="input-text" required>
-            </div>
-
-            <div class="form-field">
-                <label for="cesfam">CESFAM</label>
-                <input type="text" id="cesfam" name="contact[cesfam]" class="input-text" required>
-                <div class="field-help">Centro de salud de referencia</div>
-            </div>
-        </div>
-
-        <div class="form-field">
-            <label for="direccion">Dirección</label>
-            <input type="text" id="direccion" name="contact[direccion]" class="input-text" required>
-        </div>
-
-    </fieldset>
-
-    <!-- BOTÓN -->
-    <div class="form-submit">
-        <button type="submit" class="btn-primary">Añadir Paciente</button>
+<section class="form-card">
+    
+    <div class="form-header">
+        <h2 class="form-title">Nuevo Paciente</h2>
+        <p class="form-subtitle">Complete la ficha clínica. Los campos marcados son obligatorios.</p>
     </div>
 
-</form>
+    <form method="POST" class="main-form">
+        <!-- {% csrf_token %}  -->
 
+        <fieldset class="form-section">
+            <legend class="section-legend">Identificación Personal</legend>
+            
+            <div class="form-row three-cols">
+                <div class="form-group">
+                    <label for="nombre">Nombres</label>
+                    <input type="text" id="nombre" name="nombre" class="input-field" placeholder="Ej: María Paz" required>
+                </div>
+                <div class="form-group">
+                    <label for="primer_apellido">Primer Apellido</label>
+                    <input type="text" id="primer_apellido" name="primer_apellido" class="input-field" required>
+                </div>
+                <div class="form-group">
+                    <label for="segundo_apellido">Segundo Apellido</label>
+                    <input type="text" id="segundo_apellido" name="segundo_apellido" class="input-field" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="documento">Tipo de Documento</label>
+                    <select id="documento" name="documento" class="input-field">
+                        <option value="RUT" selected>RUT</option>
+                        <option value="PAS">Pasaporte</option>
+                        <option value="EXT">Documento Extranjero</option>
+                        <option value="TMP">Sin Documento / Temporal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="identificacion">N° Documento</label>
+                    <input type="text" id="identificacion" name="identificacion" class="input-field" placeholder="12345678-9">
+                    <span class="field-help">Si es RUT, sin puntos y con guión.</span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="input-field" required>
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidad">Nacionalidad</label>
+                    <select id="nacionalidad" name="nacionalidad" class="input-field">
+                        <option value="" disabled selected>Seleccione...</option>
+                        {% for nacionalidad in form.fields.nacionalidad.queryset %}
+                            <option value="{{ nacionalidad.id }}">{{ nacionalidad.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Datos Clínicos y Contacto</legend>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tipo_paciente">Tipo de Paciente</label>
+                    <select id="tipo_paciente" name="tipo_paciente" class="input-field" required>
+                        <option value="" selected>Seleccione...</option>
+                        {% for tipo in form.fields.tipo.queryset %}
+                            <option value="{{ tipo.id }}">{{ tipo.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" class="input-field" placeholder="Ej: 912345678">
+                    <span class="field-help">Para nacionales añada el 9. No requiere +56.</span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="comuna">Comuna</label>
+                    <select id="comuna" name="comuna" class="input-field">
+                        <option value="" selected>Seleccione...</option>
+                        {% for comuna in form.fields.comuna.queryset %}
+                            <option value="{{ comuna.id }}">{{ comuna.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cesfam">CESFAM</label>
+                    <select id="cesfam" name="cesfam" class="input-field">
+                        <option value="" selected>Ninguno / Desconocido</option>
+                        {% for cesfam in form.fields.cesfam.queryset %}
+                            <option value="{{ cesfam.id }}">{{ cesfam.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" class="input-field" placeholder="Calle, número, depto...">
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Métricas Físicas</legend>
+            <div class="form-row three-cols">
+                <div class="form-group">
+                    <label for="peso">Peso (kg)</label>
+                    <input type="number" id="peso" name="peso" step="0.01" class="input-field" placeholder="0.00">
+                </div>
+                <div class="form-group">
+                    <label for="altura">Altura (cm)</label>
+                    <input type="number" id="altura" name="altura" step="0.01" class="input-field" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label for="actividad">Actividad Física</label>
+                    <select id="actividad" name="actividad" class="input-field">
+                        <option value="baja">Baja</option>
+                        <option value="moderada">Moderada</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Características Especiales</legend>
+            
+            <div class="checkbox-grid">
+                <label class="checkbox-card">
+                    <input type="checkbox" name="descapacitado" id="descapacitado">
+                    <span class="checkbox-text">Discapacidad</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="pueblo_originario" id="pueblo_originario">
+                    <span class="checkbox-text">Pueblo Originario</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="privada_de_libertad" id="privada_de_libertad">
+                    <span class="checkbox-text">Privada de Libertad</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="transexual" id="transexual">
+                    <span class="checkbox-text">Transexual</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="visita_guiada" id="visita_guiada">
+                    <span class="checkbox-text">Visita Guiada</span>
+                </label>
+                
+                <label class="checkbox-card">
+                    <input type="checkbox" name="plan_de_parto" id="plan_de_parto">
+                    <span class="checkbox-text">Plan de Parto</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="form-actions">
+            <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+            <button type="submit" class="btn-primary">Guardar Paciente</button>
+        </div>
+
+    </form>
+</section>
 
 </main>
-
 </body>
 </html>

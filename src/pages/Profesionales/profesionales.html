@@ -3,42 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Profesionales</title>
+
+    <!-- CSS NORMALIZE-->
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+
     <!-- CSS Global-->
     <link rel="stylesheet" href="../../styles/global.css" />
 
+    <!-- CSS Topbar -->
+    <link rel="stylesheet" href="../../styles/topbar.css" />
+
     <!-- CSS Menu de navegación -->
-     <link rel="stylesheet" href="../../styles/sidebar.css" />
+    <link rel="stylesheet" href="../../styles/sidebar.css" />
 
     <!-- CSS Cards -->
     <link rel="stylesheet" href="../../styles/cards.css" />
 
     <!-- JS Tema -->
     <script src="../../scripts/theme-toggle.js" defer></script>
-    
-    <title>Profesionales</title>
+
+    <!-- JS DROPDOWN  -->
+    <script src="../../scripts/profile-dropdown.js" defer></script>
+
+    <!-- SVG Favicon  -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/pregnant.svg">
 </head>
-<body class="light">
 
-    <aside id="home" class="sidebar">
-        <nav class="nav container">
+<body>
+<header class="top-header">
+    
+    <a href="../../../index.html" class="nav__logo header-pill">
+        <img src="../../assets/icons/logo.png" alt="Logo" class="nav__logo-icon"
+        width="90px" height="55px"/>
+    </a>
 
-            <!-- Logo -->
-            <a href="../../../index.html" class="nav_logo">Clínica Herminda Martín</a>
-            <ul class="nav__links"> 
-                <li><a href="../../../index.html">Inicio</a></li> 
-                <li><a href="../Matrona/Pacientes/pacientes.html">Pacientes</a></li> 
-                <li><a href="../Matrona/Gestaciones/gestaciones.html">Gestaciones</a></li> 
-                <li><a href="../Matrona/Partos/partos.html">Partos</a></li>
-                <li><a href="../Matrona/RecienNacido/recienNacido.html">Recién Nacidos</a></li>
-                <li><a href="../Profesionales/profesionales.html">Profesionales</a></li>
-                <li><a href="../Matrona/Turnos/turnos.html">Turnos</a></li>
-                <li><a href="../Supervisor/Auditoria/auditoria.html">Auditoría</a></li>
-                <li><a href="../Usuarios/usuarios.html">Usuarios</a></li> 
-            </ul>
-        </nav>
-    </aside>
+    <div class="topbar-search header-pill">
+        <img src="../../assets/svg/buscar.svg" class="nav-svg" alt="Buscar"/>
+        <input type="text" class="search-input" placeholder="Buscar en el sistema...">
+    </div>
 
-    <h1>Profesionales</h1> 
+    <div class="actions-group header-pill">
+        <button id="themeToggle" class="action-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../assets/svg/moon.svg" alt="Tema" />
+        </button>
+
+        <button class="action-btn" aria-label="Correo TI">
+            <img src="../../assets/svg/correo.svg" alt="Correo TI" class="nav-svg"/>
+        </button>
+
+        <button class="action-btn" aria-label="Cerrar sesión">
+            <img src="../../assets/svg/salir.svg" alt="Cerrar sesión" class="nav-svg"/>
+        </button>
+    </div>
+
+    <div class="profile-container header-pill">
+        <img width="35" height="35" title="Foto de perfil"
+        alt="Foto perfil" class="profile-photo"
+        src="../../assets/icons/matronaicon.png"/>
+
+        <div class="profile-text">
+            <span class="profile-name">Matrona Ana María</span>
+            <span class="profile-email">ana.maria@clinica.cl</span>
+        </div>
+
+        <button class="dropdown-btn" aria-label="Más opciones">
+            <img src="../../assets/svg/flechaabajo.svg" alt="Más opciones" width="20px" height="20px"/>
+        </button>
+
+        <div class="profile-dropdown">
+            <a href="../Matrona/perfilMatrona.html">Ver mi perfil.</a>
+        </div>
+    </div>
+
+</header>
+
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+        <a href="../Matrona/inicioMatrona.html" class="nav-link active">
+        <img src="../../assets/svg/inicio.svg" class="nav-svg" />
+            <span class="nav-text">Inicio</span>
+        </a>
+
+        <a href="../Matrona/Pacientes/pacientes.html" class="nav-link">
+            <img src="../../assets/svg/paciente.svg" class="nav-svg" />
+            <span class="nav-text">Pacientes</span>
+        </a>
+
+        <a href="../Matrona/Gestaciones/gestaciones.html" class="nav-link">
+            <img src="../../assets/svg/gestacion.svg" class="nav-svg" />
+            <span class="nav-text">Gestaciones</span>
+        </a>
+
+        <a href="../Matrona/Partos/partos.html" class="nav-link">
+            <img src="../../assets/svg/parto.svg" class="nav-svg" />
+            <span class="nav-text">Partos</span>
+        </a>
+
+        <a href="../Matrona/RecienNacido/recienNacido.html" class="nav-link">
+            <img src="../../assets/svg/reciennacido.svg" class="nav-svg" />
+            <span class="nav-text">Recién Nacidos</span>
+        </a>
+
+        <a href="../Profesionales/profesionales.html" class="nav-link">
+            <img src="../../assets/svg/profesional.svg" class="nav-svg" />
+            <span class="nav-text">Profesionales</span>
+        </a>
+
+        <a href="../Turnos/turnos.html" class="nav-link">
+            <img src="../../assets/svg/turnos.svg" class="nav-svg" />
+            <span class="nav-text">Turnos</span>
+        </a>
+
+        <a href="../Usuarios/usuarios.html" class="nav-link">
+            <img src="../../assets/svg/usuarios.svg" class="nav-svg" />
+            <span class="nav-text">Usuarios</span>
+        </a>
+
+        <a href="../Supervisor/Reportes/reportes.html" class="nav-link">
+            <img src="../../assets/svg/reporte.svg" class="nav-svg" />
+            <span class="nav-text">Reportes</span>
+        </a>
+
+        <a href="../Supervisor/Auditoria/auditoria.html" class="nav-link">
+            <img src="../../assets/svg/auditoria.svg" class="nav-svg" />
+            <span class="nav-text">Auditoría</span>
+        </a>
+    </nav>
+</aside>
+    <!-- ===== Contenedor de las cards ===== -->
+    <main class="main-container">
+
+    <div class="welcome-header">
+        <h1 class="main-title">Profesionales</h1>
+        <p class="subtitle-desc">Ponganse en contacto con otros de su area (no se que poner aqui)</p>
+    </div>
+     
+    </main>
 </body>
 </html>

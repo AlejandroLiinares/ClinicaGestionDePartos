@@ -5,44 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinica Herminda Martín</title>
 
-    <!-- CSS Global  -->
-    <link rel="stylesheet" href="/src/styles/global.css">
+    <!-- CSS NORMALIZE-->
+    <link rel="stylesheet" href="src/styles/normalize.css" />
 
-    <!-- CSS Menu de navegación  -->
-    <link rel="stylesheet" href="/src/styles/sidebar.css">
-    
+    <!-- CSS Global-->
+    <link rel="stylesheet" href="src/styles/global.css" />
+
+    <!-- CSS Topbar -->
+    <link rel="stylesheet" href="src/styles/topbar.css" />
+
+    <!-- CSS Menu de navegación -->
+    <link rel="stylesheet" href="src/styles/sidebar.css" />
+
+    <!-- CSS Cards -->
+    <link rel="stylesheet" href="src/styles/cards.css" />
+
+    <!-- JS Tema -->
+    <script src="src/scripts/main-theme.js" defer></script>
+
+    <!-- JS DROPDOWN  -->
+    <script src="src/scripts/profile-dropdown.js" defer></script>
+
     <!-- SVG Favicon  -->
     <link rel="icon" type="image/svg+xml" href="/src/assets/svg/pregnant.svg">
 </head>
+
 <body>
+<header class="top-header">
+    
+    <a href="index.html" class="nav__logo header-pill">
+        <img src="src/assets/icons/logo.png" alt="Logo" class="nav__logo-icon"
+        width="90px" height="55px"/>
+    </a>
 
-    <aside id="home" class="sidebar">
-        <nav class="nav container">
+    <div class="topbar-search header-pill">
+        <img src="src/assets/svg/buscar.svg" class="nav-svg" alt="Buscar"/>
+        <input type="text" class="search-input" placeholder="Buscar en el sistema...">
+    </div>
 
-            <a href="../../../index.html" class="nav_logo">
-                <img src="/src/assets/images/HermindaMartin.png" alt="Logo del Hospital clínico Herminda Martín"
-                width="165" height="60">
-            </a>
-            <ul class="nav__links"> 
-                <li><a href="#home">Inicio</a></li> 
-                <li><a href="/src/pages/Matrona/Pacientes/pacientes.html">Pacientes</a></li> 
-                <li><a href="/src/pages/Matrona/Gestaciones/gestaciones.html">Gestaciones</a></li> 
-                <li><a href="/src/pages/Matrona/Partos/partos.html">Partos</a></li>
-                <li><a href="/src/pages/Matrona/RecienNacido/recienNacido.html">Recién Nacidos</a></li>
-                <li><a href="/src/pages/Profesionales/profesionales.html">Profesionales</a></li>
-                <li><a href="/src/pages/Matrona/Turnos/turnos.html">Turnos</a></li>
-                <li><a href="/src/pages/Supervisor/Auditoria/auditoria.html">Auditoría</a></li>
-                <li><a href="/src/pages/Usuarios/usuarios.html">Usuarios</a></li> 
-            </ul>
-        </nav>
-    </aside>
+    <div class="actions-group header-pill">
+        <button id="themeToggle" class="action-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="src/assets/svg/moon.svg" alt="Tema" />
+        </button>
 
-    <h1 id="home"> Bienvenidos a nuestro Hospital clínico Herminda Martín</h1>
+        <button class="action-btn" aria-label="Correo TI">
+            <img src="src/assets/svg/correo.svg" alt="Correo TI" class="nav-svg"/>
+        </button>
 
-    <img class="ministerio-logo" src="/src/assets/images/MinisterioSalud.png" alt="Logo del Ministerio de Salud" 
-    title="imagen de el Ministerio de Salud" width="100" height="90">
+        <button class="action-btn" aria-label="Cerrar sesión">
+            <img src="src/assets/svg/salir.svg" alt="Cerrar sesión" class="nav-svg"/>
+        </button>
+    </div>
+
+    <div class="profile-container header-pill">
+        <img width="35" height="35" title="Foto de perfil"
+        alt="Foto perfil" class="profile-photo"
+        src="src/assets/icons/matronaicon.png"/>
+
+        <div class="profile-text">
+            <span class="profile-name">Matrona Ana María</span>
+            <span class="profile-email">ana.maria@clinica.cl</span>
+        </div>
+
+        <button class="dropdown-btn" aria-label="Más opciones">
+            <img src="src/assets/svg/flechaabajo.svg" alt="Más opciones" width="20px" height="20px"/>
+        </button>
+
+        <div class="profile-dropdown">
+            <a href="src/pages/Matrona/perfilMatrona.html">Ver mi perfil.</a>
+        </div>
+    </div>
+
+</header>
+
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+        <a href="src/pages/Matrona/inicioMatrona.html" class="nav-link active">
+        <img src="src/assets/svg/inicio.svg" class="nav-svg" />
+            <span class="nav-text">Inicio</span>
+        </a>
+
+        <a href="src/pages/Matrona/Pacientes/pacientes.html" class="nav-link">
+            <img src="src/assets/svg/paciente.svg" class="nav-svg" />
+            <span class="nav-text">Pacientes</span>
+        </a>
+
+        <a href="src/pages/Matrona/Gestaciones/gestaciones.html" class="nav-link">
+            <img src="src/assets/svg/gestacion.svg" class="nav-svg" />
+            <span class="nav-text">Gestaciones</span>
+        </a>
+
+        <a href="src/pages/Matrona/Partos/partos.html" class="nav-link">
+            <img src="src/assets/svg/parto.svg" class="nav-svg" />
+            <span class="nav-text">Partos</span>
+        </a>
+
+        <a href="src/pages/Matrona/RecienNacido/recienNacido.html" class="nav-link">
+            <img src="src/assets/svg/reciennacido.svg" class="nav-svg" />
+            <span class="nav-text">Recién Nacidos</span>
+        </a>
+
+        <a href="src/pages/Profesionales/profesionales.html" class="nav-link">
+            <img src="src/assets/svg/profesional.svg" class="nav-svg" />
+            <span class="nav-text">Profesionales</span>
+        </a>
+
+        <a href="src/pages/Turnos/turnos.html" class="nav-link">
+            <img src="src/assets/svg/turnos.svg" class="nav-svg" />
+            <span class="nav-text">Turnos</span>
+        </a>
+
+        <a href="src/pages/Usuarios/usuarios.html" class="nav-link">
+            <img src="src/assets/svg/usuarios.svg" class="nav-svg" />
+            <span class="nav-text">Usuarios</span>
+        </a>
+
+        <a href="src/pages/Supervisor/Reportes/reportes.html" class="nav-link">
+            <img src="src/assets/svg/reporte.svg" class="nav-svg" />
+            <span class="nav-text">Reportes</span>
+        </a>
+
+        <a href="src/pages/Supervisor/Auditoria/auditoria.html" class="nav-link">
+            <img src="src/assets/svg/auditoria.svg" class="nav-svg" />
+            <span class="nav-text">Auditoría</span>
+        </a>
+    </nav>
+</aside>
+<!-- ===== Contenedor de las cards ===== -->
+<main class="main-container">
+
+    <div class="welcome-header">
+        <h1 class="main-title">Si llegaste hasta aquí</h1>
+        <p class="subtitle-desc"><-Sólo dirigase al inicio con el manu de nevagción.</p>
+    </div>
 
     <img class="hospital-logo" src="/src/assets/images/HermindaMartin.png" alt="Logo del Hospital clínico Herminda Martín" 
-    title="imagen de el Hospital clínico Herminda Martín" width="260" height="90">
+    title="imagen de el Hospital clínico Herminda Martín" width="700px" height="250px"
+    style="
+    margin-top: 1.6rem;
+    margin-bottom: 2rem;
+    margin-left: 23rem;
+    margin-right: 20rem;"/>
+
+    <img class="ministerio-logo" src="/src/assets/images/MinisterioSalud.png" alt="Logo del Ministerio de Salud" 
+    title="imagen de el Ministerio de Salud" width="250px" height="200px"
+    style="
+    margin-top: 1rem;
+    margin-left: 33.5rem;
+    margin-right: 20rem;"/>
+
+</main>
 </body>
 </html>
