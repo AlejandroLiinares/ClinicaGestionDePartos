@@ -6,69 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir Parto - Matrona</title>
 
-    <!-- CSS Global -->
-    <link rel="stylesheet" href="../../../styles/global.css">
+    <!-- CSS NORMALIZE-->
+    <link rel="stylesheet" href="../../../styles/normalize.css" />
 
-    <!-- Sidebar -->
-    <link rel="stylesheet" href="../../../styles/sidebar.css">
+    <!-- CSS Global-->
+    <link rel="stylesheet" href="../../../styles/global.css" />
 
-    <!-- Formularios -->
-    <link rel="stylesheet" href="../../../styles/form.css">
+    <!-- CSS Topbar -->
+    <link rel="stylesheet" href="../../../styles/topbar.css" />
 
-    <!-- Tema -->
+    <!-- CSS Menu de navegación -->
+    <link rel="stylesheet" href="../../../styles/sidebar.css" />
+
+    <!-- CSS Cards -->
+    <link rel="stylesheet" href="../../../styles/cards.css" />
+
+    <!-- CSS Form -->
+    <link rel="stylesheet" href="../../../styles/form.css" />
+
+    <!-- JS Tema -->
     <script src="../../../scripts/sub-themes.js" defer></script>
+
+    <!-- JS DROPDOWN  -->
+    <script src="../../../scripts/profile-dropdown.js" defer></script>
+
+    <!-- SVG Favicon  -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/pregnant.svg">
 </head>
 
-<body class="light">
+<body>
 
-<!-- SIDEBAR -->
-<aside class="sidebar collapsed" id="sidebar">
-    <nav class="nav-container">
-
-        <a href="../../../../index.html" class="nav__logo">
-            <img src="../../../assets/images/HermindaMartin.png" width="140" height="60" class="nav__logo-icon">
-        </a>
-
-        <div class="nav-scroll">
-            <ul class="nav__links">
-
-                <li class="nav__item">
-                    <a href="../inicioMatrona.html" class="nav__link">
-                        <img src="../../../assets/svg/inicio.svg" class="nav-svg">
-                        <span class="nav-text">Inicio</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="pacientes.html" class="nav__link active">
-                        <img src="../../../assets/svg/paciente.svg" class="nav-svg">
-                        <span class="nav-text">Pacientes</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-
-    </nav>
-</aside>
-
-<!-- HEADER -->
 <header class="top-header">
+    
+    <a href="../../../../index.html" class="nav__logo header-pill">
+        <img src="../../../assets/icons/logo.png" alt="Logo" class="nav__logo-icon"
+        width="90px" height="55px"/>
+    </a>
 
-    <div class="header-right">
-        <div class="profile-info">
-            <img src="../../../assets/icons/matronaicon.png" width="30" height="30" class="profile-photo">
-            <span class="profile-name">Matrona Ana María</span>
-        </div>
+    <div class="topbar-search header-pill">
+        <img src="../../../assets/svg/buscar.svg" class="nav-svg" alt="Buscar"/>
+        <input type="text" class="search-input" placeholder="Buscar en el sistema...">
+    </div>
 
-        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
-            <img id="themeIcon" src="../../../assets/svg/moon.svg">
+    <div class="actions-group header-pill">
+        <button id="themeToggle" class="action-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../../assets/svg/moon.svg" alt="Tema" />
+        </button>
+
+        <button class="action-btn" aria-label="Correo TI">
+            <img src="../../../assets/svg/correo.svg" alt="Correo TI" class="nav-svg"/>
+        </button>
+
+        <button class="action-btn" aria-label="Cerrar sesión">
+            <img src="../../../assets/svg/salir.svg" alt="Cerrar sesión" class="nav-svg"/>
         </button>
     </div>
 
-    <h1>Añadir Parto</h1>
+    <div class="profile-container header-pill">
+        <img width="35" height="35" title="Foto de perfil"
+        alt="Foto perfil" class="profile-photo"
+        src="../../../assets/icons/matronaicon.png"/>
+
+        <div class="profile-text">
+            <span class="profile-name">Matrona Ana María</span>
+            <span class="profile-email">ana.maria@clinica.cl</span>
+        </div>
+
+        <button class="dropdown-btn" aria-label="Más opciones">
+            <img src="../../../assets/svg/flechaabajo.svg" alt="Más opciones" width="20px" height="20px"/>
+        </button>
+
+        <div class="profile-dropdown">
+            <a href="../../Matrona/perfilMatrona.html">Ver mi perfil.</a>
+        </div>
+    </div>
+
 </header>
 
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+        <a href="../inicioMatrona.html" class="nav-link active">
+        <img src="../../../assets/svg/inicio.svg" class="nav-svg" />
+            <span class="nav-text">Inicio</span>
+        </a>
+
+        <a href="../../Matrona/Pacientes/pacientes.html" class="nav-link">
+            <img src="../../../assets/svg/paciente.svg" class="nav-svg" />
+            <span class="nav-text">Pacientes</span>
+        </a>
+
+        <a href="../../Matrona/Gestaciones/gestaciones.html" class="nav-link">
+            <img src="../../../assets/svg/gestacion.svg" class="nav-svg" />
+            <span class="nav-text">Gestaciones</span>
+        </a>
+
+        <a href="../../Matrona/Partos/partos.html" class="nav-link">
+            <img src="../../../assets/svg/parto.svg" class="nav-svg" />
+            <span class="nav-text">Partos</span>
+        </a>
+
+        <a href="../../Matrona/RecienNacido/recienNacido.html" class="nav-link">
+            <img src="../../../assets/svg/reciennacido.svg" class="nav-svg" />
+            <span class="nav-text">Recién Nacidos</span>
+        </a>
+
+        <a href="../../Profesionales/profesionales.html" class="nav-link">
+            <img src="../../../assets/svg/profesional.svg" class="nav-svg" />
+            <span class="nav-text">Profesionales</span>
+        </a>
+
+        <a href="../../Turnos/turnos.html" class="nav-link">
+            <img src="../../../assets/svg/turnos.svg" class="nav-svg" />
+            <span class="nav-text">Turnos</span>
+        </a>
+
+        <a href="../../Usuarios/usuarios.html" class="nav-link">
+            <img src="../../../assets/svg/usuarios.svg" class="nav-svg" />
+            <span class="nav-text">Usuarios</span>
+        </a>
+
+        <a href="../../Supervisor/Reportes/reportes.html" class="nav-link">
+            <img src="../../../assets/svg/reporte.svg" class="nav-svg" />
+            <span class="nav-text">Reportes</span>
+        </a>
+
+        <a href="../../Supervisor/Auditoria/auditoria.html" class="nav-link">
+            <img src="../../../assets/svg/auditoria.svg" class="nav-svg" />
+            <span class="nav-text">Auditoría</span>
+        </a>
+    </nav>
+</aside>
 
 <main class="main-container">
 
@@ -78,220 +145,236 @@
         <span>›</span>
         <a href="partos.html">Partos</a>
         <span>›</span>
-        <span>Nuevo</span>
+        <span>Nuevo Parto</span>
     </nav>
 
-<form class="form-wrapper">
-
-    <!-- INFORMACIÓN PRINCIPAL -->
-    <fieldset class="form-section">
-        <legend class="form-section-title">Información Principal del Parto</legend>
-
-        <div class="form-grid-3">
-
-            <!-- USUARIO -->
-            <div class="form-field">
-                <label for="usuario_id">Profesional Responsable</label>
-                <select id="usuario_id" name="parto[usuario_id]" class="input-select" required>
-                    <option value="">Seleccione al usuario</option>
-                    <!-- Daniel vos vas a cargar a las matronas, si quieres ayuda me dices.-->
-                </select>
-            </div>
-
-            <!-- TIPO DE INGRESO -->
-            <div class="form-field">
-                <label for="id_tipo_de_ingreso">Tipo de Ingreso</label>
-                <select id="id_tipo_de_ingreso" name="parto[id_tipo_de_ingreso]" class="input-select" required>
-                    <option value="">Seleccione tipo</option>
-                </select>
-            </div>
-
-            <!-- GRUPO ROBSON -->
-            <div class="form-field">
-                <label for="grupo_robson_id">Grupo Robson</label>
-                <select id="grupo_robson_id" name="parto[grupo_robson_id]" class="input-select" required>
-                    <option value="">Seleccione grupo</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="form-grid-3">
-
-            <!-- VÍA DE NACIMIENTO -->
-            <div class="form-field">
-                <label for="via_nacimiento_id">Vía de Nacimiento</label>
-                <select id="via_nacimiento_id" name="parto[via_nacimiento_id]" class="input-select" required>
-                    <option value="">Seleccione vía</option>
-                </select>
-            </div>
-
-            <!-- GESTACIÓN ASOCIADA -->
-            <div class="form-field">
-                <label for="gestacion_id">Gestación Asociada</label>
-                <select id="gestacion_id" name="parto[gestacion_id]" class="input-select" required>
-                    <option value="">Seleccione gestación</option>
-                </select>
-            </div>
-
-            <!-- FECHA INGRESO -->
-            <div class="form-field">
-                <label for="fecha_ingreso">Fecha de Ingreso</label>
-                <input type="datetime-local" id="fecha_ingreso" name="parto[fecha_ingreso]" class="input-text">
-            </div>
-
-        </div>
-    </fieldset>
-
-
-    <!-- FACTORES MATERNOS -->
-    <fieldset class="form-section">
-        <legend class="form-section-title">Factores Maternos</legend>
-
-        <div class="form-grid-3">
-
-            <div class="form-field">
-                <label for="paridad">Paridad</label>
-                <input type="number" id="paridad" name="parto[paridad]" class="input-text" min="0">
-            </div>
-
-            <div class="form-field">
-                <label for="gestaciones">Gestaciones Previas</label>
-                <input type="number" id="gestaciones" name="parto[gestaciones]" class="input-text" min="0">
-            </div>
-
-            <div class="form-field">
-                <label for="edad_madre">Edad de la Madre al Parto</label>
-                <input type="number" id="edad_madre" name="parto[edad_madre]" class="input-text" min="10" max="60">
-            </div>
-
-        </div>
-
-        <div class="form-grid-3">
-
-            <div class="form-field">
-                <label for="semana_gestacion_momento">Semana de Gestación al Momento</label>
-                <input type="number" id="semana_gestacion_momento" name="parto[semana_gestacion_momento]" class="input-text" min="20" max="45">
-            </div>
-
-            <div class="form-field">
-                <label for="estado">Estado del Parto</label>
-                <select id="estado" name="parto[estado]" class="input-select">
-                    <option value="">Seleccione estado</option>
-                    <!-- Opciones de ENUM -->
-                </select>
-            </div>
-
-            <div class="form-field">
-                <label for="posicion_materna">Posición Materna</label>
-                <select id="posicion_materna" name="parto[posicion_materna]" class="input-select">
-                    <option value="">Seleccione posición</option>
-                    <!-- Opciones ENUM -->
-                </select>
-            </div>
-
-        </div>
-    </fieldset>
-
-
-    <!-- PROCESO DE PARTO -->
-    <fieldset class="form-section">
-        <legend class="form-section-title">Proceso del Parto</legend>
-
-        <div class="checkbox-group">
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="parto[acompanante]" value="1"> Acompañante
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="parto[monitor]" value="1"> Monitor
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="parto[ttc]" value="1"> TTC
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="parto[induccion]" value="1"> Inducción
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="parto[aceleracion]" value="1"> Aceleración
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="parto[oxitocina_profilactica]" value="1"> Oxitocina Profiláctica
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="parto[uso_sala_saip]" value="1"> Uso de Sala SAIP
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="parto[entrega_placenta]" value="1"> Entrega de Placenta
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="parto[esterilizacion]" value="1"> Esterilización
-            </label>
-
-        </div>
-
-        <div class="form-grid-3">
-
-            <div class="form-field">
-                <label for="n_tactos_vaginales">N° Tactos Vaginales</label>
-                <input type="number" id="n_tactos_vaginales" name="parto[n_tactos_vaginales]" class="input-text" min="0">
-            </div>
-
-            <div class="form-field">
-                <label for="tiempo_dilatacion">Tiempo de Dilatación (min)</label>
-                <input type="number" id="tiempo_dilatacion" name="parto[tiempo_dilatacion]" class="input-text" min="0">
-            </div>
-
-            <div class="form-field">
-                <label for="tiempo_expulsivo">Tiempo Expulsivo (min)</label>
-                <input type="number" id="tiempo_expulsivo" name="parto[tiempo_expulsivo]" class="input-text" min="0">
-            </div>
-
-        </div>
-
-        <div class="form-grid-3">
-
-            <div class="form-field">
-                <label for="rotura_membrana">Rotura de Membrana</label>
-                <select id="rotura_membrana" name="parto[rotura_membrana]" class="input-select">
-                    <option value="">Seleccione</option>
-                    <!-- ENUM -->
-                </select>
-            </div>
-
-            <div class="form-field">
-                <label for="tiempo_membrana_rota">Tiempo de Membrana Rota</label>
-                <input type="datetime-local" id="tiempo_membrana_rota" name="parto[tiempo_membrana_rota]" class="input-text">
-            </div>
-
-            <div class="form-field">
-                <label for="estado_perine">Estado del Periné</label>
-                <select id="estado_perine" name="parto[estado_perine]" class="input-select">
-                    <option value="">Seleccione estado</option>
-                    <!-- ENUM -->
-                </select>
-            </div>
-
-        </div>
-
-    </fieldset>
-
-
-    <!-- BOTÓN -->
-    <div class="form-submit">
-        <button type="submit" class="btn-primary">Registrar Parto</button>
+<section class="form-card">
+    
+    <div class="form-header">
+        <h2 class="form-title">Registro de Parto</h2>
+        <p class="form-subtitle">Ingrese los datos clínicos del trabajo de parto.</p>
     </div>
 
-</form>
+    <form method="POST" class="main-form">
+        {% csrf_token %}
 
+        <fieldset class="form-section">
+            <legend class="section-legend">Antecedentes e Ingreso</legend>
 
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="gestacion">Gestación Asociada</label>
+                    <select id="gestacion" name="gestacion" required>
+                        <option value="" disabled selected>Seleccione gestación...</option>
+                        {% for g in form.fields.gestacion.queryset %}
+                            <option value="{{ g.id }}">
+                                {{ g.paciente.obtener_nombre_completo }} ({{ g.paciente.identificacion }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora_inicio">Fecha y Hora de Inicio</label>
+                    <input type="datetime-local" id="hora_inicio" name="hora_inicio" required
+                           value="{{ form.hora_inicio.value|date:'Y-m-d\TH:i' }}">
+                </div>
+            </div>
+
+            <div class="form-row three-cols">
+                <div class="form-group">
+                    <label for="tipo_de_ingreso">Tipo de Ingreso</label>
+                    <select id="tipo_de_ingreso" name="tipo_de_ingreso" required>
+                        <option value="" selected>Seleccione...</option>
+                        {% for tipo in form.fields.tipo_de_ingreso.queryset %}
+                            <option value="{{ tipo.id }}">{{ tipo.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="grupo_robson">Grupo Robson</label>
+                    <select id="grupo_robson" name="grupo_robson">
+                        <option value="" selected>Seleccione...</option>
+                        {% for grupo in form.fields.grupo_robson.queryset %}
+                            <option value="{{ grupo.id }}">{{ grupo.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="via_nacimiento">Vía de Nacimiento</label>
+                    <select id="via_nacimiento" name="via_nacimiento" required>
+                        <option value="" selected>Seleccione...</option>
+                        {% for via in form.fields.via_nacimiento.queryset %}
+                            <option value="{{ via.id }}">{{ via.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Evolución del Trabajo de Parto</legend>
+
+            <div class="form-row three-cols">
+                <div class="form-group">
+                    <label for="estado">Estado Actual</label>
+                    <select id="estado" name="estado">
+                        {% for value, label in form.fields.estado.choices %}
+                            <option value="{{ value }}">{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="posicion">Posición Materna</label>
+                    <select id="posicion" name="posicion">
+                        {% for value, label in form.fields.posicion.choices %}
+                            <option value="{{ value }}">{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo_regimen">Régimen</label>
+                    <select id="tipo_regimen" name="tipo_regimen">
+                        {% for value, label in form.fields.tipo_regimen.choices %}
+                            <option value="{{ value }}">{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row three-cols">
+                <div class="form-group">
+                    <label for="n_tactos_vaginales">N° Tactos Vaginales</label>
+                    <input type="number" id="n_tactos_vaginales" name="n_tactos_vaginales" 
+                           min="0" max="40" placeholder="0"
+                           value="{{ form.n_tactos_vaginales.value|default:'0' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="numero_aro">Número ARO</label>
+                    <input type="number" id="numero_aro" name="numero_aro" 
+                           min="0" placeholder="0"
+                           value="{{ form.numero_aro.value|default:'' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="rotura_membrana">Rotura Membrana</label>
+                    <select id="rotura_membrana" name="rotura_membrana">
+                        {% for value, label in form.fields.rotura_membrana.choices %}
+                            <option value="{{ value }}">{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Cronometría (En Minutos)</legend>
+            <p class="form-subtitle" style="margin-bottom: 1rem; margin-top: -1rem;">
+                Daniel lo pidió: ingrese solo números enteros representando minutos.
+            </p>
+
+            <div class="form-row three-cols">
+                <div class="form-group">
+                    <label for="tiempo_membrana_rota">T. Membrana Rota</label>
+                    <input type="number" id="tiempo_membrana_rota" name="tiempo_membrana_rota" 
+                           placeholder="min" min="0" required
+                           value="{{ form.tiempo_membrana_rota.value|default:'' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="tiempo_dilatacion">T. Dilatación</label>
+                    <input type="number" id="tiempo_dilatacion" name="tiempo_dilatacion" 
+                           placeholder="min" min="0" required
+                           value="{{ form.tiempo_dilatacion.value|default:'' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="tiempo_expulsivo">T. Expulsivo</label>
+                    <input type="number" id="tiempo_expulsivo" name="tiempo_expulsivo" 
+                           placeholder="min" min="0" required
+                           value="{{ form.tiempo_expulsivo.value|default:'' }}">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Procedimientos y Factores</legend>
+
+            <div class="checkbox-grid">
+                <label class="checkbox-card">
+                    <input type="checkbox" name="acompaniante" id="acompaniante" {% if form.acompaniante.value %}checked{% endif %}>
+                    <span class="checkbox-text">Acompañante</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="monitor" id="monitor" {% if form.monitor.value %}checked{% endif %}>
+                    <span class="checkbox-text">Monitor</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="ttc" id="ttc" {% if form.ttc.value %}checked{% endif %}>
+                    <span class="checkbox-text">TTC</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="induccion" id="induccion" {% if form.induccion.value %}checked{% endif %}>
+                    <span class="checkbox-text">Inducción</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="aceleracion" id="aceleracion" {% if form.aceleracion.value %}checked{% endif %}>
+                    <span class="checkbox-text">Aceleración</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="oxitocina_profilactica" id="oxitocina_profilactica" {% if form.oxitocina_profilactica.value %}checked{% endif %}>
+                    <span class="checkbox-text">Oxitocina Profiláctica</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="uso_sala_saip" id="uso_sala_saip" {% if form.uso_sala_saip.value %}checked{% endif %}>
+                    <span class="checkbox-text">Uso Sala SAIP</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="entrega_placenta" id="entrega_placenta" {% if form.entrega_placenta.value %}checked{% endif %}>
+                    <span class="checkbox-text">Entrega Placenta</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Detalles Finales</legend>
+
+            <div class="form-group">
+                <label for="profesionales">Profesionales Involucrados</label>
+                <select id="profesionales" name="profesionales" multiple style="height: auto; min-height: 100px;">
+                    {% for profesional in form.fields.profesionales.queryset %}
+                        <option value="{{ profesional.id }}">{{ profesional }}</option>
+                    {% endfor %}
+                </select>
+                <span class="field-help">Mantenga presionado Ctrl (Windows) o Cmd (Mac) para seleccionar varios.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="observaciones">Observaciones Generales</label>
+                <textarea id="observaciones" name="observaciones" placeholder="Comentarios adicionales del parto..."
+                          rows="3">{{ form.observaciones.value|default:'' }}</textarea>
+            </div>
+        </fieldset>
+
+        <div class="form-actions">
+            <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+            <button type="submit" class="btn-primary">Registrar Parto</button>
+        </div>
+
+    </form>
+</section>
 </main>
 
 </body>

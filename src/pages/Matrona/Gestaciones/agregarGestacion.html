@@ -4,71 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir Paciente - Matrona</title>
+    <title>Añadir Gestación - Matrona</title>
 
-    <!-- CSS Global -->
-    <link rel="stylesheet" href="../../../styles/global.css">
+    <!-- CSS NORMALIZE-->
+    <link rel="stylesheet" href="../../../styles/normalize.css" />
 
-    <!-- Sidebar -->
-    <link rel="stylesheet" href="../../../styles/sidebar.css">
+    <!-- CSS Global-->
+    <link rel="stylesheet" href="../../../styles/global.css" />
 
-    <!-- Formularios -->
-    <link rel="stylesheet" href="../../../styles/form.css">
+    <!-- CSS Topbar -->
+    <link rel="stylesheet" href="../../../styles/topbar.css" />
 
-    <!-- Tema -->
+    <!-- CSS Menu de navegación -->
+    <link rel="stylesheet" href="../../../styles/sidebar.css" />
+
+    <!-- CSS Cards -->
+    <link rel="stylesheet" href="../../../styles/cards.css" />
+
+    <!-- CSS Form -->
+    <link rel="stylesheet" href="../../../styles/form.css" />
+
+    <!-- JS Tema -->
     <script src="../../../scripts/sub-themes.js" defer></script>
+
+    <!-- JS DROPDOWN  -->
+    <script src="../../../scripts/profile-dropdown.js" defer></script>
+
+    <!-- SVG Favicon  -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/pregnant.svg">
 </head>
 
-<body class="light">
+<body>
 
-<!-- SIDEBAR -->
-<aside class="sidebar collapsed" id="sidebar">
-    <nav class="nav-container">
-
-        <a href="../../../../index.html" class="nav__logo">
-            <img src="../../../assets/images/HermindaMartin.png" width="140" height="60" class="nav__logo-icon">
-        </a>
-
-        <div class="nav-scroll">
-            <ul class="nav__links">
-
-                <li class="nav__item">
-                    <a href="../inicioMatrona.html" class="nav__link">
-                        <img src="../../../assets/svg/inicio.svg" class="nav-svg">
-                        <span class="nav-text">Inicio</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="pacientes.html" class="nav__link active">
-                        <img src="../../../assets/svg/paciente.svg" class="nav-svg">
-                        <span class="nav-text">Pacientes</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-
-    </nav>
-</aside>
-
-<!-- HEADER -->
 <header class="top-header">
+    
+    <a href="../../../../index.html" class="nav__logo header-pill">
+        <img src="../../../assets/icons/logo.png" alt="Logo" class="nav__logo-icon"
+        width="90px" height="55px"/>
+    </a>
 
-    <div class="header-right">
-        <div class="profile-info">
-            <img src="../../../assets/icons/matronaicon.png" width="30" height="30" class="profile-photo">
-            <span class="profile-name">Matrona Ana María</span>
-        </div>
+    <div class="topbar-search header-pill">
+        <img src="../../../assets/svg/buscar.svg" class="nav-svg" alt="Buscar"/>
+        <input type="text" class="search-input" placeholder="Buscar en el sistema...">
+    </div>
 
-        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
-            <img id="themeIcon" src="../../../assets/svg/moon.svg">
+    <div class="actions-group header-pill">
+        <button id="themeToggle" class="action-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../../assets/svg/moon.svg" alt="Tema" />
+        </button>
+
+        <button class="action-btn" aria-label="Correo TI">
+            <img src="../../../assets/svg/correo.svg" alt="Correo TI" class="nav-svg"/>
+        </button>
+
+        <button class="action-btn" aria-label="Cerrar sesión">
+            <img src="../../../assets/svg/salir.svg" alt="Cerrar sesión" class="nav-svg"/>
         </button>
     </div>
 
-    <h1>Añadir Gestación</h1>
+    <div class="profile-container header-pill">
+        <img width="35" height="35" title="Foto de perfil"
+        alt="Foto perfil" class="profile-photo"
+        src="../../../assets/icons/matronaicon.png"/>
+
+        <div class="profile-text">
+            <span class="profile-name">Matrona Ana María</span>
+            <span class="profile-email">ana.maria@clinica.cl</span>
+        </div>
+
+        <button class="dropdown-btn" aria-label="Más opciones">
+            <img src="../../../assets/svg/flechaabajo.svg" alt="Más opciones" width="20px" height="20px"/>
+        </button>
+
+        <div class="profile-dropdown">
+            <a href="../../Matrona/perfilMatrona.html">Ver mi perfil.</a>
+        </div>
+    </div>
+
 </header>
 
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+        <a href="../inicioMatrona.html" class="nav-link active">
+        <img src="../../../assets/svg/inicio.svg" class="nav-svg" />
+            <span class="nav-text">Inicio</span>
+        </a>
+
+        <a href="../../Matrona/Pacientes/pacientes.html" class="nav-link">
+            <img src="../../../assets/svg/paciente.svg" class="nav-svg" />
+            <span class="nav-text">Pacientes</span>
+        </a>
+
+        <a href="../../Matrona/Gestaciones/gestaciones.html" class="nav-link">
+            <img src="../../../assets/svg/gestacion.svg" class="nav-svg" />
+            <span class="nav-text">Gestaciones</span>
+        </a>
+
+        <a href="../../Matrona/Partos/partos.html" class="nav-link">
+            <img src="../../../assets/svg/parto.svg" class="nav-svg" />
+            <span class="nav-text">Partos</span>
+        </a>
+
+        <a href="../../Matrona/RecienNacido/recienNacido.html" class="nav-link">
+            <img src="../../../assets/svg/reciennacido.svg" class="nav-svg" />
+            <span class="nav-text">Recién Nacidos</span>
+        </a>
+
+        <a href="../../Profesionales/profesionales.html" class="nav-link">
+            <img src="../../../assets/svg/profesional.svg" class="nav-svg" />
+            <span class="nav-text">Profesionales</span>
+        </a>
+
+        <a href="../../Turnos/turnos.html" class="nav-link">
+            <img src="../../../assets/svg/turnos.svg" class="nav-svg" />
+            <span class="nav-text">Turnos</span>
+        </a>
+
+        <a href="../../Usuarios/usuarios.html" class="nav-link">
+            <img src="../../../assets/svg/usuarios.svg" class="nav-svg" />
+            <span class="nav-text">Usuarios</span>
+        </a>
+
+        <a href="../../Supervisor/Reportes/reportes.html" class="nav-link">
+            <img src="../../../assets/svg/reporte.svg" class="nav-svg" />
+            <span class="nav-text">Reportes</span>
+        </a>
+
+        <a href="../../Supervisor/Auditoria/auditoria.html" class="nav-link">
+            <img src="../../../assets/svg/auditoria.svg" class="nav-svg" />
+            <span class="nav-text">Auditoría</span>
+        </a>
+    </nav>
+</aside>
 
 <main class="main-container">
 
@@ -78,190 +145,148 @@
         <span>›</span>
         <a href="gestaciones.html">Gestaciones</a>
         <span>›</span>
-        <span>Nuevo</span>
+        <span>Nueva Gestación</span>
     </nav>
 
-<form class="form-wrapper">
-
-    <!-- INFORMACIÓN PRINCIPAL DE GESTACIÓN -->
-    <fieldset class="form-section">
-        <legend class="form-section-title">Información de la Gestación</legend>
-
-        <div class="form-grid-3">
-
-            <!-- PACIENTE -->
-            <div class="form-field">
-                <label for="paciente_id">Paciente</label>
-                <select id="paciente_id" name="gestacion[paciente_id]" class="input-select" required>
-                    <option value="">Seleccione un paciente</option>
-                    <!-- Daniel cargará dinámicamente -->
-                </select>
-            </div>
-
-            <!-- USUARIO -->
-            <div class="form-field">
-                <label for="usuario_id">Profesional Responsable</label>
-                <select id="usuario_id" name="gestacion[usuario_id]" class="input-select" required>
-                    <option value="">Seleccione a la matrona</option>
-                </select>
-            </div>
-
-            <!-- N° GESTACIÓN -->
-            <div class="form-field">
-                <label for="numero_gestacion">Número de Gestación</label>
-                <input 
-                    type="number" 
-                    id="numero_gestacion" 
-                    name="gestacion[numero_gestacion]" 
-                    class="input-text"
-                    min="1"
-                    required>
-            </div>
-
-        </div>
-
-        <!-- SEMANAS / DÍAS -->
-        <div class="form-grid-3">
-
-            <div class="form-field">
-                <label for="semanas_gestacion">Semanas de Gestación</label>
-                <input
-                    type="number"
-                    id="semanas_gestacion"
-                    name="gestacion[semanas_gestacion]"
-                    class="input-text"
-                    min="0"
-                    max="43"
-                    required>
-            </div>
-
-            <div class="form-field">
-                <label for="dias_gestacion">Días</label>
-                <input
-                    type="number"
-                    id="dias_gestacion"
-                    name="gestacion[dias_gestacion]"
-                    class="input-text"
-                    min="0"
-                    max="6"
-                    required>
-            </div>
-
-            <div class="form-field">
-                <label for="riesgo">Riesgo</label>
-                <select id="riesgo" name="gestacion[riesgo]" class="input-select" required>
-                    <option value="">Seleccione riesgo</option>
-                    <option value="bajo">Bajo</option>
-                    <option value="medio">Medio</option>
-                    <option value="alto">Alto</option>
-                </select>
-            </div>
-
-        </div>
-    </fieldset>
-
-
-    <!-- FACTORES DE RIESGO -->
-    <fieldset class="form-section">
-        <legend class="form-section-title">Factores de Riesgo</legend>
-
-        <div class="checkbox-group">
-            <label class="checkbox-item">
-                <input type="checkbox" name="gestacion[hipertension]" value="1"> Hipertensión
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="gestacion[diabetes]" value="1"> Diabetes
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="gestacion[enfermedad_cardiaca]" value="1"> Enfermedad Cardíaca
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="gestacion[multiple]" value="1"> Embarazo Múltiple
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox" name="gestacion[aborto]" value="1"> Antecedente de Aborto
-            </label>
-        </div>
-
-        <div class="form-grid-3">
-
-            <div class="form-field">
-                <label for="numero_fetos">Número de Fetos</label>
-                <input
-                    type="number"
-                    id="numero_fetos"
-                    name="gestacion[numero_fetos]"
-                    class="input-text"
-                    min="1"
-                    required>
-            </div>
-
-            <div class="form-field checkbox-item">
-                <label>
-                    <input type="checkbox" id="testsgb" name="gestacion[testsgb]" value="1"> Test SGB
-                </label>
-            </div>
-
-            <div class="form-field checkbox-item">
-                <label>
-                    <input type="checkbox" id="testvih" name="gestacion[testvih]" value="1"> Test VIH
-                </label>
-            </div>
-
-        </div>
-    </fieldset>
-
-
-    <!-- OBSERVACIONES Y FECHAS -->
-    <fieldset class="form-section">
-        <legend class="form-section-title">Observaciones y Registro</legend>
-
-        <div class="form-grid-3">
-
-            <div class="form-field">
-                <label for="observaciones">Observaciones</label>
-                <textarea 
-                    id="observaciones" 
-                    name="gestacion[observaciones]"
-                    class="input-text-large"
-                    maxlength="100"></textarea>
-            </div>
-
-            <div class="form-field">
-                <label for="fecha_ingreso">Fecha de Ingreso</label>
-                <input 
-                    type="datetime-local"
-                    id="fecha_ingreso"
-                    name="gestacion[fecha_ingreso]"
-                    class="input-text"
-                    required>
-            </div>
-
-            <div class="form-field">
-                <label for="fecha_actualizacion">Fecha de Actualización</label>
-                <input 
-                    type="datetime-local"
-                    id="fecha_actualizacion"
-                    name="gestacion[fecha_actualizacion]"
-                    class="input-text"
-                    required>
-            </div>
-
-        </div>
-    </fieldset>
-
-
-    <!-- BOTÓN -->
-    <div class="form-submit">
-        <button type="submit" class="btn-primary">Añadir Gestación</button>
+<section class="form-card">
+    
+    <div class="form-header">
+        <h2 class="form-title">Nueva Gestación</h2>
+        <p class="form-subtitle">Ingrese los datos para iniciar el control prenatal.</p>
     </div>
 
-</form>
+    <form method="POST" class="main-form">
+        {% csrf_token %}
 
+        <fieldset class="form-section">
+            <legend class="section-legend">Vinculación y Estado</legend>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="paciente">Paciente</label>
+                    <select id="paciente" name="paciente" required>
+                        <option value="" disabled selected>Buscar paciente...</option>
+                        {% for paciente in form.fields.paciente.queryset %}
+                            <option value="{{ paciente.id }}">
+                                {{ paciente.obtener_nombre_completo }} ({{ paciente.identificacion }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="estado">Estado de la Gestación</label>
+                    <select id="estado" name="estado" required>
+                        {% for value, label in form.fields.estado.choices %}
+                            <option value="{{ value }}" {% if value == 'curso' %}selected{% endif %}>
+                                {{ label }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="riesgo">Clasificación de Riesgo</label>
+                    <select id="riesgo" name="riesgo">
+                        {% for value, label in form.fields.riesgo.choices %}
+                            <option value="{{ value }}">{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="numero_fetos">Número de Fetos</label>
+                    <input type="number" id="numero_fetos" name="numero_fetos" 
+                           min="1" max="5" value="{{ form.numero_fetos.value|default:'1' }}" required>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Datación y Edad Gestacional</legend>
+
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label for="origen_datacion">Origen de Datación</label>
+                <select id="origen_datacion" name="origen_datacion" required>
+                    <option value="" disabled selected>Seleccione método (FUR o ECO)</option>
+                    {% for value, label in form.fields.origen_datacion.choices %}
+                        <option value="{{ value }}">{{ label }}</option>
+                    {% endfor %}
+                </select>
+                <span class="field-help">Seleccione el método principal para calcular la ED. Gestacional.</span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fur">Fecha Última Regla (FUR)</label>
+                    <input type="date" id="fur" name="fur" 
+                           value="{{ form.fur.value|date:'Y-m-d' }}">
+                </div>
+                <div class="form-group"></div> 
+            </div>
+
+            <div class="form-row three-cols">
+                <div class="form-group">
+                    <label for="fecha_eco">Fecha de la Ecografía</label>
+                    <input type="date" id="fecha_eco" name="fecha_eco" 
+                           value="{{ form.fecha_eco.value|date:'Y-m-d' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="semanas_eco">Semanas (según Eco)</label>
+                    <input type="number" id="semanas_eco" name="semanas_eco" 
+                           placeholder="Ej: 12" min="0" max="42"
+                           value="{{ form.semanas_eco.value|default:'' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="dias_eco">Días (según Eco)</label>
+                    <input type="number" id="dias_eco" name="dias_eco" 
+                           placeholder="Ej: 4" min="0" max="6"
+                           value="{{ form.dias_eco.value|default:'' }}">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Factores de Riesgo y Antecedentes</legend>
+
+            <div class="checkbox-grid">
+                <label class="checkbox-card">
+                    <input type="checkbox" name="hipertension" id="hipertension" 
+                           {% if form.hipertension.value %}checked{% endif %}>
+                    <span class="checkbox-text">Hipertensión</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="diabetes" id="diabetes"
+                           {% if form.diabetes.value %}checked{% endif %}>
+                    <span class="checkbox-text">Diabetes</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="enfermedad_cardiaca" id="enfermedad_cardiaca"
+                           {% if form.enfermedad_cardiaca.value %}checked{% endif %}>
+                    <span class="checkbox-text">Enfermedad Cardíaca</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="multiple" id="multiple"
+                           {% if form.multiple.value %}checked{% endif %}>
+                    <span class="checkbox-text">Embarazo Múltiple</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="form-actions">
+            <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+            <button type="submit" class="btn-primary">Registrar Gestación</button>
+        </div>
+
+    </form>
+</section>
 </main>
 
 </body>

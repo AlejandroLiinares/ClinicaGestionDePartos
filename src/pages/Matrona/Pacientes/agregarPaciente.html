@@ -156,7 +156,7 @@
     </div>
 
     <form method="POST" class="main-form">
-        <!-- {% csrf_token %}  -->
+        {% csrf_token %} 
 
         <fieldset class="form-section">
             <legend class="section-legend">Identificación Personal</legend>
@@ -164,31 +164,38 @@
             <div class="form-row three-cols">
                 <div class="form-group">
                     <label for="nombre">Nombres</label>
-                    <input type="text" id="nombre" name="nombre" class="input-field" placeholder="Ej: María Paz" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: María Paz" required 
+                           value="{{ form.nombre.value|default:'' }}">
                 </div>
+                
                 <div class="form-group">
                     <label for="primer_apellido">Primer Apellido</label>
-                    <input type="text" id="primer_apellido" name="primer_apellido" class="input-field" required>
+                    <input type="text" id="primer_apellido" name="primer_apellido" required
+                           value="{{ form.primer_apellido.value|default:'' }}">
                 </div>
+                
                 <div class="form-group">
                     <label for="segundo_apellido">Segundo Apellido</label>
-                    <input type="text" id="segundo_apellido" name="segundo_apellido" class="input-field" required>
+                    <input type="text" id="segundo_apellido" name="segundo_apellido" required
+                           value="{{ form.segundo_apellido.value|default:'' }}">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label for="documento">Tipo de Documento</label>
-                    <select id="documento" name="documento" class="input-field">
+                    <select id="documento" name="documento">
                         <option value="RUT" selected>RUT</option>
                         <option value="PAS">Pasaporte</option>
                         <option value="EXT">Documento Extranjero</option>
                         <option value="TMP">Sin Documento / Temporal</option>
                     </select>
                 </div>
+                
                 <div class="form-group">
                     <label for="identificacion">N° Documento</label>
-                    <input type="text" id="identificacion" name="identificacion" class="input-field" placeholder="12345678-9">
+                    <input type="text" id="identificacion" name="identificacion" placeholder="12345678-9"
+                           value="{{ form.identificacion.value|default:'' }}">
                     <span class="field-help">Si es RUT, sin puntos y con guión.</span>
                 </div>
             </div>
@@ -196,11 +203,13 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="fecha_nacimiento">Fecha de Nacimiento</label>
-                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="input-field" required>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required
+                           value="{{ form.fecha_nacimiento.value|date:'Y-m-d' }}">
                 </div>
+                
                 <div class="form-group">
                     <label for="nacionalidad">Nacionalidad</label>
-                    <select id="nacionalidad" name="nacionalidad" class="input-field">
+                    <select id="nacionalidad" name="nacionalidad">
                         <option value="" disabled selected>Seleccione...</option>
                         {% for nacionalidad in form.fields.nacionalidad.queryset %}
                             <option value="{{ nacionalidad.id }}">{{ nacionalidad.nombre }}</option>
@@ -215,17 +224,18 @@
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="tipo_paciente">Tipo de Paciente</label>
-                    <select id="tipo_paciente" name="tipo_paciente" class="input-field" required>
-                        <option value="" selected>Seleccione...</option>
+                    <label for="tipo">Tipo de Paciente</label>
+                    <select id="tipo" name="tipo" required>
                         {% for tipo in form.fields.tipo.queryset %}
                             <option value="{{ tipo.id }}">{{ tipo.nombre }}</option>
                         {% endfor %}
                     </select>
                 </div>
+                
                 <div class="form-group">
                     <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" class="input-field" placeholder="Ej: 912345678">
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 912345678"
+                           value="{{ form.telefono.value|default:'' }}">
                     <span class="field-help">Para nacionales añada el 9. No requiere +56.</span>
                 </div>
             </div>
@@ -233,16 +243,17 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="comuna">Comuna</label>
-                    <select id="comuna" name="comuna" class="input-field">
+                    <select id="comuna" name="comuna">
                         <option value="" selected>Seleccione...</option>
                         {% for comuna in form.fields.comuna.queryset %}
                             <option value="{{ comuna.id }}">{{ comuna.nombre }}</option>
                         {% endfor %}
                     </select>
                 </div>
+                
                 <div class="form-group">
                     <label for="cesfam">CESFAM</label>
-                    <select id="cesfam" name="cesfam" class="input-field">
+                    <select id="cesfam" name="cesfam">
                         <option value="" selected>Ninguno / Desconocido</option>
                         {% for cesfam in form.fields.cesfam.queryset %}
                             <option value="{{ cesfam.id }}">{{ cesfam.nombre }}</option>
@@ -253,7 +264,8 @@
 
             <div class="form-group">
                 <label for="direccion">Dirección</label>
-                <input type="text" id="direccion" name="direccion" class="input-field" placeholder="Calle, número, depto...">
+                <input type="text" id="direccion" name="direccion" placeholder="Calle, número, depto..."
+                       value="{{ form.direccion.value|default:'' }}">
             </div>
         </fieldset>
 
@@ -262,15 +274,19 @@
             <div class="form-row three-cols">
                 <div class="form-group">
                     <label for="peso">Peso (kg)</label>
-                    <input type="number" id="peso" name="peso" step="0.01" class="input-field" placeholder="0.00">
+                    <input type="number" id="peso" name="peso" step="0.01" placeholder="0.00"
+                           value="{{ form.peso.value|default:'' }}">
                 </div>
+                
                 <div class="form-group">
                     <label for="altura">Altura (cm)</label>
-                    <input type="number" id="altura" name="altura" step="0.01" class="input-field" placeholder="0">
+                    <input type="number" id="altura" name="altura" step="0.01" placeholder="0"
+                           value="{{ form.altura.value|default:'' }}">
                 </div>
+                
                 <div class="form-group">
                     <label for="actividad">Actividad Física</label>
-                    <select id="actividad" name="actividad" class="input-field">
+                    <select id="actividad" name="actividad">
                         <option value="baja">Baja</option>
                         <option value="moderada">Moderada</option>
                         <option value="alta">Alta</option>

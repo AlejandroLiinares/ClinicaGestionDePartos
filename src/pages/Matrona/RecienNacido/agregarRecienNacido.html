@@ -6,69 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir Recién Nacido - Matrona</title>
 
-    <!-- CSS Global -->
-    <link rel="stylesheet" href="../../../styles/global.css">
+    <!-- CSS NORMALIZE-->
+    <link rel="stylesheet" href="../../../styles/normalize.css" />
 
-    <!-- Sidebar -->
-    <link rel="stylesheet" href="../../../styles/sidebar.css">
+    <!-- CSS Global-->
+    <link rel="stylesheet" href="../../../styles/global.css" />
 
-    <!-- Formularios -->
-    <link rel="stylesheet" href="../../../styles/form.css">
+    <!-- CSS Topbar -->
+    <link rel="stylesheet" href="../../../styles/topbar.css" />
 
-    <!-- Tema -->
+    <!-- CSS Menu de navegación -->
+    <link rel="stylesheet" href="../../../styles/sidebar.css" />
+
+    <!-- CSS Cards -->
+    <link rel="stylesheet" href="../../../styles/cards.css" />
+
+    <!-- CSS Form -->
+    <link rel="stylesheet" href="../../../styles/form.css" />
+
+    <!-- JS Tema -->
     <script src="../../../scripts/sub-themes.js" defer></script>
+
+    <!-- JS DROPDOWN  -->
+    <script src="../../../scripts/profile-dropdown.js" defer></script>
+
+    <!-- SVG Favicon  -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/pregnant.svg">
 </head>
 
-<body class="light">
+<body>
 
-<!-- SIDEBAR -->
-<aside class="sidebar collapsed" id="sidebar">
-    <nav class="nav-container">
-
-        <a href="../../../../index.html" class="nav__logo">
-            <img src="../../../assets/images/HermindaMartin.png" width="140" height="60" class="nav__logo-icon">
-        </a>
-
-        <div class="nav-scroll">
-            <ul class="nav__links">
-
-                <li class="nav__item">
-                    <a href="../inicioMatrona.html" class="nav__link">
-                        <img src="../../../assets/svg/inicio.svg" class="nav-svg">
-                        <span class="nav-text">Inicio</span>
-                    </a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="pacientes.html" class="nav__link active">
-                        <img src="../../../assets/svg/paciente.svg" class="nav-svg">
-                        <span class="nav-text">Pacientes</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-
-    </nav>
-</aside>
-
-<!-- HEADER -->
 <header class="top-header">
+    
+    <a href="../../../../index.html" class="nav__logo header-pill">
+        <img src="../../../assets/icons/logo.png" alt="Logo" class="nav__logo-icon"
+        width="90px" height="55px"/>
+    </a>
 
-    <div class="header-right">
-        <div class="profile-info">
-            <img src="../../../assets/icons/matronaicon.png" width="30" height="30" class="profile-photo">
-            <span class="profile-name">Matrona Ana María</span>
-        </div>
+    <div class="topbar-search header-pill">
+        <img src="../../../assets/svg/buscar.svg" class="nav-svg" alt="Buscar"/>
+        <input type="text" class="search-input" placeholder="Buscar en el sistema...">
+    </div>
 
-        <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
-            <img id="themeIcon" src="../../../assets/svg/moon.svg">
+    <div class="actions-group header-pill">
+        <button id="themeToggle" class="action-btn" aria-label="Cambiar tema">
+            <img id="themeIcon" src="../../../assets/svg/moon.svg" alt="Tema" />
+        </button>
+
+        <button class="action-btn" aria-label="Correo TI">
+            <img src="../../../assets/svg/correo.svg" alt="Correo TI" class="nav-svg"/>
+        </button>
+
+        <button class="action-btn" aria-label="Cerrar sesión">
+            <img src="../../../assets/svg/salir.svg" alt="Cerrar sesión" class="nav-svg"/>
         </button>
     </div>
 
-    <h1>Añadir Recién Nacido</h1>
+    <div class="profile-container header-pill">
+        <img width="35" height="35" title="Foto de perfil"
+        alt="Foto perfil" class="profile-photo"
+        src="../../../assets/icons/matronaicon.png"/>
+
+        <div class="profile-text">
+            <span class="profile-name">Matrona Ana María</span>
+            <span class="profile-email">ana.maria@clinica.cl</span>
+        </div>
+
+        <button class="dropdown-btn" aria-label="Más opciones">
+            <img src="../../../assets/svg/flechaabajo.svg" alt="Más opciones" width="20px" height="20px"/>
+        </button>
+
+        <div class="profile-dropdown">
+            <a href="../../Matrona/perfilMatrona.html">Ver mi perfil.</a>
+        </div>
+    </div>
+
 </header>
 
+<aside class="sidebar collapsed" id="sidebar">
+    <nav class="nav-container">
+        <a href="../inicioMatrona.html" class="nav-link active">
+        <img src="../../../assets/svg/inicio.svg" class="nav-svg" />
+            <span class="nav-text">Inicio</span>
+        </a>
+
+        <a href="../../Matrona/Pacientes/pacientes.html" class="nav-link">
+            <img src="../../../assets/svg/paciente.svg" class="nav-svg" />
+            <span class="nav-text">Pacientes</span>
+        </a>
+
+        <a href="../../Matrona/Gestaciones/gestaciones.html" class="nav-link">
+            <img src="../../../assets/svg/gestacion.svg" class="nav-svg" />
+            <span class="nav-text">Gestaciones</span>
+        </a>
+
+        <a href="../../Matrona/Partos/partos.html" class="nav-link">
+            <img src="../../../assets/svg/parto.svg" class="nav-svg" />
+            <span class="nav-text">Partos</span>
+        </a>
+
+        <a href="../../Matrona/RecienNacido/recienNacido.html" class="nav-link">
+            <img src="../../../assets/svg/reciennacido.svg" class="nav-svg" />
+            <span class="nav-text">Recién Nacidos</span>
+        </a>
+
+        <a href="../../Profesionales/profesionales.html" class="nav-link">
+            <img src="../../../assets/svg/profesional.svg" class="nav-svg" />
+            <span class="nav-text">Profesionales</span>
+        </a>
+
+        <a href="../../Turnos/turnos.html" class="nav-link">
+            <img src="../../../assets/svg/turnos.svg" class="nav-svg" />
+            <span class="nav-text">Turnos</span>
+        </a>
+
+        <a href="../../Usuarios/usuarios.html" class="nav-link">
+            <img src="../../../assets/svg/usuarios.svg" class="nav-svg" />
+            <span class="nav-text">Usuarios</span>
+        </a>
+
+        <a href="../../Supervisor/Reportes/reportes.html" class="nav-link">
+            <img src="../../../assets/svg/reporte.svg" class="nav-svg" />
+            <span class="nav-text">Reportes</span>
+        </a>
+
+        <a href="../../Supervisor/Auditoria/auditoria.html" class="nav-link">
+            <img src="../../../assets/svg/auditoria.svg" class="nav-svg" />
+            <span class="nav-text">Auditoría</span>
+        </a>
+    </nav>
+</aside>
 
 <main class="main-container">
 
@@ -78,186 +145,217 @@
         <span>›</span>
         <a href="recienNacido.html">Recién Nacidos</a>
         <span>›</span>
-        <span>Nuevo</span>
+        <span>Nuevo recién nacido</span>
     </nav>
 
-<form class="form-content">
+    <section class="form-card">
+    
+    <div class="form-header">
+        <h2 class="form-title">Registro de Recién Nacido</h2>
+        <p class="form-subtitle">Complete la ficha de nacimiento y antropometría.</p>
+    </div>
 
-        <!-- INFORMACIÓN GENERAL -->
-        <section class="form-section">
-            <h2 class="form-section-title">Información General</h2>
+    <form method="POST" class="main-form">
+        {% csrf_token %}
 
-            <div class="form-grid-3">
+        <fieldset class="form-section">
+            <legend class="section-legend">Datos Generales</legend>
 
-                <!-- PARTO -->
-                <div class="form-field">
-                    <label for="parto_id">Parto</label>
-                    <select id="parto_id" name="parto_id" required>
-                        <option value="">Seleccione...</option>
-                        <!-- Rellenar desde backend -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="parto">Parto Asociado</label>
+                    <select id="parto" name="parto" required>
+                        <option value="" disabled selected>Seleccione parto...</option>
+                        {% for p in form.fields.parto.queryset %}
+                            <option value="{{ p.id }}">
+                                {{ p.gestacion.paciente.obtener_nombre_completo }} - {{ p.hora_inicio|date:"d/m H:i" }}
+                            </option>
+                        {% endfor %}
                     </select>
                 </div>
 
-                <!-- PRESENTACIÓN FETAL -->
-                <div class="form-field">
-                    <label for="presentacion_fetal_id">Presentación Fetal</label>
-                    <select id="presentacion_fetal_id" name="presentacion_fetal_id" required>
-                        <option value="">Seleccione...</option>
-                        <!-- Rellenar desde backend -->
+                <div class="form-group">
+                    <label for="fecha_hora">Fecha y Hora de Nacimiento</label>
+                    <input type="datetime-local" id="fecha_hora" name="fecha_hora" required
+                           value="{{ form.fecha_hora.value|date:'Y-m-d\TH:i' }}">
+                </div>
+            </div>
+
+            <div class="form-row three-cols">
+                <div class="form-group">
+                    <label for="codigo">Código Identificador</label>
+                    <input type="text" id="codigo" name="codigo" required placeholder="Ej: RN-2025-001"
+                           value="{{ form.codigo.value|default:'' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="sexo">Sexo</label>
+                    <select id="sexo" name="sexo" required>
+                         {% for value, label in form.fields.sexo.choices %}
+                            <option value="{{ value }}">{{ label }}</option>
+                        {% endfor %}
                     </select>
                 </div>
 
-                <!-- FECHA Y HORA -->
-                <div class="form-field">
-                    <label for="fecha_hora">Fecha y Hora</label>
-                    <input type="datetime-local" id="fecha_hora" name="fecha_hora">
+                <div class="form-group">
+                    <label for="c_2480">Código 2480</label>
+                    <input type="number" id="c_2480" name="c_2480" placeholder="0"
+                           value="{{ form.c_2480.value|default:'' }}">
                 </div>
-
             </div>
-        </section>
+        </fieldset>
 
-        <!-- DATOS DEL RECIÉN NACIDO -->
-        <section class="form-section">
-            <h2 class="form-section-title">Datos del Recién Nacido</h2>
+        <fieldset class="form-section">
+            <legend class="section-legend">Antropometría</legend>
 
-            <div class="form-grid-3">
-
-                <div class="form-field">
-                    <label for="nombre_completo">Nombre Completo</label>
-                    <input type="text" id="nombre_completo" name="nombre_completo" maxlength="300">
+            <div class="form-row three-cols">
+                <div class="form-group">
+                    <label for="peso">Peso (Gramos)</label>
+                    <input type="number" id="peso" name="peso" placeholder="Ej: 3000" min="500" required
+                           value="{{ form.peso.value|default:'' }}">
+                    <span class="field-help">Ingrese el valor en gramos (enteros).</span>
                 </div>
 
-                <div class="form-field">
-                    <label for="codigo">Código</label>
-                    <input type="text" id="codigo" name="codigo" maxlength="10">
-                </div>
-
-                <div class="form-field">
-                    <label for="destino_RN">Destino RN</label>
-                    <input type="text" id="destino_RN" name="destino_RN" maxlength="50">
-                </div>
-
-            </div>
-
-            <div class="form-grid-3">
-
-                <div class="form-field">
-                    <label for="peso">Peso (gr)</label>
-                    <input type="number" step="0.01" id="peso" name="peso">
-                </div>
-
-                <div class="form-field">
+                <div class="form-group">
                     <label for="talla">Talla (cm)</label>
-                    <input type="number" step="0.01" id="talla" name="talla">
+                    <input type="number" id="talla" name="talla" step="0.1" placeholder="Ej: 50.5" required
+                           value="{{ form.talla.value|default:'' }}">
                 </div>
 
-                <div class="form-field">
+                <div class="form-group">
+                    <label for="presentacion_fetal">Presentación Fetal</label>
+                    <select id="presentacion_fetal" name="presentacion_fetal" required>
+                        <option value="" selected>Seleccione...</option>
+                        {% for pres in form.fields.presentacion_fetal.queryset %}
+                            <option value="{{ pres.id }}">{{ pres.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
                     <label for="perimetro_cefalico">Perímetro Cefálico (cm)</label>
-                    <input type="number" step="0.01" id="perimetro_cefalico" name="perimetro_cefalico">
+                    <input type="number" id="perimetro_cefalico" name="perimetro_cefalico" step="0.1"
+                           value="{{ form.perimetro_cefalico.value|default:'' }}">
                 </div>
 
+                <div class="form-group">
+                    <label for="perimetro_toraxico">Perímetro Torácico (cm)</label>
+                    <input type="number" id="perimetro_toraxico" name="perimetro_toraxico" step="0.1"
+                           value="{{ form.perimetro_toraxico.value|default:'' }}">
+                </div>
             </div>
+        </fieldset>
 
-            <div class="form-grid-3">
+        <fieldset class="form-section">
+            <legend class="section-legend">Evaluación Clínica</legend>
 
-                <div class="form-field">
-                    <label for="perimetro_toracico">Perímetro Torácico (cm)</label>
-                    <input type="number" step="0.01" id="perimetro_toracico" name="perimetro_toracico">
+            <div class="form-row three-cols">
+                <div class="form-group">
+                    <label for="apgar_1">APGAR 1 min</label>
+                    <input type="number" id="apgar_1" name="apgar_1" min="0" max="10" required
+                           value="{{ form.apgar_1.value|default:'' }}">
                 </div>
 
-                <div class="form-field">
-                    <label for="apgar_1">Apgar al Minuto 1</label>
-                    <input type="number" id="apgar_1" name="apgar_1" min="0" max="10">
+                <div class="form-group">
+                    <label for="apgar_5">APGAR 5 min</label>
+                    <input type="number" id="apgar_5" name="apgar_5" min="0" max="10" required
+                           value="{{ form.apgar_5.value|default:'' }}">
                 </div>
 
-                <div class="form-field">
-                    <label for="apgar_5">Apgar a los 5 Minutos</label>
-                    <input type="number" id="apgar_5" name="apgar_5" min="0" max="10">
-                </div>
-
-            </div>
-        </section>
-
-        <!-- CUIDADOS Y OBSERVACIONES -->
-        <section class="form-section">
-            <h2 class="form-section-title">Cuidados y Observaciones</h2>
-
-            <div class="form-grid-3">
-
-                <div class="form-field">
-                    <label for="apego">Apego</label>
-                    <input type="number" id="apego" name="apego">
-                </div>
-
-                <div class="form-field">
-                    <label for="apego_canguro">Apego Canguro</label>
-                    <select id="apego_canguro" name="apego_canguro">
-                        <option value="">Seleccione...</option>
-                        <option value="0">No</option>
-                        <option value="1">Sí</option>
+                <div class="form-group">
+                    <label for="destino">Destino Final</label>
+                    <select id="destino" name="destino" required>
+                        {% for value, label in form.fields.destino.choices %}
+                            <option value="{{ value }}">{{ label }}</option>
+                        {% endfor %}
                     </select>
                 </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="destino_rn">Detalle de Destino (Opcional)</label>
+                <input type="text" id="destino_rn" name="destino_rn" placeholder="Ej: Nombre del servicio o institución de traslado"
+                       value="{{ form.destino_rn.value|default:'' }}">
+            </div>
+        </fieldset>
 
-                <div class="form-field">
-                    <label for="gases_de_cordon">Gases de Cordón</label>
-                    <select id="gases_de_cordon" name="gases_de_cordon">
-                        <option value="">Seleccione...</option>
-                        <option value="0">No</option>
-                        <option value="1">Sí</option>
+        <fieldset class="form-section">
+            <legend class="section-legend">Indicadores de Calidad</legend>
+
+            <div class="checkbox-grid">
+                <label class="checkbox-card">
+                    <input type="checkbox" name="alojamiento_conjunto" id="alojamiento_conjunto" 
+                           {% if form.alojamiento_conjunto.value %}checked{% endif %}>
+                    <span class="checkbox-text">Alojamiento Conjunto</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="apego_canguro" id="apego_canguro" 
+                           {% if form.apego_canguro.value %}checked{% endif %}>
+                    <span class="checkbox-text">Apego Canguro</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="lactante_60" id="lactante_60" 
+                           {% if form.lactante_60.value %}checked{% endif %}>
+                    <span class="checkbox-text">Lactancia < 60 min</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="apego_tunel" id="apego_tunel" 
+                           {% if form.apego_tunel.value %}checked{% endif %}>
+                    <span class="checkbox-text">Apego Túnel</span>
+                </label>
+
+                <label class="checkbox-card">
+                    <input type="checkbox" name="gases_de_cordon" id="gases_de_cordon" 
+                           {% if form.gases_de_cordon.value %}checked{% endif %}>
+                    <span class="checkbox-text">Gases de Cordón</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+            <legend class="section-legend">Complicaciones y Reanimación</legend>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="complicaciones_postparto">Complicaciones Post-Parto</label>
+                    <select id="complicaciones_postparto" name="complicaciones_postparto" multiple style="min-height: 100px;">
+                        {% for comp in form.fields.complicaciones_postparto.queryset %}
+                            <option value="{{ comp.id }}">{{ comp }}</option>
+                        {% endfor %}
                     </select>
+                    <span class="field-help">Selección múltiple (Ctrl + Clic).</span>
                 </div>
 
-            </div>
-
-            <div class="form-grid-3">
-
-                <div class="form-field">
-                    <label for="OAE">OAE</label>
-                    <input type="number" id="OAE" name="OAE">
-                </div>
-
-                <div class="form-field">
-                    <label for="lactancia_60">Lactancia < 60 min</label>
-                    <select id="lactancia_60" name="lactancia_60">
-                        <option value="">Seleccione...</option>
-                        <option value="0">No</option>
-                        <option value="1">Sí</option>
+                <div class="form-group">
+                    <label for="reanimaciones_neonatales">Reanimaciones Neonatales</label>
+                    <select id="reanimaciones_neonatales" name="reanimaciones_neonatales" multiple style="min-height: 100px;">
+                        {% for rea in form.fields.reanimaciones_neonatales.queryset %}
+                            <option value="{{ rea.id }}">{{ rea }}</option>
+                        {% endfor %}
                     </select>
+                    <span class="field-help">Selección múltiple (Ctrl + Clic).</span>
                 </div>
-
-                <div class="form-field">
-                    <label for="apego_tunel">Apego en Túnel</label>
-                    <select id="apego_tunel" name="apego_tunel">
-                        <option value="">Seleccione...</option>
-                        <option value="0">No</option>
-                        <option value="1">Sí</option>
-                    </select>
-                </div>
-
             </div>
 
-            <div class="form-field">
-                <label for="alojamiento_conjunto">Alojamiento Conjunto</label>
-                <select id="alojamiento_conjunto" name="alojamiento_conjunto">
-                    <option value="">Seleccione...</option>
-                    <option value="0">No</option>
-                    <option value="1">Sí</option>
-                </select>
+            <div class="form-group" style="margin-top: 1rem;">
+                <label for="observaciones">Observaciones Generales</label>
+                <textarea id="observaciones" name="observaciones" rows="3" 
+                          placeholder="Cualquier hallazgo relevante...">{{ form.observaciones.value|default:'' }}</textarea>
             </div>
+        </fieldset>
 
-            <div class="form-field">
-                <label for="observaciones">Observaciones</label>
-                <textarea id="observaciones" name="observaciones" rows="3" maxlength="250"></textarea>
-            </div>
-
-        </section>
-
-        <!-- BOTÓN -->
-        <div class="form-submit">
-            <button type="submit" class="btn-primary">Guardar</button>
+        <div class="form-actions">
+            <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+            <button type="submit" class="btn-primary">Registrar Recién Nacido</button>
         </div>
 
     </form>
+</section>
 
 </main>
 
