@@ -53,14 +53,13 @@
    ========================================= */
 .table-actions-bar {
     display: flex;
-    justify-content: space-between;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
 .search-pill {
     flex: 1;
-    max-width: 400px;
+    width: 100%;
     background: var(--bg-panel);
     display: flex;
     align-items: center;
@@ -84,7 +83,7 @@
 .table-container {
     background: var(--bg-panel);
     border-radius: 2rem;
-    padding: 1.5rem;
+    padding: 1.3rem;
     box-shadow: var(--shadow-m);
     overflow-x: auto; /* Scroll horizontal si la tabla es muy ancha */
 }
@@ -97,21 +96,20 @@
 
 /* Encabezados */
 .smart-table th {
-    text-align: left;
-    padding: 1rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-muted);
+    font-family: system-ui;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-weight: 650;
+    color: var(--text);
     text-transform: uppercase;
-    border-bottom: 1px solid var(--border-subtle);
 }
 
 /* Celdas de Cuerpo */
 .smart-table td {
-    padding: 1rem;
+    padding: 0.7rem 1rem;
     background: var(--bg-input); /* Fondo de la fila (Gris suave) */
     color: var(--text-main);
-    vertical-align: middle;
+    vertical-align: center;
 }
 
 /* Bordes redondeados para la fila completa */
@@ -126,32 +124,9 @@
 
 /* Efecto Hover en la fila */
 .smart-table tbody tr:hover td {
-    background: var(--bg-body); /* Cambia ligeramente de color */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    cursor: pointer;
+    background: var(--bg-light);
 }
 
-/* =========================================
-   COMPONENTES INTERNOS DE TABLA
-   ========================================= */
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-weight: 600;
-}
-
-.avatar-circle {
-    width: 35px;
-    height: 35px;
-    background: var(--primary);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9rem;
-}
 
 .text-sub {
     display: block;
@@ -172,7 +147,7 @@
 .status-badge.gestante {
     background: #E3F2FD; color: #1976D2; /* Azul */
 }
-.status-badge.puérpera {
+.status-badge.puerpera {
     background: #FCE4EC; color: #C2185B; /* Rosa */
 }
 .status-badge.recién {
@@ -213,4 +188,72 @@
 /* Excepción para eliminar (Rojo) */
 .btn-icon-sm.delete:hover {
     background: #FFEBEE;
+}
+
+/* =========================================
+   PAGINACIÓN (Centrado Perfecto)
+   ========================================= */
+.table-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* <--- ESTO CENTRA TODO */
+    gap: 1.5rem;             /* Espacio elegante entre flechas y texto */
+    margin-top: 2rem;        /* Separación de la tabla */
+    padding-top: 1rem;
+}
+
+/* Texto "1 de 1" */
+.table-pagination span {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums; /* Números alineados */
+}
+
+.table-pagination span strong {
+    color: var(--text-main);
+}
+
+/* Botones de Flecha */
+.table-pagination .action-btn {
+    width: 36px;  /* Tamaño fijo para que sean círculos */
+    height: 36px;
+    padding: 0;   /* Reset del padding original de action-btn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-input); /* Botón gris suave */
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.table-pagination .action-btn:hover {
+    background: var(--primary); /* Se pone naranja al hover */
+    box-shadow: var(--shadow-s);
+}
+
+/* Truco Pro: Cambiar color del SVG al hacer hover */
+.table-pagination .action-btn:hover img {
+    filter: brightness(0) invert(1); /* Vuelve blanco el icono negro */
+}
+
+/* Estado deshabilitado (opcional) */
+.table-pagination .action-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background: transparent;
+    transform: none;
+    box-shadow: none;
+}
+
+/* =========================================
+   AJUSTES FINOS DE TABLA
+   ========================================= */
+.smart-table td {
+    vertical-align: middle; /* Mejor alineación que "center" */
+}
+
+.action-buttons {
+    justify-content: center; /* Centrar los botones de acción en su celda */
 }

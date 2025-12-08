@@ -1,0 +1,80 @@
+<div class="table-container">
+            <table class="smart-table">
+                <thead>
+                    <tr>
+                        <th>Identificación</th>
+                        <th>Nombre y (2° Apellido)</th>
+                        <th>Tipo paciente</th>
+                        <th>CESFAM</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- {% for paciente in pacientes %}  -->
+                    <tr>
+                        <td>
+                                <!-- {{ paciente.identificacion }}  -->
+                                <span class="text-bold">26022610-k</span> 
+                                <!-- {{ paciente.documento }}  -->
+                                <span class="text-sub">RUT</span>
+                        </td>
+
+                        <!-- {{ paciente.calcular_edad_paciente }} años  -->
+                        <td> Isabelle Muñoz</td>
+                        <td>Gestante (verde)
+                            <!-- {{ paciente.tipo.nombre|lower }}  -->
+                            <span class="status-badge">
+                                <!-- {{ paciente.tipo.nombre }}  -->
+                            </span>
+                        </td>
+
+                        <!-- {{ paciente.nacionalidad.nombre }}  -->
+                        <td>Chillán viejo</td>
+                        
+                        <td class="action-group">
+                            <div class="action-buttons">
+                                <a href="detallarPaciente.html" class="action-btn" title="Ver Ficha">
+                                    <img src="../../../assets/svg/view.svg" alt="Ver" class="nav-svg">
+                                </a>
+                                <a href="editarPaciente.html" class="action-btn" title="Editar">
+                                    <img src="../../../assets/svg/edit.svg" alt="Editar" class="nav-svg">
+                                </a>
+                                <div class="action-btn" title="Eliminar">
+                                    <img src="../../../assets/svg/delete.svg" alt="Eliminar" class="nav-svg">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- {% empty %}  -->
+                    <tr>
+                        <td colspan="6" class="empty-state">
+                            No se encontraron pacientes registrados.
+                        </td>
+                    </tr>
+                    <!-- {% endfor %}  -->
+                </tbody>
+            </table>
+            
+        <div class="table-pagination">
+            <button class="action-btn" title="Primera página">
+                <img src="../../../assets/svg/leftarrow2.svg" class="nav-svg" alt="Primera"/>
+            </button>
+
+            <button class="action-btn" title="Anterior">
+                <img src="../../../assets/svg/leftarrow.svg" class="nav-svg" alt="Anterior"/>
+            </button>
+
+            <span>Página <strong>1</strong> de <strong>5</strong></span>
+
+            <button class="action-btn" title="Siguiente">
+                <img src="../../../assets/svg/rightarrow.svg" class="nav-svg" alt="Siguiente"/>
+            </button>
+
+            <button class="action-btn" title="Última página">
+                <img src="../../../assets/svg/rightarrow2.svg" class="nav-svg" alt="Última"/>
+            </button>
+        </div>
+    </section>
+    </div>
+
+el css está correctamente llamado, como te gusta.
