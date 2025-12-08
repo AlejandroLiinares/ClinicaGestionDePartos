@@ -242,7 +242,8 @@ textarea.input-field {
     border-radius: 1rem;
     cursor: pointer;
     transition: all 0.2s ease;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
+    margin-top: 0.5rem;
 }
 
 .checkbox-card:hover {

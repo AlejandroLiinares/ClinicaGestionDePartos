@@ -122,7 +122,7 @@ body {
 .subtitle {
     font: var(--p);
     color: var(--text-muted);
-    margin-bottom: 0.1rem;
+    margin-bottom: 1rem;
 }
 
 .span-text {

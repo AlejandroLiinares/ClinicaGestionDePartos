@@ -161,14 +161,18 @@
             <div class="filter-card">
                 <h3 class="third-title">Búsquedas Recientes</h3>
                 <ul class="recent-list">
-                    <li><a href="#">Maria Paz (12.345...)</a></li>
-                    <li><a href="#">Fernanda Urrejola</a></li>
-                    <li><a href="#">Camila Vallejo</a></li>
+                    <li><a href="#">Dale Daniel</a></li>
+                    <li><a href="#">Aqui añades la funcion</a></li>
+                    <li><a href="#">Para que te salgan</a></li>
+                    <li><a href="#">Los ultimos objetos</a></li>
+                    <li><a href="#">Que se buscaron en el sistema</a></li>
+                    <!-- Te recomiendo maximo cinco para no romper el diseño  -->
+                    <button class="btn-primary">Limpiar todo</button>
                 </ul>
             </div>
 
             <div class="filter-card">
-                <h3 class="filter-title">Filtrar por Estado</h3>
+                <h3 class="third-title">Filtrar por Estado</h3>
                 <label class="checkbox-card small">
                     <input type="checkbox"> <span>Gestantes</span>
                 </label>
@@ -181,25 +185,23 @@
         <section class="list-content">
 
             <div class="table-actions-bar">
-                <div class="search-pill">
-                    <img src="../../assets/svg/buscar.svg" class="search-icon" alt="Buscar">
-                    <input type="text" class="search-input" placeholder="Buscar por RUT o Nombre...">
+                <div class="topbar-search header-pill">
+                    <input type="text" class="search-input" placeholder="Filtre por run, nombre o cesfam...">
+                    <img src="../../../assets/svg/buscar.svg" class="nav-svg" alt="Buscar"/>
                 </div>
 
-                <a href="agregarPaciente.html" class="btn-primary">
-                    <span class="btn-icon">+</span> Nuevo Paciente
-                </a>
+                <button onclick="location.href='agregarPaciente.html'"
+                class="btn-primary">Agregar Paciente</button>
             </div>
 
             <div class="table-container">
                 <table class="smart-table">
                     <thead>
                         <tr>
-                            <th>Identificación</th>
-                            <th>Nombre Completo</th>
-                            <th>Edad</th>
-                            <th>Tipo</th>
-                            <th>Nacionalidad</th>
+                            <th>RUN</th>
+                            <th>Nombre y (2° Apellido)</th>
+                            <th>Tipo paciente</th>
+                            <th>CESFAM</th>
                             <th class="text-right">Acciones</th>
                         </tr>
                     </thead>
