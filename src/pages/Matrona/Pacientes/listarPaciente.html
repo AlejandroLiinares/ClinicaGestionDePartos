@@ -18,6 +18,9 @@
     <!-- CSS Menu de navegación -->
     <link rel="stylesheet" href="../../../styles/sidebar.css" />
 
+    <!-- CSS TABLES -->
+    <link rel="stylesheet" href="../../../styles/table.css" />
+
     <!-- CSS Cards -->
     <link rel="stylesheet" href="../../../styles/cards.css" />
 
@@ -139,61 +142,117 @@
     
 <main class="main-container">
 
-    <!-- Breadcrumbs -->
     <nav class="breadcrumbs">
-        <a href="../inicioMatrona.html">Inicio</a>
+        <a href="../inicioMatrona.html" class="link-color">Inicio</a>
         <span>›</span>
-        <a href="pacientes.html">Pacientes</a>
+        <a href="pacientes.html" class="link-color">Pacientes</a>
         <span>›</span>
-        <span>Listado</span>
+        <span>Listar pacientes</span>
     </nav>
 
-    <nav class="welcome-header">
+    <div class="welcome-header">
         <h1 class="main-title">Listado de Pacientes</h1>
-        <p class="subtitle">Aquí puedes ver y gestionar todos los pacientes registrados.</p>
-    </nav>
-
-    <!-- Barra superior: buscador + agregar -->
-    <div class="page-actions">
-        <input type="text" class="search-input" placeholder="Buscar paciente...">
-
-        <a href="agregarPaciente.html" class="btn-primary">
-            + Agregar Paciente
-        </a>
+        <p class="subtitle">Gestione los expedientes clínicos registrados en el sistema.</p>
     </div>
 
-    <!-- TABLA -->
-    <section class="table-container">
+    <div class="layout-split">
 
-        <table class="styled-table">
-            <thead>
-                <tr>
-                    <th>RUT</th>
-                    <th>Nombre completo</th>
-                    <th>Edad</th>
-                    <th>Última gestación</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
+        <aside class="filter-sidebar">
+            <div class="filter-card">
+                <h3 class="third-title">Búsquedas Recientes</h3>
+                <ul class="recent-list">
+                    <li><a href="#">Maria Paz (12.345...)</a></li>
+                    <li><a href="#">Fernanda Urrejola</a></li>
+                    <li><a href="#">Camila Vallejo</a></li>
+                </ul>
+            </div>
 
-            <tbody>
-                <!-- Aquí Daniel inyectará los datos -->
-                <!-- {% for paciente in pacientes %} -->
-                <tr>
-                    <td>11.234.567-8</td>
-                    <td>María Fernanda López</td>
-                    <td>28</td>
-                    <td>G2 - 36 semanas</td>
-                    <td>
-                        <a href="detallePaciente.html" class="btn-table">Ver</a>
-                    </td>
-                </tr>
-                <!-- {% endfor %} -->
-            </tbody>
+            <div class="filter-card">
+                <h3 class="filter-title">Filtrar por Estado</h3>
+                <label class="checkbox-card small">
+                    <input type="checkbox"> <span>Gestantes</span>
+                </label>
+                <label class="checkbox-card small">
+                    <input type="checkbox"> <span>Puérperas</span>
+                </label>
+            </div>
+        </aside>
 
-        </table>
+        <section class="list-content">
 
-    </section>
+            <div class="table-actions-bar">
+                <div class="search-pill">
+                    <img src="../../assets/svg/buscar.svg" class="search-icon" alt="Buscar">
+                    <input type="text" class="search-input" placeholder="Buscar por RUT o Nombre...">
+                </div>
+
+                <a href="agregarPaciente.html" class="btn-primary">
+                    <span class="btn-icon">+</span> Nuevo Paciente
+                </a>
+            </div>
+
+            <div class="table-container">
+                <table class="smart-table">
+                    <thead>
+                        <tr>
+                            <th>Identificación</th>
+                            <th>Nombre Completo</th>
+                            <th>Edad</th>
+                            <th>Tipo</th>
+                            <th>Nacionalidad</th>
+                            <th class="text-right">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for paciente in pacientes %}
+                        <tr>
+                            <td>
+                                <div class="td-content">
+                                    <span class="text-bold">{{ paciente.identificacion }}</span>
+                                    <span class="text-sub">{{ paciente.documento }}</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="user-info">
+                                    <div class="avatar-circle">{{ paciente.nombre|slice:":1" }}</div>
+                                    <span class="text-main">{{ paciente.obtener_nombre_completo }}</span>
+                                </div>
+                            </td>
+                            <td>{{ paciente.calcular_edad_paciente }} años</td>
+                            <td>
+                                <span class="status-badge {{ paciente.tipo.nombre|lower }}">
+                                    {{ paciente.tipo.nombre }}
+                                </span>
+                            </td>
+                            <td>{{ paciente.nacionalidad.nombre }}</td>
+                            
+                            <td class="text-right">
+                                <div class="action-buttons">
+                                    <a href="#" class="btn-icon-sm" title="Ver Ficha">
+                                        <img src="../../assets/svg/eye.svg" alt="Ver">
+                                    </a>
+                                    <a href="#" class="btn-icon-sm" title="Editar">
+                                        <img src="../../assets/svg/edit.svg" alt="Editar">
+                                    </a>
+                                    <a href="#" class="btn-icon-sm delete" title="Eliminar">
+                                        <img src="../../assets/svg/trash.svg" alt="Eliminar">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="6" class="empty-state">
+                                No se encontraron pacientes registrados.
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </div>
 
 </main>
 
