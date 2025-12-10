@@ -167,7 +167,7 @@
                     <li><a href="#">Los ultimos objetos</a></li>
                     <li><a href="#">Que se buscaron en el sistema</a></li>
                     <!-- Te recomiendo maximo cinco para no romper el diseño  -->
-                    <button class="btn-primary">Limpiar todo</button>
+                    <button class="btn-secondary">Limpiar todo</button>
                 </ul>
             </div>
 
@@ -229,15 +229,13 @@
                         
                         <td class="action-group">
                             <div class="action-buttons">
-                                <a href="detallarPaciente.html" class="action-btn" title="Ver Ficha">
-                                    <img src="../../../assets/svg/view.svg" alt="Ver" class="nav-svg">
-                                </a>
-                                <a href="editarPaciente.html" class="action-btn" title="Editar">
-                                    <img src="../../../assets/svg/edit.svg" alt="Editar" class="nav-svg">
-                                </a>
-                                <div class="action-btn" title="Eliminar">
-                                    <img src="../../../assets/svg/delete.svg" alt="Eliminar" class="nav-svg">
-                                </div>
+                                <button onclick="location.href='detallarPaciente.html'" class="action-btn" aria-label="Editar">
+                                    <img src="../../../assets/svg/view.svg" alt="Editar" class="nav-svg"/>
+                                </button>
+
+                                <button onclick="location.href='editarPaciente.html'" class="action-btn" aria-label="Editar">
+                                    <img src="../../../assets/svg/edit.svg" alt="Editar" class="nav-svg"/>
+                                </button>
                             </div>
                         </td>
                     </tr>

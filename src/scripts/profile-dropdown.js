@@ -22,3 +22,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Obtener la URL actual (solo el nombre del archivo, ej: "pacientes.html")
+    const pathName = window.location.pathname.split("/").pop();
+
+    // 2. Seleccionar todos los links del sidebar
+    const navLinks = document.querySelectorAll(".sidebar .nav-link");
+
+    navLinks.forEach(link => {
+        // Limpiamos cualquier active que venga por defecto
+        link.classList.remove("active");
+
+        // Obtenemos el archivo al que apunta el link
+        const linkHref = link.getAttribute("href").split("/").pop();
+
+        // 3. Comparar: Si coinciden, bingo!
+        if (pathName === linkHref) {
+            link.classList.add("active");
+        }
+    });
+});

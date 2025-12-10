@@ -132,5 +132,5 @@ body {
 }
 
 .link-color {
-    color: rgb(255, 43, 43);
+    color: var(--primary)
 }
