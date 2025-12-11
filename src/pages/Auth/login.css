@@ -5,17 +5,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    /* --- INICIO DEL NUEVO FONDO INTERACTIVO --- */
-
-    /* 1. Definimos variables iniciales (comienza en el centro) */
-    --mouse-x: 50%;
-    --mouse-y: 50%;
-
     /* 2. Usamos las variables en la posición del círculo */
     background: radial-gradient(
-        circle at var(--mouse-x) var(--mouse-y),
-        #ff414a 0%,   /* Rojo intenso central */
-        #ffc3c6 25%,  /* Transición a rosado (ajustado para que sea más grande) */
+        circle at left top,
+        #ff7279 0%,   /* Rojo intenso central */
+        #ffc3c6 10%,  /* Transición a rosado (ajustado para que sea más grande) */
         #ffffff 65%   /* Blanco */
     );
     
@@ -91,10 +85,10 @@ body {
 .login-card {
     width: 100%;
     max-width: 20rem;
-    background: #fff5f5;
+    background: #ffffff;
     padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 1.5rem;
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.08);
 
     display: flex;
     flex-direction: column;
@@ -154,7 +148,7 @@ body {
     padding: 0.75rem 1rem;
     border-radius: 1.1rem;
     border: 1.5px solid #fff;
-    background-color: #ffffff;
+    background-color: #ececec;
     font-size: 0.95rem;
     transition: border-color 0.2s ease;
     box-sizing: border-box; 
@@ -173,6 +167,53 @@ body {
 .form-input:focus {
     border-color: #ffffff;
     outline: none;
+}
+
+/* =========================================
+   TOGGLE PASSWORD (EL OJITO)
+   ========================================= */
+.password-wrapper {
+    position: relative; /* Necesario para que el botón flote dentro */
+    width: 100%;
+}
+
+/* Espacio extra a la derecha para que el texto no se escriba encima del ojo */
+.password-wrapper .form-input {
+    padding-right: 3rem; 
+}
+
+/* El botón transparente flotante */
+.btn-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%); /* Centrado vertical perfecto */
+    
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.btn-eye:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Fondo gris muy sutil al pasar mouse */
+}
+
+/* Control del tamaño de tu imagen SVG */
+.eye-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5; /* Lo hacemos un poco gris para que no destaque tanto */
+    transition: opacity 0.2s ease;
+}
+
+.btn-eye:hover .eye-icon {
+    opacity: 1; /* Se oscurece al pasar el mouse */
 }
 
 .form-options {
@@ -205,7 +246,7 @@ body {
 }
 
 .btn-primary {
-    background-color: #000000;
+    background-color: oklch(68.71% 0.202 24.112);
     color: white;
     width: 100%;          /* ahora ocupa bien el espacio */
     max-width: 19.6rem;     /* no se vuelve gigante */
@@ -217,7 +258,7 @@ body {
 
 
 .btn-primary:hover {
-    background-color: #0f0e0e;
+    background-color: oklch(70.302% 0.18836 23.235);
 }
 
 .forgot-link {
@@ -232,6 +273,7 @@ body {
 
 .forgot-link:hover {
     text-decoration: underline;
+    color: oklch(68.71% 0.202 24.112);
 }
 
 /* Footer del login */
