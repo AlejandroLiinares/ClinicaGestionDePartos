@@ -169,20 +169,16 @@ body {
     outline: none;
 }
 
-/* =========================================
-   TOGGLE PASSWORD (EL OJITO)
-   ========================================= */
+/* TOGGLE PASSWORD (EL OJITO)*/
 .password-wrapper {
     position: relative; /* Necesario para que el botón flote dentro */
     width: 100%;
 }
 
-/* Espacio extra a la derecha para que el texto no se escriba encima del ojo */
 .password-wrapper .form-input {
     padding-right: 3rem; 
 }
 
-/* El botón transparente flotante */
 .btn-eye {
     position: absolute;
     right: 12px;
@@ -269,7 +265,6 @@ body {
     display: inline-block;     /* IMPORTANTE: evita que el flex lo estire */
     text-align: center;        /* Se asegura que el texto quede centrado */
 }
-
 
 .forgot-link:hover {
     text-decoration: underline;

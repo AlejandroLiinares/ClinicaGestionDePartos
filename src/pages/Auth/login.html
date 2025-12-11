@@ -22,7 +22,6 @@
 
 <main class="login-layout">
 
-    <!-- PANEL IZQUIERDO -->
     <section class="login-left">
 
         <img src="../../assets/images/logotext.png" alt="Logo de SIO" class="welcome-logo"/>
@@ -45,8 +44,6 @@
     <section class="login-right">
 
         <div class="login-card">
-
-            <!-- Logo -->
             <header class="login-header">
                 <img 
                     class="login-logo"
@@ -59,7 +56,6 @@
                 <h2 class="login-title">Iniciar Sesión</h2>
             </header>
 
-            <!-- Formulario -->
             <form class="login-form" method="post" action="/">
                 
                 <fieldset class="form-fields">
@@ -77,31 +73,25 @@
                     </div>
 
                     <div class="form-field">
-    <label class="form-label" for="password">Contraseña</label>
-    
-    <div class="password-wrapper">
-        <input 
-            type="password"
-            id="password"
-            name="password"
-            class="form-input"
-            placeholder="••••••••••"
-            required
-        />
-        
-        <button type="button" id="togglePassword" class="btn-eye" title="Mostrar contraseña">
-            <img src="../../assets/svg/view.svg" class="eye-icon" alt="Ver contraseña" />
-        </button>
-    </div>
-</div>
+                        <label class="form-label" for="password">Contraseña</label>
+                        <div class="password-wrapper">
+                            <input 
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="form-input"
+                                placeholder="••••••••••"
+                                required
+                            />
+                        <button type="button" id="togglePassword" class="btn-eye" title="Mostrar contraseña">
+                            <img src="../../assets/svg/view.svg" class="eye-icon" alt="Ver contraseña" />
+                        </button>
+                    </div>
+        </div>
 
-                    <button type="submit" class="btn btn-primary">Ingresar</button>
-
+                <button type="submit" class="btn btn-primary">Ingresar</button>
                 </fieldset>
 
-                <!-- Daniel, programa esto para cuando de error al registrarse, papi. -->
-                <!-- De hecho podrias hacer que si se equivoca de correo, que salga '<span>correo incorrecta, intentar de nuevo</span>' -->
-                <!-- Y si es la contraseña, que diga '<span>contraseña incorrecta, intentar de nuevo</span>' -->
                 <div id="login-error" class="login-error">
                     <span>Credenciales incorrectas. Intente nuevamente.</span>
                 </div>
