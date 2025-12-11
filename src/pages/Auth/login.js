@@ -1,19 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // ==========================================
-    // 1. EFECTO GRADIENTE (SIGUE AL MOUSE)
-    // ==========================================
-    document.addEventListener('mousemove', (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-        // Actualizamos las variables CSS en tiempo real
-        document.body.style.setProperty('--mouse-x', x + 'px');
-        document.body.style.setProperty('--mouse-y', y + 'px');
-    });
-
-    // ==========================================
-    // 2. TOGGLE PASSWORD (VER/OCULTAR)
-    // ==========================================
     const togglePassword = document.querySelector('#togglePassword');
     const passwordInput = document.querySelector('#password');
     const eyeIcon = document.querySelector('.eye-icon');
